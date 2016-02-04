@@ -9,55 +9,43 @@
     <title>Forms</title>
 </head>
 <body>
-<form>
-    First Name:
-    <input type="text" value="First Name">
-    <br>
-    Last Name:
-    <input type="text" value="Last Name">
-    <br>
-    <div class='input-group date' id='datetimepicker1'>
-        Date of Birth:
-        <input type='text' class="form-control" />
-               <span class="input-group-addon">
-                   <span class="glyphicon glyphicon-calendar"></span>
-               </span>
+<h2>Forms</h2>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#forms">Forms</a></li>
+    <li><a data-toggle="tab" href="#fields">Fields</a></li>
+</ul>
+<div class="tab-content">
+    <div id="forms" class="tab-pane fade in active">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Form Name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Registration Form</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Contact List</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>To Do List</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker1').datetimepicker();
-        });
-    </script>
-    <br>
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Gender
-            <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Male</a></li>
-            <li><a href="#">Female</a></li>
-        </ul>
+    <div id="fields" class="tab-pane fade">
+
     </div>
-    <br>
-    <div class="checkbox">
-        <label><input type="checkbox" value="">Admin</label>
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox" value="">Student</label>
-    </div>
-    <div class="checkbox disabled">
-        <label><input type="checkbox" value="">User</label>
-    </div>
-    <br>
-    License Agreement:
-    <div class="radio">
-        <label><input type="radio" name="optradio">Yes</label>
-    </div>
-    <div class="radio">
-        <label><input type="radio" name="optradio">No</label>
-    </div>
-    <br>
-    <input type="submit" value="Register">
-    <input type="submit" value="Cancel">
-</form>
+</div>
 </body>
 </html>

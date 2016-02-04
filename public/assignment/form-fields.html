@@ -6,17 +6,51 @@
 </head>
 <body>
 <form>
-    Label:
-    <input type="text" value="Label">
+    First Name:
+    <input type="text" value="First Name">
     <br>
-    Placeholder:
-    <input type="text" value="Placeholder">
+    Last Name:
+    <input type="text" value="Last Name">
     <br>
-    Tooltip:
-    <input type="text" value="Tooltip">
+    <div class='input-group date' id='datetimepicker1'>
+        Date of Birth:
+        <input type='text' class="form-control" />
+               <span class="input-group-addon">
+                   <span class="glyphicon glyphicon-calendar"></span>
+               </span>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
     <br>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Gender
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Male</a></li>
+            <li><a href="#">Female</a></li>
+        </ul>
+    </div>
     <br>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">Admin</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" value="">Student</label>
+    </div>
+    <div class="checkbox disabled">
+        <label><input type="checkbox" value="">User</label>
+    </div>
     <br>
+    License Agreement:
+    <div class="radio">
+        <label><input type="radio" name="optradio">Yes</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="optradio">No</label>
+    </div>
     <br>
     <input type="submit" value="Register">
     <input type="submit" value="Cancel">
