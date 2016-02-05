@@ -2,59 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Forms: Registration Form</title>
 </head>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+</script>
 <body>
-<form>
-    First Name:
-    <input type="text" value="First Name">
-    <br>
-    Last Name:
-    <input type="text" value="Last Name">
-    <br>
-    <div class='input-group date' id='datetimepicker1'>
-        Date of Birth:
-        <input type='text' class="form-control" />
-               <span class="input-group-addon">
-                   <span class="glyphicon glyphicon-calendar"></span>
-               </span>
-    </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker1').datetimepicker();
-        });
-    </script>
-    <br>
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Gender
-            <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Male</a></li>
-            <li><a href="#">Female</a></li>
-        </ul>
-    </div>
-    <br>
-    <div class="checkbox">
-        <label><input type="checkbox" value="">Admin</label>
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox" value="">Student</label>
-    </div>
-    <div class="checkbox disabled">
-        <label><input type="checkbox" value="">User</label>
-    </div>
-    <br>
-    License Agreement:
-    <div class="radio">
-        <label><input type="radio" name="optradio">Yes</label>
-    </div>
-    <div class="radio">
-        <label><input type="radio" name="optradio">No</label>
-    </div>
-    <br>
-    <input type="submit" value="Register">
-    <input type="submit" value="Cancel">
+<div class="container">
+    <h2>Forms: Registration Form</h2>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="firstName" class="col-sm-2 control-label" style="text-align: left">First Name:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name"/>
+            </div>
+            <div class="col-sm-4" align="right">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="glyphicon glyphicon-plus"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="col-sm-2 control-label" style="text-align: left">Last Name:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            </div>
+            <div class="col-sm-4" align="right">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="glyphicon glyphicon-plus"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dob" class="col-sm-2 control-label" style="text-align: left">Date of Birth:</label>
+            <div class='input-group date col-sm-6' id='datetimepicker1'>
+                <input type='text' class="form-control" id="dob"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="glyphicon glyphicon-plus"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gender" class="col-sm-2 control-label" style="text-align: left">Gender:</label>
+            <div class="dropdown col-sm-6">
+                <button class="btn btn-default dropdown-toggle" type="button" id="gender" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Male
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="gender">
+                    <li><a href="#">Male</a></li>
+                    <li><a href="#">Female</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4" align="right">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="glyphicon glyphicon-plus"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <p class="col-sm-2">Roles:</p>
+            <div class="col-sm-6">
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Admin</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Student</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">User</label>
+                </div>
+            </div>
+            <div class="col-sm-4" align="right">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="glyphicon glyphicon-plus"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <p class="col-sm-2">License Agreement:</p>
+            <div class="col-sm-6">
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">No</label>
+                </div>
+            </div>
+            <div class="col-sm-4" align="right">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <span class="glyphicon glyphicon-plus"></span>
+                <span class="glyphicon glyphicon-remove"></span>
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </div>
+        </div>
+        <div>
+            <hr/>
+        </div>
+        <div class="form-group">
+            <label for="newField" class="col-sm-2 control-label" style="text-align: left">Add New Field:</label>
+            <div class="dropdown col-sm-6">
+                <button class="btn btn-default dropdown-toggle" type="button" id="newField" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Single Line Text
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="gender">
+                    <li><a href="#">Single Line Text</a></li>
+                    <li><a href="#">Date</a></li>
+                    <li><a href="#">Dropdown</a></li>
+                    <li><a href="#">Checkboxes</a></li>
+                    <li><a href="#">Radio buttons</a></li>
+                    <li><a href="#">Paragraph Text Field</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4" align="right">
+                <span class="glyphicon glyphicon-plus"></span>
+            </div>
+        </div>
 </form>
+</div>
 </body>
 </html>
 
