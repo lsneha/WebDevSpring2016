@@ -6,137 +6,178 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- date time helpers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/src/js/bootstrap-datetimepicker.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/build/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/customstyle.css" rel="stylesheet">
     <title>Forms: Registration Form</title>
 </head>
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker1').datetimepicker();
-    });
-</script>
 <body>
-<div class="container">
-    <h2>Forms: Registration Form</h2>
-    <form class="form-horizontal">
-        <div class="form-group">
-            <label for="firstName" class="col-sm-2 control-label" style="text-align: left">First Name:</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="firstName" placeholder="First Name"/>
-            </div>
-            <div class="col-sm-4" align="right">
-                <span class="glyphicon glyphicon-pencil"></span>
-                <span class="glyphicon glyphicon-plus"></span>
-                <span class="glyphicon glyphicon-remove"></span>
-                <span class="glyphicon glyphicon-align-justify"></span>
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <p class="websitename">Form Maker</p>
         </div>
-        <div class="form-group">
-            <label for="lastName" class="col-sm-2 control-label" style="text-align: left">Last Name:</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-            </div>
-            <div class="col-sm-4" align="right">
-                <span class="glyphicon glyphicon-pencil"></span>
-                <span class="glyphicon glyphicon-plus"></span>
-                <span class="glyphicon glyphicon-remove"></span>
-                <span class="glyphicon glyphicon-align-justify"></span>
-            </div>
+        <div class="col-lg-9 topnavmenu" align="right">
+            <ul class="nav nav-tabs navbar-right" id="topmenu">
+                <li><a href="#">Username</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
         </div>
-        <div class="form-group">
-            <label for="dob" class="col-sm-2 control-label" style="text-align: left">Date of Birth:</label>
-            <div class='input-group date col-sm-6' id='datetimepicker1'>
-                <input type='text' class="form-control" id="dob"/>
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-            </div>
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-pencil"></span>
-                <span class="glyphicon glyphicon-plus"></span>
-                <span class="glyphicon glyphicon-remove"></span>
-                <span class="glyphicon glyphicon-align-justify"></span>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
+            <ul class="nav nav-pills nav-stacked nav-sidebar leftnavmenu" id="leftmenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li class="active"><a href="forms.html">Forms</a></li>
+            </ul>
         </div>
-        <div class="form-group">
-            <label for="gender" class="col-sm-2 control-label" style="text-align: left">Gender:</label>
-            <div class="dropdown col-sm-6">
-                <button class="btn btn-default dropdown-toggle" type="button" id="gender" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Male
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="gender">
-                    <li><a href="#">Male</a></li>
-                    <li><a href="#">Female</a></li>
+        <div class="col-lg-10">
+            <div class="container-fluid">
+                <h3 class="sub-header">Forms</h3>
+                <ul class="nav nav-tabs">
+                    <li><a href="forms.html">Forms</a></li>
+                    <li class="active"><a href="form-fields.html">Fields</a></li>
                 </ul>
-            </div>
-            <div class="col-sm-4" align="right">
-                <span class="glyphicon glyphicon-pencil"></span>
-                <span class="glyphicon glyphicon-plus"></span>
-                <span class="glyphicon glyphicon-remove"></span>
-                <span class="glyphicon glyphicon-align-justify"></span>
+                <div class="tab-content">
+                    <div class="forms">
+                        <h4 class="sub-header top-buffer">Forms: Registration Form</h4>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="firstName" class="col-lg-2 control-label labels">First Name:</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name"/>
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="glyphicon glyphicon-align-justify"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="col-lg-2 control-label labels">Last Name:</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="glyphicon glyphicon-align-justify"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob" class="col-lg-2 control-label labels">Date of Birth:</label>
+                                <div class='input-group col-lg-5'>
+                                    <input type='date' class="form-control" id="dob" placeholder="Choose a Date"/>
+                                    <!-- <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>-->
+                                </div>
+                                <div class="col-lg-5">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="glyphicon glyphicon-align-justify"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-lg-2 control-label labels">Gender:</label>
+                                <div class="dropdown col-lg-6">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="gender" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        Male
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="gender">
+                                        <li><a href="#">Male</a></li>
+                                        <li><a href="#">Female</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="glyphicon glyphicon-align-justify"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="col-lg-2 labels">Roles:</p>
+                                <div class="col-lg-6">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="">Admin</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="">Student</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="">User</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="glyphicon glyphicon-align-justify"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="col-lg-2 labels">License Agreement:</p>
+                                <div class="col-lg-6">
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio">Yes</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio">No</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    <span class="glyphicon glyphicon-align-justify"></span>
+                                </div>
+                            </div>
+                            <div>
+                                <hr/>
+                            </div>
+                            <div class="form-group">
+                                <label for="newField" class="col-lg-2 control-label labels">Add New Field:</label>
+                                <div class="dropdown col-lg-6">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="newField" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        Single Line Text
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="gender">
+                                        <li><a href="#">Single Line Text</a></li>
+                                        <li><a href="#">Date</a></li>
+                                        <li><a href="#">Dropdown</a></li>
+                                        <li><a href="#">Checkboxes</a></li>
+                                        <li><a href="#">Radio buttons</a></li>
+                                        <li><a href="#">Paragraph Text Field</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <p class="col-sm-2">Roles:</p>
-            <div class="col-sm-6">
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Admin</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Student</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">User</label>
-                </div>
-            </div>
-            <div class="col-sm-4" align="right">
-                <span class="glyphicon glyphicon-pencil"></span>
-                <span class="glyphicon glyphicon-plus"></span>
-                <span class="glyphicon glyphicon-remove"></span>
-                <span class="glyphicon glyphicon-align-justify"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <p class="col-sm-2">License Agreement:</p>
-            <div class="col-sm-6">
-                <div class="radio">
-                    <label><input type="radio" name="optradio">Yes</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="optradio">No</label>
-                </div>
-            </div>
-            <div class="col-sm-4" align="right">
-                <span class="glyphicon glyphicon-pencil"></span>
-                <span class="glyphicon glyphicon-plus"></span>
-                <span class="glyphicon glyphicon-remove"></span>
-                <span class="glyphicon glyphicon-align-justify"></span>
-            </div>
-        </div>
-        <div>
-            <hr/>
-        </div>
-        <div class="form-group">
-            <label for="newField" class="col-sm-2 control-label" style="text-align: left">Add New Field:</label>
-            <div class="dropdown col-sm-6">
-                <button class="btn btn-default dropdown-toggle" type="button" id="newField" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Single Line Text
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="gender">
-                    <li><a href="#">Single Line Text</a></li>
-                    <li><a href="#">Date</a></li>
-                    <li><a href="#">Dropdown</a></li>
-                    <li><a href="#">Checkboxes</a></li>
-                    <li><a href="#">Radio buttons</a></li>
-                    <li><a href="#">Paragraph Text Field</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-4" align="right">
-                <span class="glyphicon glyphicon-plus"></span>
-            </div>
-        </div>
-</form>
+    </div>
 </div>
+</body>
+<body>
+
 </body>
 </html>
 
