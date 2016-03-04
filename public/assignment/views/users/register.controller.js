@@ -6,10 +6,10 @@
         .module("FormBuilderApp")
         .controller("RegisterController", RegisterController);
 
-    function RegisterController($scope, $location, UserService)
+    function RegisterController($scope, $location)
     {
         $scope.$location = $location;
-        $scope.users = UserService.createUser();
+        //$scope.users = UserService.createUser();
     }
 
 })();
