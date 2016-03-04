@@ -5,3 +5,8 @@
 .top-buffer {
     margin: 30px;
 }
+
+.myform-group {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}

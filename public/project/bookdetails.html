@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="customstyle.css" rel="stylesheet">
     <title>Book Details</title>
 </head>
 <body>
@@ -15,24 +17,33 @@
         <div class="col-lg-3">
             <h1>Readers Inc.</h1>
         </div>
-        <div class="col-lg-9">
-
+        <div class="col-lg-9" align="right">
+            <button type="submit" class="btn btn-default">Logout</button>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <img src="img01.jpg" class="img-rounded" alt="Cartoon" width="300" height="400">
-            <pre>Rating: 4/5
-                 Genre: Fantasy, Classic, Kids
-                 Tags: Humor, Fun, Classic
-            </pre>
+    <div class="row top-buffer">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+            <div class="row">
+                <img src="book.jpg" alt="book image"/>
+                <br/><br/><br/><br/><br/>
+                <div class="star-rating">
+                    <span class="fa fa-star-o" data-rating="1"></span>
+                    <span class="fa fa-star-o" data-rating="2"></span>
+                    <span class="fa fa-star-o" data-rating="3"></span>
+                    <span class="fa fa-star-o" data-rating="4"></span>
+                    <span class="fa fa-star-o" data-rating="5"></span>
+                    <input type="hidden" name="n1" class="rating-value" value="3">
+                </div>
+                <p>Genre: Fantasy, Classic</p>
+                <p>Tags: Classic, Kids, Fun, Humor </p>
+            </div>
         </div>
-        <div class="col-lg-8">
-            <h2 class="sub-header">Book Title</h2>
-            <p class="para">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
-            </p>
-
+        <div class="col-lg-7">
+            <h1>Alice in Wonderland</h1>
+            <p>Alice's Adventures in Wonderland (commonly shortened to Alice in Wonderland) is an 1865 novel written by English author Charles Lutwidge Dodgson under the pseudonym Lewis Carroll. It tells of a girl named Alice falling through a rabbit hole into a fantasy world populated by peculiar, anthropomorphic creatures. The tale plays with logic, giving the story lasting popularity with adults as well as with children. It is considered to be one of the best examples of the literary nonsense genre. Its narrative course and structure, characters and imagery have been enormously influential[3] in both popular culture and literature, especially in the fantasy genre.</p>
+            <br/><br/><br/><br/><br/>
+            <p>All content in this page is taken from Wikipedia</p>
         </div>
     </div>
 </div>
