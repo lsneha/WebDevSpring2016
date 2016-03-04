@@ -10,7 +10,7 @@
                     templateUrl: "home/home.view.html",
                     controller: "HomeController"
                 })
-                .when("/", {
+                .when("/home", {
                     templateUrl: "home/home.view.html",
                     controller: "HomeController"
                 })
@@ -19,16 +19,14 @@
                     controller: "ProfileController"
                 })
                 .when("/admin", {
-                    templateUrl: "admin/admin.view.html",
-                    controller: "AdminController"
+                    templateUrl: "admin/admin.view.html"
                 })
                 .when("/forms", {
                     templateUrl: "forms/forms.view.html",
-                    controller: "FormsController"
+                    controller : "FormController"
                 })
                 .when("/fields", {
-                    templateUrl: "forms/fields.view.html",
-                    controller: "FieldsController"
+                    templateUrl: "forms/fields.view.html"
                 })
                 .when("/login", {
                     templateUrl: "users/login.view.html",
