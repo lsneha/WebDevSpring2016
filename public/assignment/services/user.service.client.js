@@ -19,35 +19,71 @@
         ];
 
         var service = {
+            findUserByCredentials: findUserByCredentials,
             findAllUsers : findAllUsers,
-            findUserById : findUserById
+            createUser : createUser
         };
 
         return service;
 
         function findUserByCredentials(username, password, callback)
         {
-            return "callback";
+            users.forEach(function(result, index) {
+                if((result[username] === username) && (result[password] === password)) {
+                    callback(users[index]);
+                }
+            });
         }
 
         function findAllUsers(callback)
         {
-            return "callback";
+            return callback(users);
         }
 
         function createUser(user, callback)
         {
-            return "callback";
+            var newUser = {
+                _id: users._id,
+                firstName: users.firstName,
+                lastName: users.lastName,
+                username: users.username,
+                password: users.password,
+                roles: users.roles
+            }
+            users.push(newUser);
+            callback(users);
         }
 
         function deleteUserById(userId, callback)
         {
-            return "callback";
+            findAndRemove(users, _id, userId);
+            callback(users);
+        }
+
+        function findAndRemove(array, property, value) {
+            array.forEach(function(result, index) {
+                if(result[property] === value) {
+                    //Remove from array
+                    array.splice(index, 1);
+                }
+            });
         }
 
         function updateUser(userId, user, callback)
         {
-            return "callback";
+            users.forEach(function(result, index) {
+                if(result[_id] === userId) {
+                    users[index] = {
+                        _id: user._id,
+                        firstName: user.firstName,
+                        lastName: user.lastName,
+                        username: user.username,
+                        password: user.password,
+                        roles: user.roles
+                    };
+                    callback(users[index]);
+                }
+            });
         }
 
     }

@@ -7,37 +7,37 @@
         .config(function($routeProvider){
             $routeProvider
                 .when("/", {
-                    templateUrl: "home/home.view.html",
+                    templateUrl: "views/home/home.view.html",
                     controller: "HomeController"
                 })
                 .when("/home", {
-                    templateUrl: "home/home.view.html",
+                    templateUrl: "views/home/home.view.html",
                     controller: "HomeController"
                 })
                 .when("/profile", {
-                    templateUrl: "users/profile.view.html",
+                    templateUrl: "views/users/profile.view.html",
                     controller: "ProfileController"
                 })
                 .when("/admin", {
-                    templateUrl: "admin/admin.view.html"
+                    templateUrl: "views/admin/admin.view.html"
                 })
                 .when("/forms", {
-                    templateUrl: "forms/forms.view.html",
+                    templateUrl: "views/forms/forms.view.html",
                     controller : "FormController"
                 })
                 .when("/fields", {
-                    templateUrl: "forms/fields.view.html"
+                    templateUrl: "views/forms/fields.view.html"
                 })
                 .when("/login", {
-                    templateUrl: "users/login.view.html",
+                    templateUrl: "views/users/login.view.html",
                     controller: "LoginController"
                 })
                 .when("/register", {
-                    templateUrl: "users/register.view.html",
+                    templateUrl: "views/users/register.view.html",
                     controller: "RegisterController"
                 })
                 .otherwise({
-                    redirectTo: "/"
+                    redirectTo: "/home"
                 });
         });
 })();

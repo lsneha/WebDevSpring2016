@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="FormBuilderApp">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>
-<script src="app.js"></script>
-<script src="config.js"></script>
-<script src="home/home.controller.js"></script>
-<script src="users/profile.controller.js"></script>
-<script src="admin/admin.controller.js"></script>
-<script src="forms/forms.controller.js"></script>
-<script src="forms/fields.controller.js"></script>
-<script src="header/header.controller.js"></script>
-<script src="users/login.controller.js"></script>
-<script src="users/register.controller.js"></script>
-<!-- Custom styles for this template -->
-<link href="../css/dashboard.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="views/home/home.controller.js"></script>
+    <script src="views/users/profile.controller.js"></script>
+    <script src="views/forms/forms.controller.js"></script>
+    <script src="views/users/login.controller.js"></script>
+    <script src="views/users/register.controller.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <title>Client Side Programming assignment</title>
 </head>
 <body ng-controller="MainController">
-    <div ng-include="'views/header/header.html'"></div>
-    <div ng-include="'views/sidebar/sidebar.html'"></div>
-    <div ng-view></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div ng-include="'views/header/header.view.html'"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <div ng-include="'views/sidebar/sidebar.view.html'"></div>
+            </div>
+            <div class="col-lg-10">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
