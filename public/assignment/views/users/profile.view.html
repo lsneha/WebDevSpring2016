@@ -1,81 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <!-- Custom styles for this template -->
-    <link href="../css/dashboard.css" rel="stylesheet">
-    <link href="../css/customstyle.css" rel="stylesheet">
-    <title>Profile</title>
-</head>
-<body>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-3">
-            <p class="websitename">Form Maker</p>
-        </div>
-        <div class="col-lg-9 topnavmenu" align="right">
-            <ul class="nav nav-tabs navbar-right" id="topmenu">
-                <li><a href="#">Username</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-2">
-            <ul class="nav nav-pills nav-stacked nav-sidebar leftnavmenu" id="leftmenu">
-                <li><a href="../home/home.view.html">Home</a></li>
-                <li class="active"><a href="profile.view.html">Profile</a></li>
-                <li><a href="../admin/admin.view.html">Admin</a></li>
-                <li><a href="../admin/forms.view.html">Forms</a></li>
-            </ul>
-        </div>
-        <div class="col-lg-10">
-            <div class="container-fluid">
-                <h3 class="sub-header">Profile</h3>
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="username" class="col-sm-2 control-label labels">Username:</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control placeholder" id="username" placeholder="Username">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword" class="col-sm-2 control-label labels">Password:</label>
-                        <div class="col-sm-6">
-                            <input type="password" class="form-control placeholder" id="inputPassword" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="firstName" class="col-sm-2 control-label labels">First Name:</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control placeholder" id="firstName" placeholder="First Name">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName" class="col-sm-2 control-label labels">Last Name:</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control placeholder" id="lastname" placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-sm-2 control-label labels">Email:</label>
-                        <div class="col-sm-6">
-                            <input type="email" class="form-control placeholder" id="email" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Update</button>
-                        </div>
-                    </div>
-                </form>
+    <h3 class="sub-header">Profile</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="username" class="col-sm-2 control-label labels">Username:</label>
+            <div class="col-sm-6">
+            <input type="text" class="form-control placeholder" id="username" placeholder="Username" ng-model="uname">
             </div>
         </div>
-    </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label labels">Password:</label>
+            <div class="col-sm-6">
+            <input type="password" class="form-control placeholder" id="inputPassword" placeholder="Password" ng-model="pword">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName" class="col-sm-2 control-label labels">First Name:</label>
+            <div class="col-sm-6">
+            <input type="text" class="form-control placeholder" id="firstName" placeholder="First Name" ng-model="fname">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="col-sm-2 control-label labels">Last Name:</label>
+            <div class="col-sm-6">
+            <input type="text" class="form-control placeholder" id="lastname" placeholder="Last Name" ng-model="lname">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-2 control-label labels">Email:</label>
+            <div class="col-sm-6">
+            <input type="email" class="form-control placeholder" id="email" placeholder="Email" ng-model="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" ng-click="update()">Update</button>
+            </div>
+        </div>
+    </form>
 </div>
-</body>
-</html>
