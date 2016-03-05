@@ -11,7 +11,16 @@
     {
         $rootScope.isUserLoggedIn = true;
         console.log($rootScope.isUserLoggedIn);
-        /*user lookup*/
+        $scope.login = login;
+
+        function login (user) {
+            var user = UserService.findUserByCredentials({username: user.username, password: user.password});
+            if (user) {
+                $rootScope.currentUser = user;
+                UserService.setCurrentUser(user);
+                $location.url("/profile");
+            }
+        }
     }
 
 })();

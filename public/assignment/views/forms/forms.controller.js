@@ -7,9 +7,12 @@
         .module("FormBuilderApp")
         .controller("FormController", FormController);
 
-    function FormController($scope, FormService)
+    function FormController($scope, FormService, $rootScope)
     {
+        var vm = this;
+        this.forms = FormService.forms;
         console.log($rootScope.isUserLoggedIn);
+
     }
 
 })();

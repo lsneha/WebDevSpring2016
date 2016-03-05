@@ -7,7 +7,7 @@
         .module("FormBuilderApp")
         .factory("UserService", UserService);
 
-    function UserService()
+    function UserService($rootScope)
     {
         var users = [
             {	"_id":123, "firstName":"Alice",            "lastName":"Wonderland",              "username":"alice",  "password":"alice",   "roles": ["student"]		},
@@ -28,13 +28,24 @@
 
         return service;
 
+        function setCurrentUser (user) {
+            $rootScope.currentUser = user;
+        }
+
+        function getCurrentUser () {
+            return $rootScope.currentUser;
+        }
+
+
         function findUserByCredentials(username, password, callback)
         {
-            users.forEach(function(result, index) {
-                if((result[username] === username) && (result[password] === password)) {
-                    callback(users[index]);
+            for (var u in users) {
+                if (users[u].username === username &&
+                    users[u].password === password) {
+                    return users[u];
                 }
-            });
+            }
+            return null;
         }
 
         function findAllUsers(callback)
@@ -44,16 +55,18 @@
 
         function createUser(user, callback)
         {
-            var newUser = {
-                _id: users._id,
-                firstName: users.firstName,
-                lastName: users.lastName,
-                username: users.username,
-                password: users.password,
-                roles: users.roles
+            var userNew = findUserByUsername (user.username);
+            if (userNew != null) {
+                userNew = {
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    username: user.username,
+                    password: user.password,
+                    roles: user.roles
+                }
+                users.push(newUser);
+                callback(users);
             }
-            users.push(newUser);
-            callback(users);
         }
 
         function deleteUserById(userId, callback)
