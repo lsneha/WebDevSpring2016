@@ -2,10 +2,14 @@
     <p class="websitename">Form Maker</p>
 </div>
 <div class="col-lg-9 topnavmenu" align="right">
-    <ul class="nav nav-tabs navbar-right" id="topmenu">
-        <li><a href="#/register" class="btn btn-primary">Register</a></li>
+    <ul class="nav nav-tabs navbar-right" id="topmenu" ng-hide="isUserLoggedIn">
+        <li ng-class="{'active': location.url() == '/register'}"><a href="#/register">Register</a></li>
         <li class="nav-divider"></li>
-        <li><a href="#/login">Login</a></li>
+        <li ng-class="{'active': location.url() == '/login'}"><a href="#/login">Login</a></li>
+        <li><a href="#">Username</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+    <ul class="nav nav-tabs navbar-right" id="topmenu" ng-show="isUserLoggedIn">
         <li><a href="#">Username</a></li>
         <li><a href="#">Logout</a></li>
     </ul>

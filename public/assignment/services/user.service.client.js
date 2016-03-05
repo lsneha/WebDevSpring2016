@@ -21,7 +21,9 @@
         var service = {
             findUserByCredentials: findUserByCredentials,
             findAllUsers : findAllUsers,
-            createUser : createUser
+            createUser : createUser,
+            deleteUserById: deleteUserById,
+            updateUser: updateUser
         };
 
         return service;
