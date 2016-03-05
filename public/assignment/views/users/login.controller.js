@@ -7,10 +7,9 @@
         .module("FormBuilderApp")
         .controller("LoginController", LoginController);
 
-    function LoginController($rootScope, $scope, UserService)
+    function LoginController($rootScope, $scope, UserService, $location)
     {
-        $rootScope.isUserLoggedIn = true;
-        console.log($rootScope.isUserLoggedIn);
+        $rootScope.isUserLoggedIn = false;
         $scope.login = login;
 
         function login (user) {

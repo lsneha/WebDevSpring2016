@@ -4,7 +4,7 @@
     <li><a href="#/fields">Fields</a></li>
 </ul>
 <div class="tab-content" align="left">
-    <div id="forms" class="tab-pane fade in active top-buffer">
+    <div id="formsId" class="tab-pane fade in active top-buffer">
         <table class="table table-striped table-bordered" id="mytable">
             <thead>
             <tr>
@@ -13,40 +13,39 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="form in controller.forms">
-                <td>{{form.name}}</td>
+            <tr ng-repeat="form in controller.vm.forms">
+                <td>{{form.title}}</td>
                 <td>
-                Something
+                Random Value for checking
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" name='name' placeholder='name' class="form-control" ng-model="name"/>
+                    <input type="text" name='name' placeholder='name' class="form-control" ng-model="form.title"/>
                 </td>
                 <td>
-                    <span class="glyphicon glyphicon-plus" ng-click="addForm()"></span>
-                    <span class="glyphicon glyphicon-ok" ng-click="selectForm()"></span>
+                    <button ng-click="controller.addForm(form)" class="btn btn-success">Add</button>
                 </td>
             </tr>
             <tr>
                 <td>Registration Form</td>
                 <td>
-                    <span class="glyphicon glyphicon-remove" ng-click="deleteForm()"></span>
-                    <span class="glyphicon glyphicon-pencil" ng-click="updateForm()"></span>
+                    <button ng-click="controller.deleteForm($index)" class="btn btn-danger">Delete</button>
+                    <a href="#/forms/{{$index}}" class="btn btn-primary">Edit</a>
                 </td>
             </tr>
             <tr>
                 <td>Contact List</td>
                 <td>
-                    <span class="glyphicon glyphicon-remove" ng-click="deleteForm()"></span>
-                    <span class="glyphicon glyphicon-pencil" ng-click="updateForm()"></span>
+                    <button ng-click="controller.deleteForm($index)" class="btn btn-danger">Delete</button>
+                    <a href="#/forms/{{$index}}" class="btn btn-primary">Edit</a>
                 </td>
             </tr>
             <tr>
                 <td>To Do List</td>
                 <td>
-                    <span class="glyphicon glyphicon-remove" ng-click="deleteForm()"></span>
-                    <span class="glyphicon glyphicon-pencil" ng-click="updateForm()"></span>
+                    <button ng-click="controller.deleteForm($index)" class="btn btn-danger">Delete</button>
+                    <a href="#/forms/{{$index}}" class="btn btn-primary">Edit</a>
                 </td>
             </tr>
             </tbody>

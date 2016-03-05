@@ -23,7 +23,9 @@
             findAllUsers : findAllUsers,
             createUser : createUser,
             deleteUserById: deleteUserById,
-            updateUser: updateUser
+            updateUser: updateUser,
+            setCurrentUser: setCurrentUser,
+            getCurrentUser: getCurrentUser
         };
 
         return service;

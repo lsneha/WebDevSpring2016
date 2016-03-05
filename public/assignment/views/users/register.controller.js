@@ -7,7 +7,7 @@
         .module("FormBuilderApp")
         .controller("RegisterController", RegisterController);
 
-    function RegisterController($scope, $location, UserService)
+    function RegisterController($scope, $location, UserService, $rootScope)
     {
 	    var vm = this;
 	
@@ -16,12 +16,12 @@
         console.log($rootScope.isUserLoggedIn);
 
 	    function init() {
-            UserService.findAllUsers(function(trips){
-                vm.users = users;
+            UserService.findAllUsers(function(users){
+                vm.users = UserService.users;
             });
         }
 
-        $scope.register = function register(user) {
+        function register(user) {
             console.log($location);
             $location.path('#/profile');
 		    UserService.createUser(user, function(users) {

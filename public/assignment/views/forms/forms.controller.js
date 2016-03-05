@@ -10,9 +10,27 @@
     function FormController($scope, FormService, $rootScope)
     {
         var vm = this;
-        this.forms = FormService.forms;
-        console.log($rootScope.isUserLoggedIn);
+        $rootScope.isUserLoggedIn = true;
 
+        function init() {
+            FormService.findAllFormsForUser($scope.currentUser, function(forms){
+                vm.forms = forms;
+            });
+        }
+
+        function addForm(form) {
+            FormService.createFormForUser($scope.currentUser, form, function(forms){
+                vm.forms = forms;
+            })
+        }
+
+        function deleteForm(index) {
+            FormService.deleteFormById(index, function(forms){
+                vm.forms = forms;
+            });
+        }
+
+        init();
     }
 
 })();

@@ -39,13 +39,12 @@
         function findAllFormsForUser(userId, callback)
         {
             var foundForms = [];
-            forms.forEach(function(result, index) {
-                if(result[userId] === userId) {
-                    //add to a new array
-                    foundForms.add(result[index])
+            for (var f in forms) {
+                if (forms[f].userId === userId) {
+                    foundForms.push(forms[f]);
                 }
-            });
-            return foundForms;
+            }
+            return callback(foundForms);
         }
 
         function deleteFormById(formId, callback)

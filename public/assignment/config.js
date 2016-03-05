@@ -11,7 +11,8 @@
                     templateUrl: "views/home/home.view.html"
                 })
                 .when("/home", {
-                    templateUrl: "views/home/home.view.html"
+                    templateUrl: "views/home/home.view.html",
+                    controller: "HomeController"
                 })
                 .when("/profile", {
                     templateUrl: "views/users/profile.view.html",
