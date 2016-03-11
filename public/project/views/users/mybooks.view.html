@@ -1,0 +1,85 @@
+<div class="col-lg-2">
+    <div class="row">
+        <img src="images/Avatar.PNG" alt="Avatar"/>
+        <p class="myform-group">
+            <br/>
+            <br/>
+        <h4>About me:</h4>
+        <br/>
+        <p>I am an avid book reader who has read a 100 books...</p>
+        </p>
+    </div>
+</div>
+<div class="col-lg-7">
+    <ul class="nav nav-tabs">
+        <li><a data-toggle="tab" href="#adminHm">Admin Page</a></li>
+        <li><a data-toggle="tab" href="#profile">Profile</a></li>
+        <li class="active"><a data-toggle="tab" href="#mybooks">My Books</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="mybooks" class="tab-pane fade in active">
+            <table class="table table-striped table-bordered top-buffer" id="mytable">
+                <thead>
+                <tr>
+                    <th><i class="fa fa-fw fa-sort"></i>Book</th>
+                    <th><i class="fa fa-fw fa-sort"></i>Author</th>
+                    <th><i class="fa fa-fw fa-sort"></i>Status</th>
+                    <th><i class="fa fa-fw fa-sort"></i>My Rating</th>
+                    <th><i class="fa fa-fw fa-sort"></i>Overall Rating</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Canterbury Tales</td>
+                    <td>Geoffrey Chaucer</td>
+                    <td>To read</td>
+                    <td></td>
+                    <td>
+                        <div class="star-rating">
+                            <span class="fa fa-star-o" data-rating="1"></span>
+                            <span class="fa fa-star-o" data-rating="2"></span>
+                            <span class="fa fa-star-o" data-rating="3"></span>
+                            <span class="fa fa-star-o" data-rating="4"></span>
+                            <span class="fa fa-star-o" data-rating="5"></span>
+                            <input type="hidden" name="n1" class="rating-value" value="3">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>The Adventures of Tintin</td>
+                    <td>Herge</td>
+                    <td>Read</td>
+                    <td>
+                        <div class="star-rating">
+                            <span class="fa fa-star-o" data-rating="1"></span>
+                            <span class="fa fa-star-o" data-rating="2"></span>
+                            <span class="fa fa-star-o" data-rating="3"></span>
+                            <span class="fa fa-star-o" data-rating="4"></span>
+                            <span class="fa fa-star-o" data-rating="5"></span>
+                            <input type="hidden" name="n2" class="rating-value" value="3">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="star-rating">
+                            <span class="fa fa-star-o" data-rating="1"></span>
+                            <span class="fa fa-star-o" data-rating="2"></span>
+                            <span class="fa fa-star-o" data-rating="3"></span>
+                            <span class="fa fa-star-o" data-rating="4"></span>
+                            <span class="fa fa-star-o" data-rating="5"></span>
+                            <input type="hidden" name="n3" class="rating-value" value="3">
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for books..."/>
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+        </span>
+    </div>
+</div>
