@@ -76,10 +76,56 @@
     </div>
 </div>
 <div class="col-lg-3">
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for books..."/>
-        <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Go!</button>
-        </span>
+    <div>
+        <input value="Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch" id="bookTitleTxt" class="form-control" placeholder="Some book"/>
+        <a id="searchBtn" class="btn btn-primary btn-block" onclick="searchBook()">Go!</a>
+
+        <table id="searchResults" class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>Title</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="#details">Good Omens: The Nice and Accurate Prophecies of Agnes Nutter</a></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
+<!-- will remove this in the prototype :) -->
+<script type="text/javascript">
+
+    $("td").click(function(){
+        //window.location.href = "details.view.html";
+    });
+
+    function searchBook($http) {
+        var SEARCH_URL = "https://www.goodreads.com/search.xml?key=G9L1n2xWsxGDJxXV6yiQg&q=TITLE";
+        alert("inside search");
+        var $bookTitleTxt = $("#bookTitleTxt");
+        var title = $bookTitleTxt.val();
+        var url = SEARCH_URL.replace("TITLE", title);
+
+        $.ajax({
+        url: url,
+        success: renderSearchResults
+        });
+
+        alert("Search for " + title);
+    }
+
+    function renderSearchResults(response) {
+        var $searchResults = $("#searchResults tbody");
+        /*var $tr = $("<tr>")
+                .click(fetchMovieDetails);
+
+        var $td = $("<td>")
+                .append("Good Omens")
+                .appendTo($tr);
+
+        $searchResults.append($tr);*/
+    }
+
+</script>

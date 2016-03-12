@@ -2,5 +2,8 @@
     <h1>Readers Inc.</h1>
 </div>
 <div class="col-lg-9" align="right">
-    <button type="submit" class="btn btn-default">Logout</button>
+    <ul class="nav nav-tabs navbar-right" id="topmenu" ng-show="isUserLoggedIn">
+        <li><a href="#home">Username</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
 </div>

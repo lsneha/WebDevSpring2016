@@ -20,7 +20,10 @@
                 .when("/mybooks", {
                     templateUrl: "views/users/mybooks.view.html"
                 })
-                .when("/adminHm", {
+                .when("/details", {
+                    templateUrl: "views/users/details.view.html"
+                }).
+                when("/adminHm", {
                     templateUrl: "views/users/admin.view.html"
                 })
                 .otherwise({

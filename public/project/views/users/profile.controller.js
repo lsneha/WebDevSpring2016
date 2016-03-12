@@ -10,6 +10,7 @@
     function ProfileController($scope)
     {
         $scope.isUserLoggedIn = true;
+        console.log($scope.isUserLoggedIn);
     }
 
 })();

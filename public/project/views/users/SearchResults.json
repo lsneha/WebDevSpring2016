@@ -1,0 +1,74 @@
+//https://www.goodreads.com/search.xml?key=G9L1n2xWsxGDJxXV6yiQg&q=Good%20Omens:%20The%20Nice%20and%20Accurate%20Prophecies%20of%20Agnes%20Nutter
+{
+  "GoodreadsResponse": {
+    "Request": {
+      "authentication": "true",
+      "key": "
+      G9L1n2xWsxGDJxXV6yiQg
+      ",
+      "method": "
+      search_search
+      "
+    },
+    "search": {
+      "query": "
+      Good Omens: The Nice and Accurate Prophecies of Agnes Nutter
+      ",
+      "results-start": "1",
+      "results-end": "1",
+      "total-results": "1",
+      "source": "Goodreads",
+      "query-time-seconds": "0.03",
+      "results": {
+        "work": {
+          "id": {
+            "-type": "integer",
+            "#text": "4110990"
+          },
+          "books_count": {
+            "-type": "integer",
+            "#text": "103"
+          },
+          "ratings_count": {
+            "-type": "integer",
+            "#text": "271341"
+          },
+          "text_reviews_count": {
+            "-type": "integer",
+            "#text": "11516"
+          },
+          "original_publication_year": {
+            "-type": "integer",
+            "#text": "1990"
+          },
+          "original_publication_month": {
+            "-type": "integer",
+            "-nil": "true"
+          },
+          "original_publication_day": {
+            "-type": "integer",
+            "-nil": "true"
+          },
+          "average_rating": "4.26",
+          "best_book": {
+            "-type": "Book",
+            "id": {
+              "-type": "integer",
+              "#text": "12067"
+            },
+            "title": "Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch",
+            "author": {
+              "id": {
+                "-type": "integer",
+                "#text": "1654"
+              },
+              "name": "Terry Pratchett"
+            },
+            "image_url": "https://d.gr-assets.com/books/1392528568m/12067.jpg",
+            "small_image_url": "https://d.gr-assets.com/books/1392528568s/12067.jpg"
+          }
+        }
+      }
+    }
+  }
+}
