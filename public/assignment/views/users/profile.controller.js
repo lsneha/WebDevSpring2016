@@ -7,10 +7,10 @@
         .module("FormBuilderApp")
         .controller("ProfileController", ProfileController);
 
-    function ProfileController($rootScope, $scope, $location, UserService)
+    function ProfileController($scope, $location, UserService)
     {
-        $rootScope.isUserLoggedIn = true;
-        console.log($rootScope.isUserLoggedIn);
+        $scope.isUserLoggedIn = true;
+        console.log($scope.isUserLoggedIn);
 
         var vm = this;
         //vm.createUser = UserService.createUser;

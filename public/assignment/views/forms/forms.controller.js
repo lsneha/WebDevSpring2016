@@ -7,10 +7,10 @@
         .module("FormBuilderApp")
         .controller("FormController", FormController);
 
-    function FormController($scope, FormService, $rootScope)
+    function FormController($scope, FormService)
     {
         var vm = this;
-        $rootScope.isUserLoggedIn = true;
+        $scope.isUserLoggedIn = true;
 
         function init() {
             FormService.findAllFormsForUser($scope.currentUser, function(forms){

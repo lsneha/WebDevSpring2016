@@ -7,13 +7,13 @@
         .module("FormBuilderApp")
         .controller("RegisterController", RegisterController);
 
-    function RegisterController($scope, $location, UserService, $rootScope)
+    function RegisterController($scope, $location, UserService)
     {
 	    var vm = this;
 	
         $scope.$location = $location;
-        $rootScope.isUserLoggedIn = false;
-        console.log($rootScope.isUserLoggedIn);
+        $scope.isUserLoggedIn = false;
+        console.log($scope.isUserLoggedIn);
 
 	    function init() {
             UserService.findAllUsers(function(users){

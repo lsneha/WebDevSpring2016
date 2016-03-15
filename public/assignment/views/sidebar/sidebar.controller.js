@@ -8,7 +8,7 @@
         .controller("SidebarController", SidebarController);
 
     function SidebarController($scope) {
-        console.log($rootScope.isUserLoggedIn);
+        console.log($scope.isUserLoggedIn);
 
         $scope.getClass = function (path) {
             console.log($location.path());

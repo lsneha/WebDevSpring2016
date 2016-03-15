@@ -7,14 +7,14 @@
         .module("FormBuilderApp")
         .controller("MainController", MainController);
 
-    function MainController($scope, $rootScope, $location)
+    function MainController($scope, $location)
     {
 	    var vm = this;
 	    vm.$location = $location;
-        $rootScope.$location = $location;
+        $scope.$location = $location;
         $scope.$location = $location;
         console.log($location.url());
-        console.log($rootScope.isUserLoggedIn);
+        console.log($scope.isUserLoggedIn);
     }
 
 })();
