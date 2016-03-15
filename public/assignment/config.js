@@ -20,14 +20,16 @@
                     controller: "ProfileController"
                 })
                 .when("/admin", {
-                    templateUrl: "views/admin/admin.view.html"
+                    templateUrl: "views/admin/admin.view.html",
+                    controller: "ProfileController"
                 })
                 .when("/forms", {
                     templateUrl: "views/forms/forms.view.html",
                     controller : "FormController"
                 })
                 .when("/fields", {
-                    templateUrl: "views/forms/fields.view.html"
+                    templateUrl: "views/forms/fields.view.html",
+                    controller : "FieldsController"
                 })
                 .when("/login", {
                     templateUrl: "views/users/login.view.html",
