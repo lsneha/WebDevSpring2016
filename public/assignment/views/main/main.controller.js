@@ -12,9 +12,6 @@
 	    var vm = this;
 	    vm.$location = $location;
         $scope.$location = $location;
-        $scope.$location = $location;
-        console.log($location.url());
-        console.log($scope.isUserLoggedIn);
     }
 
 })();

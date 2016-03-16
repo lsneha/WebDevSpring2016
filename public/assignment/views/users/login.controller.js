@@ -7,7 +7,7 @@
         .module("FormBuilderApp")
         .controller("LoginController", LoginController);
 
-    function LoginController($scope, UserService, $location)
+    function LoginController($rootScope, $scope, UserService, $location)
     {
         $scope.isUserLoggedIn = false;
         $scope.login = login;
@@ -15,7 +15,7 @@
         function login (user) {
             var user = UserService.findUserByCredentials({username: user.username, password: user.password});
             if (user) {
-                $scope.currentUser = user;
+                $rootScope.currentUser = user;
                 UserService.setCurrentUser(user);
                 $location.url("/profile");
             }

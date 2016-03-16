@@ -10,10 +10,10 @@
     function RegisterController($scope, $location, UserService)
     {
 	    var vm = this;
+        vm.users = [];
 	
         $scope.$location = $location;
         $scope.isUserLoggedIn = false;
-        console.log($scope.isUserLoggedIn);
 
 	    function init() {
             UserService.findAllUsers(function(users){
@@ -22,7 +22,6 @@
         }
 
         function register(user) {
-            console.log($location);
             $location.path('#/profile');
 		    UserService.createUser(user, function(users) {
 			    vm.users = users;

@@ -7,7 +7,7 @@
         .module("FormBuilderApp")
         .factory("UserService", UserService);
 
-    function UserService($rootScope)
+    function UserService($scope)
     {
         var users = [
             {	"_id":123, "firstName":"Alice",            "lastName":"Wonderland",              "username":"alice",  "password":"alice",   "roles": ["student"]		},
@@ -31,11 +31,11 @@
         return service;
 
         function setCurrentUser (user) {
-            $rootScope.currentUser = user;
+            $scope.currentUser = user;
         }
 
         function getCurrentUser () {
-            return $rootScope.currentUser;
+            return $scope.currentUser;
         }
 
 

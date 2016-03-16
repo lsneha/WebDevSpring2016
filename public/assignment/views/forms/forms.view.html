@@ -13,7 +13,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="form in controller.vm.forms">
+            <tr ng-repeat="form in controller.forms">
                 <td>{{form.title}}</td>
                 <td>
                 Random Value for checking
@@ -21,7 +21,7 @@
             </tr>
             <tr>
                 <td>
-                    <input type="text" name='name' placeholder='name' class="form-control" ng-model="form.title"/>
+                    <input type="text" name='name' placeholder='name' class="form-control"/>
                 </td>
                 <td>
                     <button ng-click="controller.addForm(form)" class="btn btn-success">Add</button>

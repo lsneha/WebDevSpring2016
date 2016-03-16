@@ -10,7 +10,6 @@
     function HomeController($scope, UserService)
     {
         $scope.isUserLoggedIn = false;
-        console.log($rootScope.isUserLoggedIn);
         /*user lookup*/
     }
 

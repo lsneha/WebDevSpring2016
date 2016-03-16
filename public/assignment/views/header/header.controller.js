@@ -10,6 +10,5 @@
     function HeaderController($scope, $location) {
         $scope.$location = $location;
         $scope.isUserLoggedIn = false;
-        console.log($rootScope.isUserLoggedIn);
     }
 })();
