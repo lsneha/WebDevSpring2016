@@ -6,7 +6,13 @@
         .module("MovieApp")
         .controller("SearchController", searchController);
 
-    function searchController($scope, $http) {
+    function searchController(MovieService, $scope, $http, $routeParams, $location) {
+
+        var title = $routeParams.title;
+
+        if(title) {
+            search(title);
+        }
 
         //event handler declarations
         $scope.search = search;
@@ -14,8 +20,10 @@
         //event handler implementation
         function search(title){
             console.log(title);
-            $http.get("http://www.omdbapi.com/?s="+title)
-                .success(render);
+            $location.url("/search/"+title);
+            /*$http.get("http://www.omdbapi.com/?s="+title)
+                .success(render);*/
+            MovieService.findMoviesByTitle(title, render);
         }
 
         function render(response) {

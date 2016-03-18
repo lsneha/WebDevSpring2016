@@ -15,6 +15,14 @@
                 templateUrl: "search/search.view.html",
                 controller: "SearchController"
             })
+            .when("/search/:title", {
+                templateUrl: "search/search.view.html",
+                controller: "SearchController"
+            })
+            .when("/details/:imdbID", {
+                templateUrl: "details/details.view.html",
+                controller: "DetailsController"
+            })
             .otherwise({
                 redirectTo: "/home"
             })
