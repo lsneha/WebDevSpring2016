@@ -1,26 +1,58 @@
 /**
  * Created by sneha_000 on 3/14/2016.
  */
+var mock = require("./user.mock.json");
+
 module.exports = function(app, userModel) {
-    app.post("/api/assignment/register", register);
-    app.post("/api/assignment/user", findUserByCredentials);
-    app.get("/api/assignment/alluser", findAllUsers);
+
+    "use strict";
+
+    app.post("/api/assignment/user", register);
+    app.get("/api/assignment/user", findAllUsers);
+    app.get("/api/assignment/user/:id", findUserById);
+    app.get("/api/assignment/user?username=username", findUserByUsername);
+    app.get("/api/assignment/user?username=alice&password=wonderland", findUserByCredentials);
+    app.put("/api/assignment/user/:id", updateUser);
+    app.delete("/api/assignment/user/:id", deleteUser);
 
     function register(request, response) {
         var user = request.body;
         user = userModel.createUser(user);
         request.session.currentUser = user;
-        request.json(user);
+        response.json(user);
     }
 
     function findUserByCredentials(request, response) {
-        console.log(request.body);
         var credentials = request.body;
+        var users = userModel.findUserByCredentials(credentials);
         response.send(200);
     }
 
     function findAllUsers(request, response) {
-        var users = userModel.findAllUsers;
+        var users = userModel.findAllUsers();
+        response.json(users);
+    }
+
+    function findUserById(request, response) {
+        var id = request.body;
+        var user = userModel.findUserById(id);
+        response.json(user);
+    }
+
+    function findUserByUsername(request, response) {
+        var username = request.body;
+        var user = userModel.findUserByUsername(username);
+        response.json(user);
+    }
+
+    function updateUser(request, response) {
+        var user = userModel.updateUser(request.body.userId, request.body.user);
+        response.json(user);
+    }
+
+    function deleteUser(request, response) {
+        var userId = request.body.userId;
+        var users = userModel.deleteUser(userId);
         response.json(users);
     }
 

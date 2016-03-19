@@ -5,6 +5,8 @@ var mock = require("./user.mock.json");
 
 module.exports = function(app) {
 
+    "use strict";
+
     var userApi = {
         findUserByCredentials: findUserByCredentials,
         findAllUsers : findAllUsers,
@@ -59,11 +61,11 @@ module.exports = function(app) {
         return model.Users[u];
     }
 
-    function updateUser(user, update)
+    function updateUser(userId, user)
     {
         for(var u in mock) {
-            if(mock[u]._id === user._id){
-                mock[u] = update;
+            if(mock[u]._id === userId){
+                mock[u] = user;
                 return mock[u];
             }
         }

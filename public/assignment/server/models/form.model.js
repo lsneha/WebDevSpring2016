@@ -5,6 +5,8 @@ var mock = require("./form.mock.json");
 
 module.exports = function(app) {
 
+    "use strict";
+
     var formApi = {
         findFormByTitle: findFormByTitle,
         findAllForms : findAllForms,
@@ -15,8 +17,6 @@ module.exports = function(app) {
         getCurrentForm: getCurrentForm,
         findFormById: findFormById
     };
-
-    return formApi;
 
     function setCurrentForm(form) {
         $scope.currentForm = form;
@@ -37,7 +37,7 @@ module.exports = function(app) {
         return form;
     }
 
-    function deleteForm(form)
+    function deleteForm(formId)
     {
         for(var f in mock) {
             if(formId === mock[f]._id) {
@@ -45,7 +45,7 @@ module.exports = function(app) {
                 model.Forms.splice(index, 1);
             }
         }
-        return model.Users[u];
+        return model.Forms[f];
     }
 
     function updateForm(form, update)
@@ -76,5 +76,7 @@ module.exports = function(app) {
         }
         return null;
     }
+
+    return formApi;
 
 }
