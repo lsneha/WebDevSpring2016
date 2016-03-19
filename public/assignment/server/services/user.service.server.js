@@ -15,8 +15,12 @@ module.exports = function(app, userModel) {
     app.put("/api/assignment/user/:id", updateUser);
     app.delete("/api/assignment/user/:id", deleteUser);
 
+    app.post("/api/assignment/user/login", login);
+    app.get("/api/assignment/user/loggedin", loggedin);
+    app.post("/api/assignment/user/logout", logout);
+
     function register(request, response) {
-        var user = request.body;
+        var user = request.body.user;
         user = userModel.createUser(user);
         request.session.currentUser = user;
         response.json(user);
@@ -54,6 +58,22 @@ module.exports = function(app, userModel) {
         var userId = request.body.userId;
         var users = userModel.deleteUser(userId);
         response.json(users);
+    }
+
+    function login(request, response) {
+        var credentials = request.body;
+        var user = userModel.findUserByCredentials(credentials);
+        request.session.currentUser = user;
+        response.json(user);
+    }
+
+    function loggedin(request, response) {
+        response.json(request.session.currentUser);
+    }
+
+    function logout(request, response) {
+        request.session.destroy();
+        response.send(200);
     }
 
 }

@@ -18,14 +18,21 @@
             var newForm = {
                 title: form.title
             }
-            FormService.createFormForUser(user._id, newForm);
-            $scope.forms = FormService.findAllFormsForUser(user._id);
-            $scope.form = null;
+            FormService
+                .createFormForUser(user._id, newForm)
+                .then(function(response){
+                    $scope.forms = FormService.findAllFormsForUser(user._id);
+                    $scope.form = null;
+                });
         }
 
+        //change
         function deleteForm(index) {
-            FormService.deleteFormById($scope.forms[index]._id);
-            $scope.forms = FormService.findAllFormsForUser(user._id);
+            FormService
+                .findAllFormsForUser($scope.forms[index]._id)
+                .then(function(response){
+                    $scope.forms = FormService.deleteForm(index);
+                });
         }
 
         function selectForm(index){
