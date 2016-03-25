@@ -1,0 +1,23 @@
+<div>
+    <input value="Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch" id="bookTitleTxt" class="form-control" placeholder="Some book" ng-model="bookname"/>
+    <a id="searchBtn" class="btn btn-primary btn-block" ng-click="search(bookname)">Go!</a>
+
+    <table class="table tabled-striped">
+        <thead>
+            <tr>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="book in data.Search">
+                <td><img ng-src="{{book.small_image_url}}" height="75px"/></td> <!--check the keyword -->
+                <td>
+                    <a href="#/details/{{book.title}}">{{book.title}}</a>
+                </td>
+                <td>{{book.average_rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

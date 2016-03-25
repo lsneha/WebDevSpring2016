@@ -1,5 +1,5 @@
 /**
- * Created by sneha_000 on 2/17/2016.
+ * Created by sneha_000 on 2/17/2016. #ProjectTrafficCop :)
  */
 (function(){
     "use strict";
@@ -22,9 +22,13 @@
                 })
                 .when("/details", {
                     templateUrl: "views/users/details.view.html"
-                }).
-                when("/adminHm", {
+                })
+                .when("/adminHm", {
                     templateUrl: "views/users/admin.view.html"
+                })
+                .when("/search", {
+                    templateUrl: "views/search/search.view.html",
+                    controller: "SearchController"
                 })
                 .otherwise({
                     redirectTo: "/home"
