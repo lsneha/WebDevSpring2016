@@ -20,13 +20,18 @@
                 .when("/mybooks", {
                     templateUrl: "views/users/mybooks.view.html"
                 })
-                .when("/details", {
-                    templateUrl: "views/users/details.view.html"
+                .when("/details/:someID", {
+                    templateUrl: "views/details/details.view.html",
+                    controller: "DetailsController"
                 })
                 .when("/adminHm", {
                     templateUrl: "views/users/admin.view.html"
                 })
                 .when("/search", {
+                    templateUrl: "views/search/search.view.html",
+                    controller: "SearchController"
+                })
+                .when("/search/:title", {
                     templateUrl: "views/search/search.view.html",
                     controller: "SearchController"
                 })
