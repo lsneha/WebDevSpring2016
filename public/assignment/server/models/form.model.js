@@ -142,7 +142,7 @@ module.exports = function(app) {
         return null;*/
         var deferred = q.defer();
 
-        FormModel.findFormById(formId, function(err, form){
+        FormModel.findFormById(formId, function(err, form) {
             if(err) {
                 deferred.reject(err);
             } else {
