@@ -1,11 +1,15 @@
 /**
  * Created by sneha_000 on 3/14/2016.
  */
-var mock = require("./form.mock.json");
+//var mock = require("./form.mock.json");
+var q = require("q");
 
 module.exports = function(app) {
 
     "use strict";
+
+    var FormSchema = require("./form.schema.server.js")(mongoose);
+    var FormModel = mongoose.model("FormModel", FormSchema);
 
     var formApi = {
         findFormByTitle: findFormByTitle,

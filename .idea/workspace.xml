@@ -2,10 +2,277 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e36a0470-11c0-4cc0-aba6-a745e8235c03" name="Default" comment="checking WS commit">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/HTML/rr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/images/Avatar.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/images/BookTalk.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/images/book.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/images/quote.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/services/field.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/services/forms.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/services/user.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/admin/admin.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/admin/admin.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/forms/fields.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/forms/fields.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/forms/forms.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/forms/forms.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/header/header.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/header/header.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/home/home.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/home/home.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/main/main.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/sidebar/sidebar.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/sidebar/sidebar.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/login.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/login.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/profile.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/profile.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/register.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/client/views/users/register.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/css/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/css/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/js/customjs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/js/jswithAPIs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/app.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/models/field.schema.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/models/form.mock.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/models/form.model.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/models/form.schema.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/models/user.mock.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/models/user.model.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/services/field.service.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/services/form.server.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/server/services/user.service.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/services/forms.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/services/user.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/admin/admin.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/admin/admin.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/forms/field.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/forms/field.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/forms/fields.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/forms/fields.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/forms/forms.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/forms/forms.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/header/header.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/header/header.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/home/home.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/home/home.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/main/main.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/sidebar/sidebar.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/sidebar/sidebar.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/users/login.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/users/login.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/users/profile.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/users/profile.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/users/register.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/views/users/register.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/HTML/dynamic/a.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/HTML/dynamic/b.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/HTML/myfirst.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/services/movie.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/services/omdb.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/services/user.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/details/details.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/details/details.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/header/header.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/header/navigation.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/home/home.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/login/login.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/login/login.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/profile/profile.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/profile/profile.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/register/register.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/register/register.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/search/search.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/views/search/search.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/server/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/server/models/movie.model.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/server/models/user.mock.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/server/models/user.model.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/server/services/movie.service.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/server/services/user.service.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/courses2/courses.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/courses2/courses.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/courses2/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/courses2/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/dir/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/dir/helloDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/dir/helloDirectiveTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/dir/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/dir/mainController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/directives/intro/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/directives/intro/controller1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/directives/intro/controller2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/directives/intro/helloDirective.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/directives/intro/helloDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/directives/intro/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/delete/client/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/delete/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/delete/client/services/movie.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/delete/server/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/get/client/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/get/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/get/client/services/movie.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/get/server/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/post/client/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/post/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/post/client/services/movie.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/post/server/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/structure/client/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/structure/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/structure/client/services/movie.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/structure/server/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/structure/server/models/movie.model.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/structure/server/services/movie.service.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/update/client/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/update/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/update/client/services/movie.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/express/omdb/update/server/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/hello/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/hello/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/movieAdmin/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/movieAdmin/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/movies/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/movies/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngModel/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngModel/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngclick/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngclick/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngrepeat/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngrepeat/example1.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngrepeat/example2.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngrepeat/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroute/admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroute/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroute/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroute/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroute/profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/admin/admin.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/admin/admin.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/home/home.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/home/home.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/profile/profile.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutecontrollers/profile/profile.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutelocation/admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutelocation/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutelocation/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutelocation/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/ngroutelocation/profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/MainController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/features/home/home.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/features/login/login.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/features/trips/TripEditControllers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/features/trips/TripsControllers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/features/trips/trips.edit.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/features/trips/trips.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing0/services/TripService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing1/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing1/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing1/courses/courses.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing1/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/navController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/profile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/userController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/userService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routing2orchangingtabs/users.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/details/details.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/details/details.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/home.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/navigation.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/search/search.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/search/search.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/routingdemos/services/movie.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/CourseController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/CourseEditController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/CourseService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/MainController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/courseEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/courses.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/slick/slick.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickorcourses1/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickorcourses1/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickorcourses1/courseList/courseList.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickorcourses1/courseList/courseList.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickorcourses1/courseOverview/courseOverview.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickorcourses1/courseOverview/courseOverview.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickorcourses1/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickwithsidebarorcourses2/courses.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickwithsidebarorcourses2/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickwithsidebarorcourses2/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/angularJS/tableclickwithsidebarorcourses2/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/js/document.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/js/intro.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/js/jswithNamespace.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/js/sampleappjsjQAjax/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/js/sampleappjsjQAjax/sampleapp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/js/sampleappjsjQAjax/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/navcontroller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/profile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/userController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/userService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dabbling/routing2sample/users.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/css/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/css/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/services/book.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/services/user.service.client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/details/bookdetails.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/details/details.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/details/details.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/header/header.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/home/home.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/search/SearchResults.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/search/search.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/search/search.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/services/book.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/users/admin.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/users/mybooks.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/users/profile.controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/users/profile.view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/client/views/users/queryresults.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/server/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/server/models/book.model.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/server/models/user.mock.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/server/models/user.model.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/server/services/book.service.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/server/services/user.service.server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
     </list>
     <ignored path="webdevelopment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +297,7 @@
         <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="28" />
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -46,11 +313,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.schema.server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form.schema.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assignment/server/models/form.schema.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7446808">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.model.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.model.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/form.model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4054054">
+              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -73,7 +360,7 @@
         <option value="Sneha" />
       </list>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/public" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -85,8 +372,6 @@
         <option value="$PROJECT_DIR$/public/assignment/client/services/user.service.client.js" />
         <option value="$PROJECT_DIR$/public/assignment/client/services/forms.service.client.js" />
         <option value="$PROJECT_DIR$/public/assignment/client/services/field.service.client.js" />
-        <option value="$PROJECT_DIR$/public/assignment/server/models/user.model.js" />
-        <option value="$PROJECT_DIR$/public/assignment/server/models/form.model.js" />
         <option value="$PROJECT_DIR$/public/assignment/server/services/form.server.service.js" />
         <option value="$PROJECT_DIR$/public/assignment/server/services/field.service.server.js" />
         <option value="$PROJECT_DIR$/public/assignment/views/forms/field.view.html" />
@@ -129,6 +414,8 @@
         <option value="$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js" />
         <option value="$PROJECT_DIR$/public/assignment/server/models/field.schema.server.js" />
         <option value="$PROJECT_DIR$/public/assignment/server/models/form.schema.server.js" />
+        <option value="$PROJECT_DIR$/public/assignment/server/models/user.model.js" />
+        <option value="$PROJECT_DIR$/public/assignment/server/models/form.model.js" />
       </list>
     </option>
   </component>
@@ -143,7 +430,7 @@
     <option name="width" value="1942" />
     <option name="height" value="1042" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -407,24 +694,43 @@
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23741388" sideWeight="0.49530515" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23741388" sideWeight="0.49530515" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278496" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29460093" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29494712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5046948" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39952996" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39952996" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278496" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29494712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23741388" sideWeight="0.49530515" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5046948" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39952996" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -449,20 +755,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/details/details.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3846154">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77874184">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serverOpenshift.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6">
@@ -777,14 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment/server/models/field.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -795,8 +1079,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment/server/models/form.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7446808">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/form.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4054054">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding />
         </state>
       </provider>
