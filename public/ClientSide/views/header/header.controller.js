@@ -7,8 +7,8 @@
         .module("FormBuilderApp")
         .controller("HeaderController", HeaderController);
 
-    function HeaderController($scope, $location) {
-        $scope.$location = $location;
-        $scope.isUserLoggedIn = false;
+    function HeaderController($rootScope, $location) {
+        $rootScope.$location = $location;
+        $rootScope.isUserLoggedIn = false;
     }
 })();

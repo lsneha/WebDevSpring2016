@@ -1,0 +1,36 @@
+.top-buffer {
+    margin: 30px;
+}
+
+body {
+    margin: 20px;
+    padding:20px;
+}
+
+.websitename {
+    font-size:32px;
+    text-align: left;
+    font-family: Cambria;
+    color: #006699;
+    text-decoration: underline;
+}
+
+.topnavmenu {
+    font-size:18px
+}
+
+.labels {
+    font-weight: bold;
+    text-align: left !important;
+}
+
+.para {
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 5px;
+    font-size: medium;
+}
+
+.leftnavmenu {
+    font-size: 20px;
+}

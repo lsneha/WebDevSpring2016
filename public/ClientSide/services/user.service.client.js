@@ -1,12 +1,14 @@
 (function()
 {
+    "use strict";
     angular
         .module("FormBuilderApp")
         .factory("UserService", UserService);
 
     function UserService($scope)
     {
-        var users = [
+        var users = [];
+        users = [
             {	"_id":123, "firstName":"Alice",            "lastName":"Wonderland",              "username":"alice",  "password":"alice",   "roles": ["student"]		},
             {	"_id":234, "firstName":"Bob",              "lastName":"Hope",
                 "username":"bob",    "password":"bob",     "roles": ["admin"]		},
@@ -41,9 +43,10 @@
             for (var u in users) {
                 if (users[u].username === username &&
                     users[u].password === password) {
-                    return users[u];
+                    return callback(users[u]);
                 }
             }
+            //callback with null??
             return null;
         }
 
@@ -57,6 +60,7 @@
             var userNew = findUserByUsername (user.username);
             if (userNew != null) {
                 userNew = {
+                    _id: (new Date).getTime(),
                     firstName: user.firstName,
                     lastName: user.lastName,
                     username: user.username,
@@ -66,6 +70,7 @@
                 users.push(newUser);
                 callback(users);
             }
+            //otherwise what?
         }
 
         function deleteUserById(userId, callback)
@@ -88,7 +93,7 @@
             users.forEach(function(result, index) {
                 if(result[_id] === userId) {
                     users[index] = {
-                        _id: user._id,
+                        _id: user._id, //or is it userId, they're the same?
                         firstName: user.firstName,
                         lastName: user.lastName,
                         username: user.username,

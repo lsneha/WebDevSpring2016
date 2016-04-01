@@ -27,10 +27,10 @@
                     templateUrl: "views/forms/forms.view.html",
                     controller : "FormController"
                 })
-                /*.when("/fields", {
+                .when("/fields", {
                     templateUrl: "views/forms/fields.view.html",
                     controller : "FieldsController"
-                })*/
+                })
                 .when("/login", {
                     templateUrl: "views/users/login.view.html",
                     controller: "LoginController"
@@ -39,10 +39,10 @@
                     templateUrl: "views/users/register.view.html",
                     controller: "RegisterController"
                 })
-                /*.when("/form/:formId/fields", {
+                .when("/form/:formId/fields", {
                     templateUrl: "views/forms/field.view.html",
                     controller: "FieldController"
-                })*/
+                })
                 .otherwise({
                     redirectTo: "/home"
                 });

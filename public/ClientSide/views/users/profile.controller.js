@@ -9,6 +9,9 @@
 
     function ProfileController($rootScope, $scope, $location, UserService)
     {
+        //is init() not required?
+        //why do we use this variable at all?
+
         $scope.isUserLoggedIn = true;
 
         var vm = this;

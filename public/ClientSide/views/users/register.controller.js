@@ -1,19 +1,16 @@
-/**
- * Created by sneha_000 on 2/15/2016.
- */
 (function(){
     "use strict";
     angular
         .module("FormBuilderApp")
         .controller("RegisterController", RegisterController);
 
-    function RegisterController($scope, $location, UserService)
+    function RegisterController($scope, $rootScope, $location, UserService)
     {
 	    var vm = this;
         vm.users = [];
-	
+
         $scope.$location = $location;
-        $scope.isUserLoggedIn = false;
+        $rootScope.isUserLoggedIn = false;
 
 	    function init() {
             UserService.findAllUsers(function(users){
@@ -21,14 +18,16 @@
             });
         }
 
+        //add the created user to the $rootScope.currentUser - check syntax
         function register(user) {
-            $location.path('#/profile');
+            $location.path('#/profile');    //is this right?
 		    UserService.createUser(user, function(users) {
 			    vm.users = users;
-		}) 
-	}
+		    })
+	    }
 
-	init();
+	    init();
+
     }
 
 })();

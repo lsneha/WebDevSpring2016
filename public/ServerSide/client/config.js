@@ -1,5 +1,5 @@
 /**
- * Created by sneha_000 on 2/17/2016.
+ * Created by sneha_000 on 3/14/2016.
  */
 (function(){
     "use strict";
@@ -27,22 +27,19 @@
                     templateUrl: "views/forms/forms.view.html",
                     controller : "FormController"
                 })
-                /*.when("/fields", {
+                .when("/fields", {
                     templateUrl: "views/forms/fields.view.html",
                     controller : "FieldsController"
-                })*/
+                })
                 .when("/login", {
                     templateUrl: "views/users/login.view.html",
                     controller: "LoginController"
                 })
                 .when("/register", {
                     templateUrl: "views/users/register.view.html",
-                    controller: "RegisterController"
+                    controller: "RegisterController",
+                    controllerAs: "rc"
                 })
-                /*.when("/form/:formId/fields", {
-                    templateUrl: "views/forms/field.view.html",
-                    controller: "FieldController"
-                })*/
                 .otherwise({
                     redirectTo: "/home"
                 });
