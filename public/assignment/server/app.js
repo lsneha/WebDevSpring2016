@@ -1,6 +1,3 @@
-/**
- * Created by sneha_000 on 3/14/2016.
- */
 module.exports(app)
 {
     var userModel    = require("./models/user.model.js")();

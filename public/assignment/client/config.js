@@ -1,6 +1,3 @@
-/**
- * Created by sneha_000 on 3/14/2016.
- */
 (function(){
     "use strict";
     angular
@@ -37,8 +34,11 @@
                 })
                 .when("/register", {
                     templateUrl: "views/users/register.view.html",
-                    controller: "RegisterController",
-                    controllerAs: "rc"
+                    controller: "RegisterController"
+                })
+                .when("/form/:formId/fields", {
+                    templateUrl: "views/forms/field.view.html",
+                    controller: "FieldController"
                 })
                 .otherwise({
                     redirectTo: "/home"

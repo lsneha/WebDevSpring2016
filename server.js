@@ -16,7 +16,8 @@ app.use(multer());
 //app.use(session({secret:"process.env.PASSPORT_SECRET"}));
 app.use(cookieParser());
 
-mongoose.connect("mongodb://localhost:27017")
+var connectionString = 'mongodb://127.0.0.1:27017/';
+var db = mongoose.connect(connectionString);
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
@@ -30,6 +31,7 @@ require("./public/project/server/app")(app);
 var fieldService = require("./public/assignment/server/services/field.service.server");
 var userService = require("./public/assignment/server/services/user.service.server");
 var formService = require("./public/assignment/server/services/form.server.service");
+require("./public/assignment/server/app.js")(app, db, mongoose);
 
 app.get('/someurl', function(req, res){
     console.log("Inside server js");
