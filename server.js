@@ -26,12 +26,13 @@ app.get('/hello', function(req, res) {
     res.send('hello world');
 });
 
-require("./public/project/server/app")(app);
+//require("./public/project/server/app")(app);
 //require("./public/assignment/server/app")(app);
 var fieldService = require("./public/assignment/server/services/field.service.server");
 var userService = require("./public/assignment/server/services/user.service.server");
 var formService = require("./public/assignment/server/services/form.server.service");
-require("./public/assignment/server/app.js")(app, db, mongoose);
+
+//require("./public/assignment/server/app.js")(app, db, mongoose);
 
 app.get('/someurl', function(req, res){
     console.log("Inside server js");
