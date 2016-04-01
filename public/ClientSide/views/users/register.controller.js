@@ -11,6 +11,7 @@
 
         $scope.$location = $location;
         $rootScope.isUserLoggedIn = false;
+        console.log($rootScope.isUserLoggedIn);
 
 	    function init() {
             UserService.findAllUsers(function(users){

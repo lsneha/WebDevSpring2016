@@ -9,6 +9,6 @@
 
     function HeaderController($rootScope, $location) {
         $rootScope.$location = $location;
-        $rootScope.isUserLoggedIn = false;
+        //$rootScope.isUserLoggedIn = false;
     }
 })();

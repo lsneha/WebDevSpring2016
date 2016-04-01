@@ -1,13 +1,10 @@
-/**
- * Created by sneha_000 on 2/15/2016.
- */
 (function(){
     "use strict";
     angular
         .module("FormBuilderApp")
         .controller("FormController", FormController);
 
-    function FormController($scope, FormService)
+    function FormController($rootScope, FormService, $scope)
     {
         var vm = this;
         vm.forms = [
@@ -16,7 +13,8 @@
             {"_id": "020", "title": "CDs",      "userId": 234}
         ];
         console.log("first" + vm.forms);
-        $scope.isUserLoggedIn = true;
+        $rootScope.isUserLoggedIn = true;
+        console.log($rootScope.isUserLoggedIn);
 
         function init() {
             FormService.findAllFormsForUser($scope.currentUser, function(forms){

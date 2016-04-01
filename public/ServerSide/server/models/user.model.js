@@ -1,10 +1,6 @@
-/**
- * Created by sneha_000 on 3/14/2016.
- */
-//var mock = require("./user.mock.json");
 var q = require("q");
 
-module.exports = function(db, mongoose) {
+module.exports = function(app, db, mongoose) {
 
     "use strict";
 
@@ -17,30 +13,13 @@ module.exports = function(db, mongoose) {
         createUser : createUser,
         deleteUser: deleteUser,
         updateUser: updateUser,
-        setCurrentUser: setCurrentUser,
-        getCurrentUser: getCurrentUser,
         findUserByUsername: findUserByUsername,
         findUserById: findUserById
     };
 
     return userApi;
 
-    function setCurrentUser (user) {
-        $scope.currentUser = user;
-    }
-
-    function getCurrentUser () {
-        return $scope.currentUser;
-    }
-
     function findUserByCredentials(credentials) {
-        /*for (var u in mock) {
-            if (mock[u].username === credentials.username &&
-                mock[u].password === credentials.password) {
-                return mock[u];
-            }
-        }
-        return null;*/
         var deferred = q.defer();
 
         UserModel.findUserByCredentials(credentials, function(err, user){
@@ -55,7 +34,6 @@ module.exports = function(db, mongoose) {
     }
 
     function findAllUsers() {
-        /*return mock;*/
         var deferred = q.defer();
 
         UserModel.findAllUsers(function(err, users){
@@ -69,11 +47,7 @@ module.exports = function(db, mongoose) {
         return deferred.promise;
     }
 
-    function createUser(user)
-    {
-        /*user._id = "ID_"+(new Date()).getTime();
-        mock.push(user);
-        return user;*/
+    function createUser(user) {
         var deferred = q.defer();
         console.log("Create a user");
 
@@ -90,15 +64,7 @@ module.exports = function(db, mongoose) {
         return deferred.promise;
     }
 
-    function deleteUser(userId)
-    {
-        /*for(var u in mock) {
-            if(userId === mock[u]._id) {
-                var index = model.Users.indexOf(mock[u]);
-                model.Users.splice(index, 1);
-            }
-        }
-        return model.Users[u];*/
+    function deleteUser(userId) {
         var deferred = q.defer();
 
         UserModel.deleteUserById(userId, function(err, status) {
@@ -112,15 +78,7 @@ module.exports = function(db, mongoose) {
         return deferred.promise;
     }
 
-    function updateUser(userId, user)
-    {
-        /*for(var u in mock) {
-            if(mock[u]._id === userId){
-                mock[u] = user;
-                return mock[u];
-            }
-        }
-        return null;*/
+    function updateUser(userId, user) {
         var deferred = q.defer();
 
         user.delete("userId");
@@ -137,12 +95,7 @@ module.exports = function(db, mongoose) {
     }
 
     function findUserByUsername(username) {
-        /*for (var u in mock) {
-            if (mock[u].username) {
-                return mock[u];
-            }
-        }
-        return null;*/
+
         var deferred = q.defer();
 
         UserModel.findUserByUsername(username, function(err, user){
@@ -157,12 +110,7 @@ module.exports = function(db, mongoose) {
     }
 
     function findUserById(userId) {
-        /*for (var u in mock) {
-            if (mock[u]._id === userId) {
-                return mock[u];
-            }
-        }
-        return null;*/
+
         var deferred = q.defer();
 
         UserModel.findUserById(userId, function(err, user){

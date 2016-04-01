@@ -7,10 +7,11 @@
         .module("FormBuilderApp")
         .controller("HomeController", HomeController);
 
-    function HomeController($scope, UserService)
+    function HomeController($rootScope)
     {
-        $scope.isUserLoggedIn = false;
-        /*user lookup*/
+        $rootScope.isUserLoggedIn = false;
+        console.log($rootScope.isUserLoggedIn);
+            /*user lookup*/
     }
 
 })();

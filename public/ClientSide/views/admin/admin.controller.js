@@ -7,9 +7,10 @@
         .module("FormBuilderApp")
         .controller("AdminController", AdminController);
 
-    function AdminController($scope)
+    function AdminController($rootScope)
     {
-        $scope.isUserLoggedIn = true;
+        $rootScope.isUserLoggedIn = true;
+        console.log($rootScope.isUserLoggedIn);
     }
 
 })();

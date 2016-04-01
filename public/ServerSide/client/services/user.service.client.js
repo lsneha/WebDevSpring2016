@@ -22,10 +22,12 @@
 
         return userService;
 
+        //??
         function setCurrentUser(user) {
             $scope.currentUser = user;
         }
 
+        //??
         function getCurrentUser() {
             return $http.get("/figureitout");
         }
@@ -45,7 +47,7 @@
         }
 
         function findUserByUsername(username) {
-            return $http.get("/api/assignment/user?username=username", username);
+            return $http.get("/api/assignment/user?username="+username);
         }
 
         function createUser(user)

@@ -40,6 +40,10 @@
                     controller: "RegisterController",
                     controllerAs: "rc"
                 })
+                .when("/form/:formId/fields", {
+                    templateUrl: "views/forms/fields.view.html",
+                    controller: "FieldController"
+                })
                 .otherwise({
                     redirectTo: "/home"
                 });

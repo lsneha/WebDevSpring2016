@@ -1,7 +1,3 @@
-/**
- * Created by sneha_000 on 3/14/2016.
- */
-//var mock = require("./form.mock.json");
 var q = require("q");
 
 module.exports = function(app) {
@@ -17,20 +13,10 @@ module.exports = function(app) {
         createForm : createForm,
         deleteForm: deleteForm,
         updateForm: updateForm,
-        setCurrentForm: setCurrentForm,
-        getCurrentForm: getCurrentForm,
         findFormById: findFormById
     };
 
     return formApi;
-
-    function setCurrentForm(form) {
-        $scope.currentForm = form;
-    }
-
-    function getCurrentForm() {
-        return $scope.currentForm;
-    }
 
     function findAllForms() {
         var deferred = q.defer();

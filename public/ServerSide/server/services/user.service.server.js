@@ -15,6 +15,7 @@ module.exports = function(app, userModel) {
     app.put("/api/assignment/user/:id", updateUser);
     app.delete("/api/assignment/user/:id", deleteUser);
 
+    //check if we need this
     app.post("/api/assignment/user/login", login);
     app.get("/api/assignment/user/loggedin", loggedin);
     app.post("/api/assignment/user/logout", logout);

@@ -1,6 +1,3 @@
-/**
- * Created by sneha_000 on 2/15/2016.
- */
 (function(){
     "use strict";
     angular
@@ -12,7 +9,8 @@
         //is init() not required?
         //why do we use this variable at all?
 
-        $scope.isUserLoggedIn = true;
+        $rootScope.isUserLoggedIn = true;
+        console.log($rootScope.isUserLoggedIn);
 
         var vm = this;
         //vm.createUser = UserService.createUser;

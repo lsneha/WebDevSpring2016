@@ -7,9 +7,9 @@
         .module("FormBuilderApp")
         .controller("FieldController", FieldController);
 
-    function FieldController($scope, $routeParams)
+    function FieldController($rootScope, $routeParams)
     {
-        $scope.isUserLoggedIn = true;
+        $rootScope.isUserLoggedIn = true;
         var userId = $routeParams.userId;
         var formId = $routeParams.formId;
 
