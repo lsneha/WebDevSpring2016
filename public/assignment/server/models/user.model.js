@@ -1,7 +1,3 @@
-/**
- * Created by sneha_000 on 3/14/2016.
- */
-//var mock = require("./user.mock.json");
 var q = require("q");
 
 module.exports = function(db, mongoose) {

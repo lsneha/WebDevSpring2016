@@ -1,6 +1,3 @@
-/**
- * Created by sneha_000 on 3/18/2016.
- */
 (function(){
     angular
         .module("MovieApp")

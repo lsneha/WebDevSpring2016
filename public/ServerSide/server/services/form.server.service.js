@@ -1,5 +1,3 @@
-var mock = require("./form.mock.json");
-
 module.exports = function(app, userModel, formModel) {
 
     "use strict";

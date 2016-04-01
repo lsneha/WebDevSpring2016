@@ -1,8 +1,3 @@
-/**
- * Created by sneha_000 on 3/14/2016.
- */
-var mock = require("./form.mock.json");
-
 module.exports = function(app, userModel, formModel) {
 
     "use strict";
