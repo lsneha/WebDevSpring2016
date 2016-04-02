@@ -8,29 +8,44 @@ module.exports = function(app, userModel, formModel) {
     app.post("/api/assignment/user/:userId/form", createFormForUser);
     app.put("/api/assignment/form/:formId", updateForm);
 
-    function findFormsForUser(request, response) {
-        var forms = userModel.findAllFormsForUser(request.body.userId);
-        response.json(forms);
+    function findFormsForUser(req, res) {
+        model
+            .findAllFormsForUser(req.body)
+            .then(function(forms){
+                res.json(forms);
+            });
     }
 
-    function findFormById(request, response) {
-        var form = formModel.findFormById(request.body.formId);
-        response.json(form);
+    function findFormById(req, res) {
+        model
+            .findFormById(req.params.formId)
+            .then(function(forms){
+                res.json(forms);
+            });
     }
 
-    function deleteForm(request, response) {
-        formModel.deleteForm(request.body.formId);
-        response.json(200);
+    function deleteForm(req, res) {
+        model
+            .deleteFormById(req.params.formId)
+            .then(function(status){
+                res.json(status);
+            });
     }
 
-    function createFormForUser(request, response) {
-        var form = formModel.createFormForUser(request.body.form);
-        response.json(form);
+    function createFormForUser(req, res) {
+        model
+            .createForm(req.params.userId, req.body)
+            .then(function(form){
+                res.json(form);
+            });
     }
 
-    function updateForm(request, response) {
-        var form = formModel.updateForm(request.body.form, request.body.update);
-        response.json(form);
+    function updateForm(req, res) {
+        model
+            .updateForm(req.params.formId, req.body)
+            .then(function(sheet){
+                res.json(sheet);
+            });
     }
 
 }

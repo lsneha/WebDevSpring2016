@@ -1,6 +1,6 @@
 var q = require("q");
 
-module.exports = function(app) {
+module.exports = function(db, mongoose) {
 
     "use strict";
 

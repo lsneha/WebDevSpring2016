@@ -11,22 +11,12 @@ module.exports = function(app) {
         findFormByTitle: findFormByTitle,
         findAllForms : findAllForms,
         createForm : createForm,
-        deleteForm: deleteForm,
+        deleteFormById: deleteFormById,
         updateForm: updateForm,
-        setCurrentForm: setCurrentForm,
-        getCurrentForm: getCurrentForm,
         findFormById: findFormById
     };
 
     return formApi;
-
-    function setCurrentForm(form) {
-        $scope.currentForm = form;
-    }
-
-    function getCurrentForm() {
-        return $scope.currentForm;
-    }
 
     function findAllForms() {
         var deferred = q.defer();
@@ -42,15 +32,25 @@ module.exports = function(app) {
         return deferred.promise;
     }
 
-    function createForm(form)
-    {
-        /*form._id = "ID_"+(new Date()).getTime();
-        mock.push(form);
-        return form;*/
+    function findAllFormsForUser(userId) {
+        var deferred = q.defer();
+
+        FormModel.findAllFormsForUser(userId, function(err, forms){
+            if(err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve(forms);
+            }
+        });
+
+        return deferred.promise;
+    }
+
+    function createForm(userId, form) {
         var deferred = q.defer();
         console.log("Create a form");
 
-        FormModel.createForm(user, function(err, form) {
+        FormModel.createFormForUser(userId, form, function(err, form) {
             if(err) {
                 deferred.reject(err);
             } else {
@@ -63,18 +63,10 @@ module.exports = function(app) {
         return deferred.promise;
     }
 
-    function deleteForm(formId)
-    {
-        /*for(var f in mock) {
-            if(formId === mock[f]._id) {
-                var index = model.Forms.indexOf(mock[f]);
-                model.Forms.splice(index, 1);
-            }
-        }
-        return model.Forms[f];*/
+    function deleteFormById(formId) {
         var deferred = q.defer();
 
-        FormModel.deleteForm(formId, function(err, status) {
+        FormModel.deleteFormById(formId, function(err, status) {
             if(err) {
                 deferred.reject(err);
             } else {
@@ -85,15 +77,7 @@ module.exports = function(app) {
         return deferred.promise;
     }
 
-    function updateForm(formId, form)
-    {
-        /*for(var f in mock) {
-            if(mock[f]._id === form._id){
-                mock[f] = update;
-                return mock[f];
-            }
-        }
-        return null;*/
+    function updateForm(formId, form) {
         var deferred = q.defer();
 
         form.delete("formId");
@@ -110,12 +94,6 @@ module.exports = function(app) {
     }
 
     function findFormByTitle(title) {
-        /*for (var f in mock) {
-            if (mock[f].title) {
-                return mock[f];
-            }
-        }
-        return null;*/
         var deferred = q.defer();
 
         FormModel.findFormByTitle(title, function(err, form){
@@ -130,12 +108,6 @@ module.exports = function(app) {
     }
 
     function findFormById(formId) {
-        /*for (var f in mock) {
-            if (mock[f]._id === formId) {
-                return mock[f];
-            }
-        }
-        return null;*/
         var deferred = q.defer();
 
         FormModel.findFormById(formId, function(err, form) {
