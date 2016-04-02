@@ -69,6 +69,5 @@
 
             return deferred.promise;
         }
-
     }
 })();

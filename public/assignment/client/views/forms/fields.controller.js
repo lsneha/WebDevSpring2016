@@ -1,15 +1,12 @@
-/**
- * Created by sneha_000 on 2/15/2016.
- */
-(function(){
+(function() {
     "use strict";
     angular
         .module("FormBuilderApp")
         .controller("FieldsController", FieldsController);
 
-    function FieldsController($scope)
+    function FieldsController($rootScope)
     {
-        $scope.isUserLoggedIn = true;
+        $rootScope.isUserLoggedIn = true;
     }
 
 })();
