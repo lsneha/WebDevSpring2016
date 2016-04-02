@@ -1,15 +1,12 @@
-/**
- * Created by sneha_000 on 2/15/2016.
- */
-(function(){
+(function() {
     "use strict";
     angular
         .module("FormBuilderApp")
         .controller("HomeController", HomeController);
 
-    function HomeController($scope)
+    function HomeController($rootScope)
     {
-        $scope.isUserLoggedIn = false;
+        $rootScope.isUserLoggedIn = false;
         /*user lookup*/
     }
 

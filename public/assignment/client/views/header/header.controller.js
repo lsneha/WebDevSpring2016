@@ -1,18 +1,15 @@
-/**
- * Created by sneha_000 on 2/15/2016.
- */
-(function(){
+(function() {
     "use strict";
     angular
         .module("FormBuilderApp")
         .controller("HeaderController", HeaderController);
 
-    function HeaderController($scope, $location, UserService) {
+    function HeaderController($scope, $location, $rootScope) {
         $scope.$location = $location;
-        $scope.isUserLoggedIn = false;
+        $rootScope.isUserLoggedIn = false;
 
         function logout() {
-            UserService.setCurrentUser(null);
+            $rootScope.currentUser = null;
             $location.url("/home");
         }
     }
