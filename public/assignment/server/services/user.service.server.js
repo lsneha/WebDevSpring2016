@@ -14,61 +14,61 @@ module.exports = function(app, userModel) {
     app.get("/api/assignment/user/loggedin", loggedin);
     app.post("/api/assignment/user/logout", logout);
 
-    function register(request, response) {
-        var user = request.body.user;
+    function register(req, res) {
+        var user = req.body.user;
         user = userModel.createUser(user);
-        request.session.currentUser = user;
-        response.json(user);
+        req.session.currentUser = user;
+        res.json(user);
     }
 
-    function findUserByCredentials(request, response) {
-        var credentials = request.body;
+    function findUserByCredentials(req, res) {
+        var credentials = req.body;
         var users = userModel.findUserByCredentials(credentials);
-        response.send(200);
+        res.send(200);
     }
 
-    function findAllUsers(request, response) {
+    function findAllUsers(req, res) {
         var users = userModel.findAllUsers();
-        response.json(users);
+        res.json(users);
     }
 
-    function findUserById(request, response) {
-        var id = request.body;
+    function findUserById(req, res) {
+        var id = req.body;
         var user = userModel.findUserById(id);
-        response.json(user);
+        res.json(user);
     }
 
-    function findUserByUsername(request, response) {
-        var username = request.body;
+    function findUserByUsername(req, res) {
+        var username = req.body;
         var user = userModel.findUserByUsername(username);
-        response.json(user);
+        res.json(user);
     }
 
-    function updateUser(request, response) {
-        var user = userModel.updateUser(request.body.userId, request.body.user);
-        response.json(user);
+    function updateUser(req, res) {
+        var user = userModel.updateUser(req.body.userId, req.body.user);
+        res.json(user);
     }
 
-    function deleteUser(request, response) {
-        var userId = request.body.userId;
+    function deleteUser(req, res) {
+        var userId = req.body.userId;
         var users = userModel.deleteUser(userId);
-        response.json(users);
+        res.json(users);
     }
 
-    function login(request, response) {
-        var credentials = request.body;
+    function login(req, res) {
+        var credentials = req.body;
         var user = userModel.findUserByCredentials(credentials);
-        request.session.currentUser = user;
-        response.json(user);
+        req.session.currentUser = user;
+        res.json(user);
     }
 
-    function loggedin(request, response) {
-        response.json(request.session.currentUser);
+    function loggedin(req, res) {
+        res.json(req.session.currentUser);
     }
 
-    function logout(request, response) {
-        request.session.destroy();
-        response.send(200);
+    function logout(req, res) {
+        req.session.destroy();
+        res.send(200);
     }
 
 }

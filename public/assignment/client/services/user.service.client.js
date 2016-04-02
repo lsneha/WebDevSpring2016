@@ -1,4 +1,5 @@
 (function() {
+    "use strict";
     angular
         .module("FormBuilderApp")
         .factory("UserService", UserService);
@@ -11,7 +12,8 @@
             createUser : createUser,
             deleteUserById: deleteUserById,
             updateUser: updateUser,
-            findUserByUsername: findUserByUsername
+            findUserByUsername: findUserByUsername,
+            findUserById: findUserById
         };
 
         return userService;
@@ -42,6 +44,17 @@
             var deferred = $q.defer();
 
             $http.get("/api/assignment/user?username="+username)
+                .success(function(response){
+                    deferred.resolve(response);
+                });
+
+            return deferred.promise;
+        }
+
+        function findUserById(userId) {
+            var deferred = $q.defer();
+
+            $http.get("/api/assignment/user?userId="+userId)
                 .success(function(response){
                     deferred.resolve(response);
                 });
