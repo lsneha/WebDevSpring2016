@@ -1,4 +1,4 @@
-module.exports = function(app, userModel, formModel) {
+module.exports = function(app, fieldModel) {
 
     "use strict";
 
@@ -8,34 +8,31 @@ module.exports = function(app, userModel, formModel) {
     app.post("/api/assignment/form/:formId/field", createField);
     app.put("/api/assignment/form/:formId/field/:fieldId", updateField);
 
-    function findFieldsForForm(request, response) {
-        var user = request.body;
-        user = userModel.createUser(user);
-        request.session.currentUser = user;
-        response.json(user);
+    function findFieldsForForm(req, res) {
+        var id = req.body;
+        var fields = fieldModel.findFieldsForForm(id);
+        res.json(fields);
     }
 
-    function findFieldById(request, response) {
-        var credentials = request.body;
-        var users = userModel.findUserByCredentials(credentials);
-        response.send(200);
+    function findFieldById(req, res) {
+        var id = req.body;
+        var field = fieldModel.findFieldById(id);
+        res.json(field);
     }
 
-    function deleteField(request, response) {
-        var users = userModel.findAllUsers();
-        response.json(users);
+    function deleteField(req, res) {
+        var status = fieldModel.deleteFieldById(req.body.formId, req.body.fieldId);
+        res.json(status);
     }
 
-    function createField(request, response) {
-        var id = request.body;
-        var users = userModel.findUserById;
-        response.json(users);
+    function createField(req, res) {
+        var fields = fieldModel.createField(req.body.formId, req.body.field);
+        res.json(fields);
     }
 
-    function updateField(request, response) {
-        var id = request.body;
-        var users = userModel.findUserById;
-        response.json(users);
+    function updateField(req, res) {
+        var fields = fieldModel.updateField(req.body.formId, req.body.fieldId, req.body.newField);
+        res.json(fields);
     }
 
 }
