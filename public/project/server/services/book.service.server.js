@@ -1,6 +1,3 @@
-/**
- * Created by sneha_000 on 3/25/2016.
- */
 module.exports = function(app, bookModel, userModel) {
     app.get("/api/project/book/:id", findBookById);
     app.get("/api/project/book/:title", findBooksByTitle);

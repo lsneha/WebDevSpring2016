@@ -1,6 +1,3 @@
-/**
- * Created by sneha_000 on 3/25/2016.
- */
 module.exports = function(app) {
     var userModel    = require("./models/user.model.server.js")();
     var bookModel   = require("./models/book.model.server.js")();
