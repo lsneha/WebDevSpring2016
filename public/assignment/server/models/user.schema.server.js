@@ -1,3 +1,4 @@
+var mongoose = require('mongoose');
 module.exports = function(mongoose) {
 
     var COLLECTION = "user";
@@ -6,10 +7,18 @@ module.exports = function(mongoose) {
         {
             username: String,
             password: String,
+            google: {
+                id: String,
+                token: String
+            },
+            facebook: {
+                id: String,
+                token: String
+            },
             firstName: String,
             lastName: String,
             email: [String],
-            roles: [String],
+            roles: [String]
         }, {collection: COLLECTION});
 
     return UserSchema;

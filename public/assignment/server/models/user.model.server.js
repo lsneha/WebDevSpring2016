@@ -123,4 +123,12 @@ module.exports = function(db, mongoose) {
         return deferred.promise;
     }
 
+    function findUserByFacebookId(facebookId) {
+        return UserModel.findOne({'facebook.id': facebookId });
+    }
+
+    function findUserByGoogleId(googleId) {
+        return UserModel.findOne({'google.id': googleId});
+    }
+
 }
