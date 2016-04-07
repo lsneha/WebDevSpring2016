@@ -1,4 +1,7 @@
 <h3 class="sub-header">Login</h3>
+<div ng-if="error" class="alert alert-danger">
+    {{error}}
+</div>
 <form class="form-horizontal">
     <div class="form-group">
         <label for="username" class="col-lg-2 control-label labels">Username:</label>
@@ -18,4 +21,14 @@
         </div>
     </div>
     <div ng-show="message" class="col-lg-offset-2 alert alert-danger" role="alert">{{message}}</div>
+    <a href="/auth/google"
+       class="btn btn-danger btn-block">
+        <span class="fa fa-google-plus"></span>
+        Google
+    </a>
+    <a href="/auth/facebook"
+       class="btn btn-primary btn-block">
+        <span class="fa fa-facebook"></span>
+        Facebook
+    </a>
 </form>

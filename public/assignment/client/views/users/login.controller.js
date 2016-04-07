@@ -9,14 +9,21 @@
         $rootScope.isUserLoggedIn = false;
         $scope.login = login;
 
-        var model = this;
-
-        function login (user) {
-            var user = model.findUserByCredentials({username: user.username, password: user.password});
-            if (user) {
-                $rootScope.currentUser = user;
-                $location.url("/profile");
-            }
+        function login(user)
+        {
+            if(user)
+                UserService
+                    .login(user)
+                    .then(
+                        function(response)
+                        {
+                            $rootScope.currentUser = response.data;
+                            $location.url("/profile");
+                        },
+                        function(err) {
+                            $scope.error = err;
+                        }
+                    );
         }
     }
 
