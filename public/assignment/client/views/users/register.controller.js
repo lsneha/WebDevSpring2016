@@ -4,7 +4,7 @@
         .module("FormBuilderApp")
         .controller("RegisterController", RegisterController);
 
-    function RegisterController($scope, $location, UserService)
+    function RegisterController($scope, $rootScope, $location, UserService)
     {
         var model = this;
         $scope.message = null;
@@ -36,14 +36,20 @@
                 return;
             }
 
-            model
-                .createUser(user)
-                .then(function (response) {
-                    if (response.data != null) {
-                        model.setCurrentUser(response.data);
-                        $location.url("/profile")
+            UserService
+                .register(user)
+                .then(
+                    function(response) {
+                        var user = response.data;
+                        if(user != null) {
+                            $rootScope.currentUser = user;
+                            $location.url("/profile");
+                        }
+                    },
+                    function(err) {
+                        $scope.error = err;
                     }
-                });
+                );
         }
     }
 
