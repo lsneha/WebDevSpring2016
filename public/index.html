@@ -13,7 +13,7 @@
 
   <style>
 
-  .logo {
+  /*.logo {
     background-size: cover;
     height: 58px;
     width: 180px;
@@ -59,10 +59,10 @@
   .container:before,
   .container:after {
     content: " ";
-    /* 1 */
+    !* 1 *!
 
     display: table;
-    /* 2 */
+    !* 2 *!
 
   }
   .container:after {
@@ -75,10 +75,10 @@
   .row:before,
   .row:after {
     content: " ";
-    /* 1 */
+    !* 1 *!
 
     display: table;
-    /* 2 */
+    !* 2 *!
 
   }
   .row:after {
@@ -188,32 +188,45 @@
     word-wrap: break-word;
     overflow: auto;
     font-family: Menlo,Monaco,"Liberation Mono",Consolas,monospace !important;
+  }*/
+  .top-buffer {
+      background-color: white;
+      border: 1px solid #ccc000;
+      color: #888;
+      margin-top: 5em;
   }
 </style>
 </head>
 <body>
   <div class='container'>
-  <div class="row">
-    <section>
-      <hgroup>
-        <h1>Welcome to Sneha's Home Page for CS5100 WebDevelopment course, Spring 2016</h1>
-      </hgroup>
-    </section>
-    <section>
-      <pre>
-        <h2>Assignments: https://github.com/lsneha/WebDevSpring2016/tree/master/public/assignment</h2>
-        <h2>Project POC: https://github.com/lsneha/WebDevSpring2016/tree/master/public/project</h2>
-        <h2>Link to project proposal: https://docs.google.com/document/d/1opHK2rhTWzuxE7GHI6lfKL4W0A4xy10rH1k90EjpQWE/edit</h2>
-      </pre>
-    </section>
+    <div class="row">
+        <nav class="navbar navbar-inverse navbar-fixed-top"> <!--change color-->
+            <div class="navbar-header">
+                <!-- change font, check content -->
+                <a class="navbar-brand" href="#" data-toggle="tooltip" title="Home Page">My Home Page</a>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+      <div class="jumbotron top-buffer">
+          <h3>Welcome to Sneha's Home Page!</h3>
+          <p>This is a home page created for CS5100 WebDevelopment course, Spring 2016</p>
+      </div>
+      <section>
+        <pre>
+          <p>Assignments: https://github.com/lsneha/WebDevSpring2016/tree/master/public/assignment</p>
+          <p>Project POC: https://github.com/lsneha/WebDevSpring2016/tree/master/public/project</p>
+          <p>Link to project proposal: https://docs.google.com/document/d/1opHK2rhTWzuxE7GHI6lfKL4W0A4xy10rH1k90EjpQWE/edit</p>
+        </pre>
+      </section>
+    </div>
+    <div class="row">
+      <h3>Other details</h3>
+      <p></p>
+    </div>
+    <footer>
+      <div class="logo"><a href="https://www.openshift.com/"></a></div>
+    </footer>
   </div>
-  <div class="row">
-    <h3>Other details</h3>
-    <p></p>
-  </div>
-  <footer>
-    <div class="logo"><a href="https://www.openshift.com/"></a></div>
-  </footer>
-</div>
 </body>
 </html>
