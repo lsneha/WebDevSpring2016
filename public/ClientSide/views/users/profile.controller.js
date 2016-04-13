@@ -3,14 +3,8 @@
         .module("FormBuilderApp")
         .controller("ProfileController", ['UserService', '$scope', '$rootScope', '$location', function ProfileController(UserService, $scope, $rootScope, $location)
         {
-            //is init() not required?
-            //why do we use this variable at all?
-
             $rootScope.isUserLoggedIn = true;
             console.log($rootScope.isUserLoggedIn);
-
-            var vm = this;
-            //vm.createUser = UserService.createUser;
 
             $rootScope.currentUser = UserService.getCurrentUser();
             if (!$rootScope.currentUser) {
