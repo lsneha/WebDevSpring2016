@@ -1,6 +1,3 @@
-/**
- * Created by sneha_000 on 2/15/2016.
- */
 (function(){
     "use strict";
     angular
@@ -10,6 +7,7 @@
     function HomeController($rootScope)
     {
         $rootScope.isUserLoggedIn = false;
+        $rootScope.isAdmin = true;
         console.log($rootScope.isUserLoggedIn);
             /*user lookup*/
     }
