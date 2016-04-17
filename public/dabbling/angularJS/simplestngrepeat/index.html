@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="myconttroller.js"></script>
+    <title>check ng repeat</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div ng-controller="MyController" class="row">
+            <!--<table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Seats Available</th>
+                    <th>Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="course in controller.courses">
+                    <td>{{course}}</td>
+                    <td>ssdjksj</td>
+                    <td>sdsl</td>
+                </tr>
+                </tbody>
+            </table>-->
+            <ul>
+                <li ng-repeat="courseName in courseNames">
+                    {{courseName}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
