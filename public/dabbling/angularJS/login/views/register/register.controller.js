@@ -1,11 +1,9 @@
 (function(){
-    "use strict";
     angular
-        .module("FormBuilderApp")
-        .controller("RegisterController", RegisterController);
+        .module("LoginExample")
+        .controller("RegisterController", registerController);
 
-    function RegisterController($scope, $rootScope, $location, UserService)
-    {
+    function registerController($location, $scope, UserService, $rootScope) {
         $scope.message = null;
         $scope.register = register;
 
@@ -37,5 +35,4 @@
             $location.url("/profile");
         }
     }
-
 })();

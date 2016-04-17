@@ -1,5 +1,8 @@
 <h3 class="sub-header">Register</h3>
-<form class="form-horizontal">
+
+<div ng-show="message" class="alert alert-danger" role="alert">{{message}}</div>
+
+<div class="form-horizontal">
     <div class="form-group">
         <label for="username" class="col-lg-2 control-label labels">Username:</label>
         <div class="col-lg-6">
@@ -9,13 +12,13 @@
             <div class="form-group">
             <label for="inputPassword" class="col-lg-2 control-label labels">Password:</label>
             <div class="col-lg-6">
-                <input type="password" class="form-control placeholder" id="inputPassword" placeholder="Password">
+                <input type="password" class="form-control placeholder" id="inputPassword" placeholder="Password" ng-model="user.password">
             </div>
         </div>
         <div class="form-group">
             <label for="verifyPassword" class="col-lg-2 control-label labels">Verify Password:</label>
             <div class="col-lg-6">
-                <input type="password" class="form-control placeholder" id="verifyPassword" placeholder="Password" ng-model="user.password">
+                <input type="password" class="form-control placeholder" id="verifyPassword" placeholder="Password" ng-model="user.password2">
             </div>
         </div>
         <div class="form-group">
@@ -26,7 +29,7 @@
         </div>
         <div class="form-group">
             <div class="col-lg-offset-2 col-lg-10">
-                <a class="btn btn-default" href="#/profile" role="button" ng-click="register(user)">Register</a>
+                <a class="btn btn-default" role="button" ng-click="register(user)">Register</a>
             </div>
         </div>
-</form>
+</div>

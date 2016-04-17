@@ -1,8 +1,6 @@
-(function()
-{
-    "use strict"
+(function() {
     angular
-        .module("FormBuilderApp")
+        .module("LoginExample")
         .factory("UserService", UserService);
 
     function UserService($rootScope) {

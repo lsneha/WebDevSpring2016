@@ -6,26 +6,16 @@
 
     function FormController($rootScope, FormService, $scope)
     {
-        //var vm = this;
         $scope.addForm = addForm;
         $scope.deleteForm = deleteForm;
+        $scope.selectForm = selectForm;
+        $scope.updateForm = updateForm;
+
         $scope.forms = [
             {"_id": "000", "title": "Contacts", "userId": 123},
             {"_id": "010", "title": "ToDo",     "userId": 123},
             {"_id": "020", "title": "CDs",      "userId": 234}
         ];
-        //console.log("first: " + vm.forms);
-        $rootScope.isUserLoggedIn = true;
-        console.log($rootScope.isUserLoggedIn);
-
-        function init() {
-            /*FormService.findAllFormsForUser($scope.currentUser, function(forms){
-                //vm.forms = forms;
-                console.log(vm.forms);
-            });*/
-            // event handler declarations
-
-        }
 
         function addForm(formName) {
             var newForm = {
@@ -37,12 +27,32 @@
             console.log($scope.forms);
         }
 
-        function deleteForm(index) {
-            //var index = $scope.movies.indexOf(movie);
-            $scope.forms.splice(index, 1);
+        function updateForm(formName)
+        {
+            console.log("Inside update form");
+            $scope.forms[$scope.selectedFormIndex].title = formName;
         }
 
-        init();
+        function selectForm(index)
+        {
+            $scope.selectedFormIndex = index;
+            $scope.newForm = {
+                title: $scope.forms[index].title,
+                _id: "000",
+                userId: 123
+            };
+        }
+
+        function deleteForm(formName)
+        {
+            $scope.newForm = {
+                title: formName,
+                _id: "000",
+                userId: 123
+            };
+            var index = $scope.forms.indexOf($scope.newForm);
+            $scope.forms.splice(index, 1);
+        }
     }
 
 })();

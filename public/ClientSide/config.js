@@ -36,10 +36,10 @@
                     templateUrl: "views/users/register.view.html",
                     controller: "RegisterController"
                 })
-                /*.when("/form/:formId/fields", {
-                    templateUrl: "views/forms/field.view.html",
-                    controller: "FieldController"
-                })*/
+                .when("/forms/:index", {
+                    templateUrl: "views/forms/forms.view.html",
+                    controller : "FormController"
+                })
                 .otherwise({
                     redirectTo: "/home"
                 });

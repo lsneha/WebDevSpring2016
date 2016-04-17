@@ -1,6 +1,22 @@
-<ul class="nav nav-pills nav-stacked nav-sidebar leftnavmenu" ng-controller="SidebarController" id="leftmenu">
+<!--<ul class="nav nav-pills nav-stacked nav-sidebar leftnavmenu" ng-controller="SidebarController" id="leftmenu">
     <li><a href="#/home">Home</a></li>
     <li><a href="#/profile">Profile</a></li>
     <li><a href="#/admin">Admin</a></li>
     <li><a href="#/forms">Forms</a></li>
-</ul>
+</ul>-->
+<nav ng-controller="HeaderController">
+    <ul class="nav nav-pills nav-stacked nav-sidebar leftnavmenu">
+        <li ng-class="{'active': $location.url()=='/home'}">
+            <a href="#/home">Home</a>
+        </li>
+        <li ng-class="{'active': $location.url()=='/profile'}" ng-show="currentUser">
+            <a href="#/profile">Profile</a>
+        </li>
+        <li ng-show="currentUser.roles.indexOf('admin') >= 0" ng-class="{'active': $location.url() === '/admin'}">
+            <a href="#/admin">Admin</a>
+        </li>
+        <li ng-show="currentUser" ng-class="{'active': $location.url() === '/forms'}">
+            <a href="#/forms">Forms</a>
+        </li>
+    </ul>
+</nav>

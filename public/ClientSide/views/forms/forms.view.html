@@ -19,13 +19,15 @@
                 </td>
                 <td>
                     <button ng-click="addForm(formName)" class="btn btn-success">Add</button>
+                    <button ng-click="updateForm(formName)" class="btn btn-success">Update</button>
                 </td>
             </tr>
-            <tr ng-repeat="form in forms">
+            <tr ng-repeat="form in forms" ng-class="{'success' : $index == selectedFormIndex}">
                 <td>{{form.title}}</td>
                 <td>
-                    <button ng-click="deleteForm($index)" class="btn btn-danger">Delete</button>
-                    <a href="#/forms/{{$index}}" class="btn btn-primary">Edit</a>
+                    <button ng-click="deleteForm(form.title)" class="btn btn-danger">Remove</button>
+                    <button ng-click="selectForm($index)" class="btn btn-info">Select</button>
+                    <button ng-click="updateForm(form.title)" class="btn btn-warning">Edit</a>
                 </td>
             </tr>
             </tbody>

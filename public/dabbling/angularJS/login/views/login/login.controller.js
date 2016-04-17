@@ -1,14 +1,9 @@
 (function(){
-    "use strict";
     angular
-        .module("FormBuilderApp")
-        .controller("LoginController", LoginController);
+        .module("LoginExample")
+        .controller("LoginController", loginController);
 
-    function LoginController($rootScope, $scope, UserService, $location)
-    {
-        /*$rootScope.isUserLoggedIn = false;
-        console.log($rootScope.isUserLoggedIn);
-        */
+    function loginController ($scope, UserService, $location, $rootScope) {
         $scope.login = login;
 
         function login (user) {
@@ -20,5 +15,4 @@
             }
         }
     }
-
 })();

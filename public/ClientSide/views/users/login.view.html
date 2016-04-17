@@ -1,5 +1,8 @@
 <h3 class="sub-header">Login</h3>
-<form class="form-horizontal">
+
+<div ng-show="message" class="alert alert-danger" role="alert">{{message}}</div>
+
+<div class="form-horizontal">
     <div class="form-group">
         <label for="username" class="col-lg-2 control-label labels">Username:</label>
         <div class="col-lg-6">
@@ -17,4 +20,4 @@
             <a class="btn btn-default" href="#/profile" role="button" ng-click="login(user)">Login</a>
         </div>
     </div>
-</form>
+</div>

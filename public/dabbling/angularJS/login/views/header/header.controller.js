@@ -1,10 +1,9 @@
 (function(){
-    "use strict";
     angular
-        .module("FormBuilderApp")
-        .controller("HeaderController", HeaderController);
+        .module("LoginExample")
+        .controller("HeaderController", headerController);
 
-    function HeaderController($location, $scope, UserService) {
+    function headerController($location, $scope, UserService) {
         $scope.$location = $location;
         $scope.logout = logout;
 
