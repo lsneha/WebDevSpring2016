@@ -7,7 +7,7 @@ var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
 
-app.use(express.static(__dirname + '/public' ));
+app.use(express.static(__dirname + '/public/dabbling/mongo/pageEditor/client' ));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 //why not just multer()
@@ -37,8 +37,9 @@ var fieldService = require("./public/assignment/server/services/field.service.se
 var userService = require("./public/assignment/server/services/user.service.server");
 var formService = require("./public/assignment/server/services/form.server.service");
 
-require("./public/assignment/server/app.js")(app, db, mongoose);
+//require("./public/assignment/server/app.js")(app, db, mongoose);
 require("./public/project/server/app.js")(app, db, mongoose);
+require("./public/dabbling/mongo/pageEditor/server/app.js")(app, db, mongoose);
 
 app.get('/someurl', function(req, res){
     console.log("Inside server js");

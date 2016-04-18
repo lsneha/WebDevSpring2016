@@ -1,4 +1,5 @@
 module.exports = function(app) {
+    console.log("Inside app js...");
     var userModel    = require("./models/user.model.server.js")();
     var bookModel   = require("./models/book.model.server.js")();
 
