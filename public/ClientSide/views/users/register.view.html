@@ -8,28 +8,28 @@
         <div class="col-lg-6">
             <input type="text" class="form-control placeholder" id="username" placeholder="Username" ng-model="user.username">
         </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword" class="col-lg-2 control-label labels">Password:</label>
+        <div class="col-lg-6">
+        <input type="password" class="form-control placeholder" id="inputPassword" placeholder="Password" ng-model="user.password">
         </div>
-            <div class="form-group">
-            <label for="inputPassword" class="col-lg-2 control-label labels">Password:</label>
-            <div class="col-lg-6">
-                <input type="password" class="form-control placeholder" id="inputPassword" placeholder="Password" ng-model="user.password">
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="verifyPassword" class="col-lg-2 control-label labels">Verify Password:</label>
+        <div class="col-lg-6">
+            <input type="password" class="form-control placeholder" id="verifyPassword" placeholder="Password" ng-model="user.password2">
         </div>
-        <div class="form-group">
-            <label for="verifyPassword" class="col-lg-2 control-label labels">Verify Password:</label>
-            <div class="col-lg-6">
-                <input type="password" class="form-control placeholder" id="verifyPassword" placeholder="Password" ng-model="user.password2">
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-lg-2 control-label labels">Email:</label>
+        <div class="col-lg-6">
+            <input type="email" class="form-control placeholder" id="email" placeholder="Email" ng-model="user.email">
         </div>
-        <div class="form-group">
-            <label for="email" class="col-lg-2 control-label labels">Email:</label>
-            <div class="col-lg-6">
-                <input type="email" class="form-control placeholder" id="email" placeholder="Email" ng-model="user.email">
-            </div>
+    </div>
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+            <a class="btn btn-default" role="button" ng-click="register(user)">Register</a>
         </div>
-        <div class="form-group">
-            <div class="col-lg-offset-2 col-lg-10">
-                <a class="btn btn-default" role="button" ng-click="register(user)">Register</a>
-            </div>
-        </div>
+    </div>
 </div>

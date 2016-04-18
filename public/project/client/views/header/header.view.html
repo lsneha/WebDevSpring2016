@@ -1,19 +1,37 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Readers Inc.</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button>
+        </button>-->
         <img src="./images/papyrusLogo.jpg" alt="Logo missing" href="#" width="100px" height="50px"/>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
+    <!--<div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#/">Home</a></li>
             <li><a href="#/profile">Profile</a></li>
             <li><a href="#/">Settings</a></li>
         </ul>
+        <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search books...">
+            <a class="btn btn-default" href="#/search" role="button">Go!</a>
+        </form>
+    </div>-->
+    <div>
+        <nav ng-controller="HeaderController">
+            <ul class="nav nav-tabs navbar-right navbar-nav navbar-right">
+                <li ng-show="currentUser" ng-class="{'active': $location.url()=='/home'}">
+                    <a href="#/home">Home</a></li>
+                <li ng-class="{'active': $location.url()=='/profile'}" ng-show="currentUser">
+                    <a href="#/profile">{{currentUser.username}}</a></li>
+                <li ng-show="currentUser.roles.indexOf('admin') >= 0" ng-class="{'active': $location.url() === '/admin'}">
+                    <a href="#/admin">Admin</a></li>
+                <li ng-show="currentUser">
+                    <a ng-click="logout()">Logout</a></li>
+            </ul>
+        </nav>
         <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search books...">
             <a class="btn btn-default" href="#/search" role="button">Go!</a>
