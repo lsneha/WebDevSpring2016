@@ -7,8 +7,8 @@ var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
 
-app.use(express.static(__dirname + '/public/dabbling/mongo/pageEditor/client' ));
-//app.use(express.static(__dirname + '/public/project/client' ));
+//app.use(express.static(__dirname + '/public/dabbling/mongo/pageEditor/client'));
+app.use(express.static(__dirname + '/public/project/client' ));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 //why not just multer()

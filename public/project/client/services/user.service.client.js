@@ -1,41 +1,71 @@
-(function(){
-    angular
-        .module("MyProjectApp")
-        .factory("UserService", userService);
+(function() {
+     "use strict"
+     angular
+     .module("MyProjectApp")
+     .factory("UserService", UserService);
 
-    function userService($http, $rootScope) {
-        var api = {
-            login: login,
-            setCurrentUser: setCurrentUser,
-            getCurrentUser: getCurrentUser,
-            register: register,
-            logout: logout,
-            getProfile: getProfile
-        };
-        return api;
+     function UserService($rootScope) {
+         var model = {
+             users: [
+             {username: "alice", password: "alice", roles: ["user"], description: "I am Alice"},
+             {username: "bob", password: "bob", roles: ["user", "admin"], description: "I am Bob"},
+             {username: "charlie", password: "charlie", roles: ["user"], description: "I am Charlie"}
+             ],
+             createUser: createUser,
+             findUserByUsername: findUserByUsername,
+             findUserByCredentials: findUserByCredentials,
+             updateUser: updateUser,
+             setCurrentUser: setCurrentUser,
+             getCurrentUser: getCurrentUser
+         };
+        return model;
 
-        function getProfile() {
-            return $http.get("/api/project/papyrus/profile/"+$rootScope.currentUser._id);
-        }
-
-        function register(user) {
-            return $http.post("/api/project/papyrus/register", user);
-        }
-
-        function logout() {
-            return $http.post("/api/project/papyrus/logout");
-        }
-
-        function getCurrentUser() {
-            return $http.get("/api/project/papyrus/loggedin");
-        }
-
-        function setCurrentUser(user) {
+         function setCurrentUser (user) {
             $rootScope.currentUser = user;
-        }
+         }
 
-        function login(credentials) {
-            return $http.post("/api/project/papyrus/login", credentials);
-        }
-    }
-})();
+         function getCurrentUser () {
+            return $rootScope.currentUser;
+         }
+
+         function createUser (user) {
+             var user = {
+                username: user.username,
+                password: user.password
+             };
+             model.users.push(user);
+             return user;
+         }
+
+         function findUserByUsername (username) {
+            for (var u in model.users) {
+                if (model.users[u].username === username) {
+                    return model.users[u];
+                }
+            }
+            return null;
+         }
+
+         function findUserByCredentials(credentials) {
+             for (var u in model.users) {
+                if (model.users[u].username === credentials.username &&
+                model.users[u].password === credentials.password) {
+                    return model.users[u];
+                }
+             }
+             return null;
+         }
+
+         function updateUser (currentUser) {
+             var user = model.findUserByUsername (currentUser.username);
+             if (user != null) {
+                user.firstName = currentUser.firstName;
+                 user.lastName = currentUser.lastName;
+                 user.password = currentUser.password;
+                 return user;
+             } else {
+                return null;
+             }
+         }
+     }
+ })();

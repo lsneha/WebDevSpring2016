@@ -1,3 +1,4 @@
+/*
 (function() {
     "use strict"
     angular
@@ -7,9 +8,9 @@
     function UserService($rootScope) {
         var model = {
             users: [
-                {username: "alice", password: "alice", roles: ["user"]},
-                {username: "bob", password: "bob", roles: ["user", "admin"]},
-                {username: "charlie", password: "charlie", roles: ["user"]}
+                {username: "alice", password: "alice", roles: ["user"], description: "I am Alice"},
+                {username: "bob", password: "bob", roles: ["user", "admin"], description: "I am Bob"},
+                {username: "charlie", password: "charlie", roles: ["user"], description: "I am Charlie"}
             ],
             createUser: createUser,
             findUserByUsername: findUserByUsername,
@@ -69,3 +70,4 @@
         }
     }
 })();
+*/

@@ -43,6 +43,18 @@
 
         function login(user) {
             console.log("Inside login");
+            if (user == null) {
+                $scope.message = "Please fill in the required fields";
+                return;
+            }
+            if (!user.username01) {
+                $scope.message = "Please provide a username";
+                return;
+            }
+            if (!user.password01) {
+                $scope.message = "Please provide a password";
+                return;
+            }
             var user = UserService.findUserByCredentials({username: user.username01, password: user.password01});
             if (user) {
                 $rootScope.currentUser = user;

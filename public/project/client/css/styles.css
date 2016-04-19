@@ -7,7 +7,7 @@
 }
 
 .myform-group {
-    background-color: gainsboro;
+    background-color: #ffe4c4;
     border-style: dotted;
     padding: 15px;
     -moz-border-radius: 25px 10px / 10px 25px;
@@ -19,18 +19,18 @@
 }
 
 .main-content {
-    background-color: whitesmoke;
+    background-color: #ffebcd;
 }
 
 blockquote {
-    background: #f9f9f9;
+    background: #fffaf0;
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
 }
 blockquote:before {
-    color: #ccc;
+    color: #000000;
     content: open-quote;
     font-size: 4em;
     line-height: 0.1em;

@@ -1,5 +1,19 @@
+//var q = require("q");
 var mock = require("./user.mock.json");
-module.exports = function() {
+
+module.exports = function(mongoose, db) {
+
+    /*var UserSchema = mongoose.Schema({
+        "username": String,
+        "password": String,
+        "firstName": String,
+        "lastName": String,
+        "description": String,
+        "books": [
+            ]
+    }, {collection: "users"});
+
+    var UserModel = mongoose.model("UserModel", UserSchema);*/
     var api = {
         findUserByCredentials: findUserByCredentials,
         createUser: createUser,
@@ -26,12 +40,22 @@ module.exports = function() {
             }
         }
         return null;
+
     }
 
     function createUser(user) {
         user._id = "ID_" + (new Date()).getTime();
         mock.push(user);
         return user;
+        /*var deferred = q.defer();
+
+        UserModel.create(user, function(err, doc){
+            UserModel.find(function(err, users){
+                deferred.resolve(users);
+            });
+        });
+
+        return deferred.promise;*/
     }
 
     function findUserByCredentials(credentials) {

@@ -1,6 +1,3 @@
-/**
- * Created by sneha_000 on 2/17/2016. #ProjectTrafficCop :)
- */
 (function(){
     "use strict";
     angular
@@ -21,20 +18,20 @@
                 .when("/mybooks", {
                     templateUrl: "views/users/mybooks.view.html"
                 })
-                .when("/details/:someID", {
+                /*.when("/details/:someID", {
                     templateUrl: "views/details/details.view.html",
                     controller: "DetailsController"
-                })
+                })*/
                 .when("/adminHm", {
                     templateUrl: "views/users/admin.view.html"
                 })
                 .when("/search", {
-                    templateUrl: "views/search/search.view.html",
-                    controller: "SearchController"
+                    templateUrl: "views/details/details.view.html",
+                    controller: "DetailsController"
                 })
                 .when("/search/:title", {
-                    templateUrl: "views/search/search.view.html",
-                    controller: "SearchController"
+                    templateUrl: "views/details/details.view.html",
+                    controller: "DetailsController"
                 })
                 .otherwise({
                     redirectTo: "/home"

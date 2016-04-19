@@ -1,22 +1,15 @@
-module.exports = function(app, bookModel, userModel) {
-    app.get("/api/project/book/:id", findBookById);
+module.exports = function(app) {
+
     app.get("/api/project/book/:title", findBooksByTitle);
 
     function findBooksByTitle(title, callback) {
+        console.log("Inside server side book service...");
+        console.log("Title: "+title);
         var config = {headers:  {
-            'Access-Control-Allow-Origin': 'http://localhost:63342'
+            'Access-Control-Allow-Origin': 'http://localhost:3000'
         }};
         $http
-            .get("https://www.goodreads.com/search.xml?key=G9L1n2xWsxGDJxXV6yiQg&q="+title, config)
-            .success(callback);
-    }
-
-    function findBookById(id, callback) {
-        var config = {headers:  {
-            'Access-Control-Allow-Origin': 'http://localhost:63342'
-        }};
-        $http
-            .get("https://www.goodreads.com/search.xml?key=G9L1n2xWsxGDJxXV6yiQg&q="+id, config)
+            .get("https://http://openlibrary.org/search.json?title="+title, config)
             .success(callback);
     }
 

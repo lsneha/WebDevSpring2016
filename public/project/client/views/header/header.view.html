@@ -1,9 +1,9 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="HeaderController">
     <div class="navbar-header">
-        <img src="./images/papyrusLogo.jpg" alt="Logo missing" href="#" width="100px" height="50px"/>
+        <img src="./images/papyrusLogo.jpg" alt="Logo missing" href="#/home" width="100px" height="50px"/>
     </div>
     <div>
-        <nav ng-controller="HeaderController">
+        <nav>
             <ul class="nav nav-tabs navbar-right navbar-nav navbar-right">
                 <li ng-show="currentUser" ng-class="{'active': $location.url()=='/home'}">
                     <a href="#/home">Home</a></li>
@@ -16,8 +16,8 @@
             </ul>
         </nav>
         <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search books...">
-            <a class="btn btn-default" href="#/search" role="button">Go!</a>
+            <input type="text" class="form-control" placeholder="Search books..." ng-model="title">
+            <a class="btn btn-default" role="button" ng-click="search(title)">Go!</a>
         </form>
     </div>
 </nav>

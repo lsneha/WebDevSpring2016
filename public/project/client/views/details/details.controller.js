@@ -5,13 +5,13 @@
 
     function detailsController($routeParams, $http, $scope) {
         var id = $routeParams.someID;
-        $http
+        /*$http
             .get("")
             .success(renderBook);
 
         function renderBook(response) {
             $scope.book = response;
-        }
+        }*/
 
     }
 

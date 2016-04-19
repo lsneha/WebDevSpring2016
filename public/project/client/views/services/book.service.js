@@ -1,3 +1,4 @@
+/*
 (function(){
     angular
         .module("MyProjectApp")
@@ -11,11 +12,12 @@
         return api;
 
         function findBooksByTitle(title, callback) {
+            console.log("Inside views book service");
             var config = {headers:  {
                 'Access-Control-Allow-Origin': 'http://localhost:63342'
             }};
             $http
-                .get("https://www.goodreads.com/search.xml?key=G9L1n2xWsxGDJxXV6yiQg&q="+title, config)
+                .get("https://openlibrary.org/api/books?bibkeys=ISBN:0451526538")
                 .success(callback);
         }
 
@@ -23,4 +25,4 @@
 
         }
     }
-})();
+})();*/
