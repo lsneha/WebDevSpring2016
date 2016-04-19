@@ -15,19 +15,19 @@
         return api;
 
         function getProfile() {
-            return $http.get("/api/project/readersinc/profile/"+$rootScope.currentUser._id);
+            return $http.get("/api/project/papyrus/profile/"+$rootScope.currentUser._id);
         }
 
         function register(user) {
-            return $http.post("/api/project/readersinc/register", user);
+            return $http.post("/api/project/papyrus/register", user);
         }
 
         function logout() {
-            return $http.post("/api/project/readersinc/logout");
+            return $http.post("/api/project/papyrus/logout");
         }
 
         function getCurrentUser() {
-            return $http.get("/api/project/readersinc/loggedin");
+            return $http.get("/api/project/papyrus/loggedin");
         }
 
         function setCurrentUser(user) {
@@ -35,7 +35,7 @@
         }
 
         function login(credentials) {
-            return $http.post("/api/project/readersinc/login", credentials);
+            return $http.post("/api/project/papyrus/login", credentials);
         }
     }
 })();

@@ -1,9 +1,9 @@
 module.exports = function(app, bookModel, userModel) {
-    app.post("/api/project/readersinc/login", login);
-    app.get("/api/project/readersinc/loggedin", loggedin);
-    app.post("/api/project/readersinc/logout", logout);
-    app.post("/api/project/readersinc/register", register);
-    app.get("/api/project/readersinc/profile/:userId", profile);
+    app.post("/api/project/papyrus/login", login);
+    app.get("/api/project/papyrus/loggedin", loggedin);
+    app.post("/api/project/papyrus/logout", logout);
+    app.post("/api/project/papyrus/register", register);
+    app.get("/api/project/papyrus/profile/:userId", profile);
 
     function profile(req, res) {
         var userId = req.params.userId;
