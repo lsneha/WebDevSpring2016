@@ -1,6 +1,6 @@
 module.exports = function(mongoose) {
 
-    var Field = require("field.schema.js")(mongoose);
+    var Field = require("./field.schema.server.js")(mongoose);
 
     var COLLECTION = "form";
 

@@ -9,7 +9,7 @@ module.exports = function(app, userModel) {
 
     "use strict";
 
-    var userModel = require("../../models/user/user.model.server.js")();
+    var userModel = require("../models/user.model.server.js")();
     var auth = authorized;
 
     app.post('/api/assignment/user', auth, createUser);
