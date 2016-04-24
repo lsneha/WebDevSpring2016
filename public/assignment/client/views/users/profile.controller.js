@@ -6,7 +6,6 @@
 
     function ProfileController($scope, $rootScope, $location, UserService)
     {
-        var model = this;
         $rootScope.isUserLoggedIn = true;
 
         $rootScope.currentUser = model.getCurrentUser();
@@ -21,8 +20,6 @@
 
         function updateUser(user) {
 
-            $scope.error = null;
-            $scope.message = null;
             if(!user.firstName)
                 user.firstName = $rootScope.currentUser.firstName;
             if(!user.lastName)
@@ -32,14 +29,28 @@
             if(!user.password)
                 user.password = $rootScope.currentUser.password;
 
-            if(model.updateUser($rootScope.currentUser._id, user))
+            /*if(model.updateUser($rootScope.currentUser._id, user))
             {
                 $scope.message = "Updated user details";
                 model.setCurrentUser($rootScope.currentUser);
             }
             else{
                 $scope.message = "Unable to update the user";
-            }
+            }*/
+
+            console.log("Inside update...");
+            UserService
+                .updateUser(user._id, user)
+                .then(
+                    function(response) {
+                        $scope.users = response.data;
+                        console.log("scope.users: "+$scope.users);
+                    },
+                    function(err) {
+                        console.log("scope.err: "+$scope.error);
+                        $scope.error = err;
+                    }
+                );
         }
     }
 

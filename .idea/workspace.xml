@@ -443,6 +443,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/server/services/book.service.server.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/server/services/user.service.server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="webdevelopment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -463,61 +465,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="register.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/register.view.html">
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/client/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.62413317">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/login.view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8974359">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment/client/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.3846154">
-              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
+      <file leaf-file-name="user.schema.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="12" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/dabbling/passport/app/services/user/user.service.server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39087948">
-              <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assignment/server/services/user.service.server.js">
+      <file leaf-file-name="user.model.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="64" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="64" />
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.model.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/form.model.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="field.schema.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/server/models/field.schema.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="34" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.model.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/dabbling/passport/app/models/user/user.model.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="5" selection-start-line="51" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -546,19 +558,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/ClientSide/views/header/header.view.html" />
-        <option value="$PROJECT_DIR$/public/ClientSide/views/sidebar/sidebar.view.html" />
-        <option value="$PROJECT_DIR$/public/dabbling/angularJS/sidebar&amp;header/index.html" />
-        <option value="$PROJECT_DIR$/public/ClientSide/config.js" />
-        <option value="$PROJECT_DIR$/public/ClientSide/views/forms/forms.view.html" />
-        <option value="$PROJECT_DIR$/public/ClientSide/views/forms/forms.controller.js" />
-        <option value="$PROJECT_DIR$/public/ClientSide/views/users/register.view.html" />
-        <option value="$PROJECT_DIR$/public/ClientSide/views/users/login.view.html" />
-        <option value="$PROJECT_DIR$/public/ClientSide/index.html" />
-        <option value="$PROJECT_DIR$/public/dabbling/angularJS/ServerCoding/omdb/client/index.html" />
-        <option value="$PROJECT_DIR$/public/dabbling/angularJS/mean-demo/package.json" />
-        <option value="$PROJECT_DIR$/public/dabbling/angularJS/mean-demo/server.js" />
-        <option value="$PROJECT_DIR$/public/dabbling/angularJS/mean-demo/client/views/index.html" />
         <option value="$PROJECT_DIR$/public/dabbling/angularJS/mean-demo/client/js/controllers/meetups-controller.js" />
         <option value="$PROJECT_DIR$/public/dabbling/mongo/pageEditor/server/services/page.service.server.js" />
         <option value="$PROJECT_DIR$/public/dabbling/mongo/pageEditor/client/index.html" />
@@ -567,7 +566,6 @@
         <option value="$PROJECT_DIR$/public/dabbling/startbootstrap-creative-gh-pages/css/creative.css" />
         <option value="$PROJECT_DIR$/public/dabbling/startbootstrap-creative-gh-pages/index.html" />
         <option value="$PROJECT_DIR$/public/dabbling/mongo/pageEditor/server/app.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/project/client/views/search/search.controller.js" />
         <option value="$PROJECT_DIR$/public/project/client/views/home/home.view.html" />
         <option value="$PROJECT_DIR$/public/project/client/views/home/home.controller.js" />
@@ -592,11 +590,25 @@
         <option value="$PROJECT_DIR$/public/project/client/views/main/main.controller.js" />
         <option value="$PROJECT_DIR$/public/project/client/views/header/header.controller.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/dabbling/passport/app/services/user/user.service.server.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/public/assignment/client/views/users/login.view.html" />
         <option value="$PROJECT_DIR$/public/assignment/client/index.html" />
+        <option value="$PROJECT_DIR$/public/dabbling/passport/public/views/profile/profile.controller.js" />
+        <option value="$PROJECT_DIR$/public/dabbling/passport/public/views/register/register.controller.js" />
+        <option value="$PROJECT_DIR$/public/dabbling/passport/app/services/user/user.service.server.js" />
+        <option value="$PROJECT_DIR$/public/dabbling/passport/public/services/user.services.client.js" />
+        <option value="$PROJECT_DIR$/public/dabbling/passport/app/models/user/user.model.server.js" />
         <option value="$PROJECT_DIR$/public/assignment/server/services/user.service.server.js" />
+        <option value="$PROJECT_DIR$/public/assignment/client/services/user.service.client.js" />
+        <option value="$PROJECT_DIR$/public/assignment/client/views/users/login.view.html" />
+        <option value="$PROJECT_DIR$/public/assignment/client/views/users/login.controller.js" />
+        <option value="$PROJECT_DIR$/public/assignment/client/views/users/register.view.html" />
+        <option value="$PROJECT_DIR$/public/assignment/client/views/users/register.controller.js" />
+        <option value="$PROJECT_DIR$/public/assignment/client/views/users/profile.controller.js" />
+        <option value="$PROJECT_DIR$/public/assignment/client/config.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js" />
+        <option value="$PROJECT_DIR$/public/assignment/server/models/user.model.server.js" />
+        <option value="$PROJECT_DIR$/public/assignment/server/models/form.model.server.js" />
       </list>
     </option>
   </component>
@@ -622,7 +634,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -637,7 +649,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -750,40 +761,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dabbling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="passport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webdevelopment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webdevelopment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="assignment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -835,9 +812,199 @@
               <option name="myItemId" value="assignment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dabbling">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dabbling">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="passport">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dabbling">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="passport">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="dabbling">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="passport">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="models">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="user">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="assignment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="assignment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="models">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="webdevelopment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="assignment">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -856,13 +1023,6 @@
     <property name="SearchEverywhereHistoryKey" value="main.con&#9;FILE&#9;file://C:/Users/sneha_000/WebstormProjects/New/webdevelopment/public/assignment/views/main/main.controller.js" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\dabbling" />
-      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public" />
-      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\dabbling\startbootstrap-creative-gh-pages\img\portfolio" />
-      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\dabbling\startbootstrap-creative-gh-pages\img" />
-      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\project\client\views\services" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\dabbling\angularJS\checkctrrl" />
       <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\assignment\client\css" />
@@ -870,21 +1030,28 @@
       <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\project\client" />
       <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\project\server\services" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\dabbling\angularJS" />
+      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\dabbling" />
+      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public" />
+      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\dabbling\startbootstrap-creative-gh-pages\img\portfolio" />
+      <recent name="C:\Users\sneha_000\WebstormProjects\New\webdevelopment\public\dabbling\startbootstrap-creative-gh-pages\img" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+  <component name="RunManager" selected="Node.js.server.js (1)">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webdevelopment/public/project/client/index.html">
       <method />
     </configuration>
     <configuration default="false" name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webdevelopment/public/dabbling/mongo/pageEditor/client/index.html">
       <method />
     </configuration>
-    <configuration default="false" name="index.html (3)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webdevelopment/public/dabbling/angularJS/mean-demo/client/views/index.html">
-      <method />
-    </configuration>
     <configuration default="false" name="index.html (4)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webdevelopment/public/index.html">
       <method />
     </configuration>
     <configuration default="false" name="index.html (5)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webdevelopment/public/dabbling/startbootstrap-creative-gh-pages/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="server.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/public/dabbling/passport">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -942,17 +1109,17 @@
       <item index="0" class="java.lang.String" itemvalue="Node.js.server.js" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html (4)" />
-      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.index.html (5)" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (4)" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html (5)" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.server.js (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (5)" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (4)" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.server.js (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (5)" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (4)" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -976,26 +1143,35 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23476417" sideWeight="0.49530515" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19483568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278496" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359155" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11032864" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960254" sideWeight="0.5046948" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39952996" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39906102" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19483568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1017,159 +1193,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/project/client/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9478261">
-          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/users/admin.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33224756">
-          <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/users/mybooks.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/home/home.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38434783">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/users/profile.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0602407">
-          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/users/profile.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/mongo/pageEditor/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/mongo/pageEditor/server/models/page.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="13.045603">
-          <caret line="257" column="5" selection-start-line="257" selection-start-column="5" selection-end-line="257" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/mongo/pageEditor/server/services/page.service.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5635179">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/server/services/book.service.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6840391">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/mongo/pageEditor/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47826087">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/details/details.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1538463">
-          <caret line="8" column="8" selection-start-line="6" selection-start-column="12" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/details/details.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/services/book.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/services/book.service.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/mongo/pageEditor/client/page/page.content.details.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62608695">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/mongo/pageEditor/client/page/page.details.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26956522">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/mongo/pageEditor/client/services/page.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2703583">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/client/views/header/header.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.104347825">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/dabbling/mongo/pageEditor/client/page/page.details.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8306189">
@@ -1275,6 +1303,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4102564">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.6608696">
+          <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/home/home.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7826087">
+          <caret line="7" column="736" selection-start-line="7" selection-start-column="736" selection-end-line="7" selection-end-column="736" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20869565">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/views/profile/profile.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.820513">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/dabbling/passport/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1283,103 +1387,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/app.js">
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2931596">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4102564">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.6608696">
-          <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.538462">
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/home/home.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7826087">
-          <caret line="7" column="736" selection-start-line="7" selection-start-column="736" selection-end-line="7" selection-end-column="736" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/login.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8974359">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3076923">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3846154">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/server/services/user.service.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="64" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/services/user.services.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6612378">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/register.view.html">
+    <entry file="file://$PROJECT_DIR$/public/dabbling/angularJS/sortable/ul/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1387,10 +1403,195 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/services/user.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5863192">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="71" />
+          <folding>
+            <element signature="e#8691#9368#0" expanded="false" />
+            <element signature="e#9404#10150#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/services/user.service.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.732899">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/views/login/login.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5384616">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/login.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.008695652">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/login.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/views/login/login.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.38273615">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/register.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42608696">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/views/register/register.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/register.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4397395">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/views/register/register.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1465798">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/profile.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="25.25641">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/views/profile/profile.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8794788">
+          <caret line="24" column="18" selection-start-line="12" selection-start-column="12" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/views/users/profile.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20358306">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="12" selection-end-line="38" selection-end-column="15" />
+          <folding>
+            <marker date="1461469407501" expanded="true" signature="1016:1150" placeholder="{...}" />
+            <marker date="1461469407501" expanded="true" signature="1167:1244" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/client/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/dabbling/passport/app/services/user/user.service.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39087948">
-          <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7795#8472#0" expanded="false" />
+            <element signature="e#8508#9254#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/services/user.services.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/app/models/user/user.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="5" selection-start-line="51" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/user.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/form.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/server/models/field.schema.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8408306">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dabbling/passport/public/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.62413317">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,6 +1,7 @@
-var q = require("q");
+var q             = require("q");
+var mongoose      = require("mongoose");
 
-module.exports = function(db, mongoose) {
+module.exports = function() {
 
     "use strict";
 
@@ -14,113 +15,57 @@ module.exports = function(db, mongoose) {
         deleteUser: deleteUser,
         updateUser: updateUser,
         findUserByUsername: findUserByUsername,
-        findUserById: findUserById
+        findUserById: findUserById,
+        findUserByGoogleId: findUserByGoogleId,
+        findUserByFacebookId: findUserByFacebookId,
+        getMongooseModel: getMongooseModel
     };
 
     return userApi;
 
+    function deleteUser(userId) {
+        return UserModel.remove({_id: userId});
+    }
+
     function findUserByCredentials(credentials) {
-        var deferred = q.defer();
-
-        UserModel.findUserByCredentials(credentials, function(err, user){
-            if(err) {
-                deferred.reject(err);
-            } else {
-                deferred.resolve(user);
+        console.log("find user by creds model");
+        return UserModel.findOne(
+            {
+                username: credentials.username,
+                password: credentials.password
             }
-        });
-
-        return deferred.promise;
+        );
     }
 
     function findAllUsers() {
-        var deferred = q.defer();
-
-        UserModel.findAllUsers(function(err, users){
-            if(err) {
-                deferred.reject(err);
-            } else {
-                deferred.resolve(users);
-            }
-        });
-
-        return deferred.promise;
+        console.log("find all users model");
+        return UserModel.find();
     }
 
     function createUser(user) {
-        var deferred = q.defer();
-        console.log("Create a user");
-
-        UserModel.createUser(user, function(err, user) {
-            if(err) {
-                deferred.reject(err);
-            } else {
-                console.log("User>");
-                console.log(user);
-                deferred.resolve(user);
-            }
-        });
-
-        return deferred.promise;
+        console.log("create user model");
+        console.log(UserModel.create(user));
+        return UserModel.create(user);
     }
 
-    function deleteUser(userId) {
-        var deferred = q.defer();
-
-        UserModel.deleteUserById(userId, function(err, user) {
-            if(err) {
-                deferred.reject(err);
-            } else {
-                deferred.resolve(user);
-            }
-        });
-
-        return deferred.promise;
+    function removeUser(userId) {
+        return UserModel.remove({_id: userId});
     }
 
-    function updateUser(userId, user)
-    {
-        var deferred = q.defer();
-
-        user.delete("userId");
-
-        UserModel.updateUser({userId: userId}, {$set: user}, function(err, user) {
-            if(err) {
-                deferred.reject(err);
-            } else {
-                deferred.resolve(user);
-            }
-        });
-
-        return deferred.promise;
+    function updateUser(userId, user) {
+        console.log("update user model");
+        return UserModel.update({_id: userId}, {$set: user});
     }
 
     function findUserByUsername(username) {
-        var deferred = q.defer();
-
-        UserModel.findUserByUsername(username, function(err, user){
-            if(err) {
-                deferred.reject(err);
-            } else {
-                deferred.resolve(user);
-            }
-        });
-
-        return deferred.promise;
+        console.log("find user by username model");
+        console.log(UserModel.findOne({username: username}));
+        return UserModel.findOne({username: username});
     }
 
     function findUserById(userId) {
-        var deferred = q.defer();
-
-        UserModel.findUserById(userId, function(err, user){
-            if(err) {
-                deferred.reject(err);
-            } else {
-                deferred.resolve(user);
-            }
-        });
-
-        return deferred.promise;
+        console.log("find user by id model");
+        return UserModel.findById(userId);
     }
 
     function findUserByFacebookId(facebookId) {
@@ -129,6 +74,11 @@ module.exports = function(db, mongoose) {
 
     function findUserByGoogleId(googleId) {
         return UserModel.findOne({'google.id': googleId});
+    }
+
+    function getMongooseModel() {
+        console.log("user model get mongoose model");
+        return UserModel;
     }
 
 }

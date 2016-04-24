@@ -24,6 +24,7 @@
         }
 
         function updateUser(userId, user) {
+            console.log("update client service...");
             return $http.put('/api/user/'+userId, user);
         }
 
@@ -36,6 +37,7 @@
         }
 
         function register(user) {
+            console.log("inside client service register");
             return $http.post("/api/register", user);
         }
 

@@ -6,13 +6,10 @@
 
     function RegisterController($scope, $rootScope, $location, UserService)
     {
-        var model = this;
         $scope.message = null;
-        model.register = register;
+        $scope.register = register;
 
         function register(user) {
-
-            $scope.message = null;
 
             if (user === null) {
                 $scope.message = "Please fill in the compulsory fields";
@@ -30,26 +27,27 @@
                 $scope.message = "Passwords do not match";
                 return;
             }
-            var checkuser = model.findUserByCredentials(user.username, user.password);
+            /*var checkuser = model.findUserByCredentials(user.username, user.password);
             if (checkuser != null) {
                 $scope.message = "User already exists";
                 return;
-            }
-
-            UserService
-                .register(user)
-                .then(
-                    function(response) {
-                        var user = response.data;
-                        if(user != null) {
-                            $rootScope.currentUser = user;
-                            $location.url("/profile");
+            }*/
+            else {
+                UserService
+                    .register(user)
+                    .then(
+                        function(response) {
+                            var user = response.data;
+                            if(user != null) {
+                                $rootScope.currentUser = user;
+                                $location.url("/profile");
+                            }
+                        },
+                        function(err) {
+                            $scope.error = err;
                         }
-                    },
-                    function(err) {
-                        $scope.error = err;
-                    }
-                );
+                    );
+            }
         }
     }
 

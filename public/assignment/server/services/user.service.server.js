@@ -1,35 +1,39 @@
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var passport         = require('passport');
+var LocalStrategy    = require('passport-local').Strategy;
+var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
-var mongoose = require('mongoose');
-var auth = authorized;
-
-var userModel = require("../../models/user/user.model.server.js")();
+var mongoose         = require('mongoose');
+var bcrypt = require('bcrypt-nodejs');
 
 module.exports = function(app, userModel) {
 
     "use strict";
 
+    var userModel = require("../../models/user/user.model.server.js")();
+    var auth = authorized;
+
     app.post('/api/assignment/user', auth, createUser);
-    app.post("/api/assignment/user", register);
+    app.post("/api/assignment/register", register);
     app.get("/api/assignment/user", auth, findAllUsers);
     app.get("/api/assignment/user/:id", auth, findUserById);
-    app.get("/api/assignment/user?username=username", auth, findUserByUsername);
-    app.get("/api/assignment/user?username=alice&password=wonderland", auth, findUserByCredentials);
+    app.get("/api/assignment/user/username/:username", auth, findUserByUsername);
+    app.get("/api/assignment/user/username/:username/password/:password", auth, findUserByCredentials);
     app.put("/api/assignment/user/:id", auth, updateUser);
     app.delete("/api/assignment/user/:id", auth, deleteUser);
-    app.post("/api/assignment/user/login", passport.authenticate('local'), login);
-    app.get("/api/assignment/user/loggedin", loggedin);
-    app.post("/api/assignment/user/logout", logout);
+    app.post("/api/assignment/login", passport.authenticate('local'), login);
+    app.get("/api/assignment/loggedin", loggedin);
+    app.post("/api/assignment/logout", logout);
     app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+    app.get   ('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
     app.get('/auth/facebook/callback',
         passport.authenticate('facebook', {
             successRedirect: '/#/profile',
             failureRedirect: '/#/login'
         }));
-    app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
-    app.get('/auth/google/callback',
+
+    app.get   ('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
+    app.get   ('/auth/google/callback',
         passport.authenticate('google', {
             successRedirect: '/#/profile',
             failureRedirect: '/#/login'
@@ -153,7 +157,22 @@ module.exports = function(app, userModel) {
             );
     }
 
+    function login(req, res) {
+        var user = req.user;
+        res.json(user);
+    }
+
+    function loggedin(req, res) {
+        res.send(req.isAuthenticated() ? req.user : '0');
+    }
+
+    function logout(req, res) {
+        req.logOut();
+        res.send(200);
+    }
+
     function register(req, res) {
+        console.log("inside server register...");
         var newUser = req.body;
         newUser.roles = ['student'];
 
@@ -162,28 +181,36 @@ module.exports = function(app, userModel) {
             .then(
                 function(user){
                     if(user) {
+                        console.log("line 178");
                         res.json(null);
                     } else {
+                        console.log("line 181");
+                        newUser.password = bcrypt.hashSync(newUser.password);
+                        console.log("encrypted password: "+newUser.password);
                         return userModel.createUser(newUser);
                     }
                 },
                 function(err){
+                    console.log("user server service error: "+err);
                     res.status(400).send(err);
                 }
             )
             .then(
                 function(user){
-                    if(user){
+                    if(user){console.log("line 194");
                         req.login(user, function(err) {
                             if(err) {
+                                console.log("line 197: "+err);
                                 res.status(400).send(err);
                             } else {
+                                console.log("line 200: "+user);
                                 res.json(user);
                             }
                         });
                     }
                 },
                 function(err){
+                    console.log("error 207: "+err);
                     res.status(400).send(err);
                 }
             );
@@ -224,6 +251,32 @@ module.exports = function(app, userModel) {
         res.json(user);
     }
 
+    function deleteUser(req, res) {
+        if(isAdmin(req.user)) {
+
+            userModel
+                .removeUser(req.params.id)
+                .then(
+                    function(user){
+                        return userModel.findAllUsers();
+                    },
+                    function(err){
+                        res.status(400).send(err);
+                    }
+                )
+                .then(
+                    function(users){
+                        res.json(users);
+                    },
+                    function(err){
+                        res.status(400).send(err);
+                    }
+                );
+        } else {
+            res.status(403);
+        }
+    }
+
     function updateUser(req, res) {
         var newUser = req.body;
         if(!isAdmin(req.user)) {
@@ -251,32 +304,6 @@ module.exports = function(app, userModel) {
                     res.status(400).send(err);
                 }
             );
-    }
-
-    function deleteUser(req, res) {
-        if(isAdmin(req.user)) {
-
-            userModel
-                .removeUser(req.params.id)
-                .then(
-                    function(user){
-                        return userModel.findAllUsers();
-                    },
-                    function(err){
-                        res.status(400).send(err);
-                    }
-                )
-                .then(
-                    function(users){
-                        res.json(users);
-                    },
-                    function(err){
-                        res.status(400).send(err);
-                    }
-                );
-        } else {
-            res.status(403);
-        }
     }
 
     function login(req, res) {
@@ -307,6 +334,7 @@ module.exports = function(app, userModel) {
             .then(
                 function(user){
                     // if the user does not already exist
+                    //add a
                     if(user == null) {
                         // create a new user
                         return userModel.createUser(newUser)

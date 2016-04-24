@@ -6,7 +6,6 @@
 
     function LoginController($rootScope, $scope, UserService, $location)
     {
-        $rootScope.isUserLoggedIn = false;
         $scope.login = login;
 
         function login(user)

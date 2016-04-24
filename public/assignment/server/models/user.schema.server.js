@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-module.exports = function(mongoose) {
+
+module.exports = function() {
 
     var COLLECTION = "user";
 

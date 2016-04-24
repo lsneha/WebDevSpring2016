@@ -45,6 +45,7 @@ module.exports = function() {
     }
 
     function updateUser(userId, user) {
+        console.log("update user model");
         return UserModel.update({_id: userId}, {$set: user});
     }
 
@@ -53,25 +54,34 @@ module.exports = function() {
     }
 
     function findAllUsers() {
+        console.log("find all users model");
         return UserModel.find();
     }
+
     function createUser(user) {
+        console.log("create user model");
+        console.log(UserModel.create(user));
         return UserModel.create(user);
     }
 
     function findUserByUsername(username) {
+        console.log("find user by username model");
+        console.log(UserModel.findOne({username: username}));
         return UserModel.findOne({username: username});
     }
 
     function getMongooseModel() {
+        console.log("user model get mongoose model");
         return UserModel;
     }
 
     function findUserById(userId) {
+        console.log("find user by id model");
         return UserModel.findById(userId);
     }
 
     function findUserByCredentials(credentials) {
+        console.log("find user by creds model");
         return UserModel.findOne(
             {
                 username: credentials.username,
