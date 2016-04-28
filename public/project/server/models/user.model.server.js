@@ -1,70 +1,53 @@
-//var q = require("q");
-var mock = require("./user.mock.json");
+var q             = require("q");
+var mongoose      = require("mongoose");
 
-module.exports = function(mongoose, db) {
+module.exports = function() {
 
-    /*var UserSchema = mongoose.Schema({
-        "username": String,
-        "password": String,
-        "firstName": String,
-        "lastName": String,
-        "description": String,
-        "books": [
-            ]
-    }, {collection: "users"});
+    "use strict";
 
-    var UserModel = mongoose.model("UserModel", UserSchema);*/
-    var api = {
-        findUserByCredentials: findUserByCredentials,
-        createUser: createUser,
-        findUserById: findUserById,
-        findUsersByIds: findUsersByIds
+    mongoose.models = {};
+    mongoose.modelSchemas = {};
+    var UserSchema = require("./user.schema.server.js")(mongoose);
+    var UserModel = mongoose.model('UserModel', UserSchema);
+
+    var userApi = {
+        findAllUsers : findAllUsers,
+        createUser : createUser,
+        deleteUser: deleteUser,
+        updateUser: updateUser,
+        findUserByUsername: findUserByUsername,
+        getMongooseModel: getMongooseModel
     };
-    return api;
 
-    function findUsersByIds (userIds) {
-        var users = [];
-        for (var u in userIds) {
-            var user = findUserById (userIds[u]);
-            if (user) {
-                users.push (user);
-            }
-        }
-        return users;
+    return userApi;
+
+    function deleteUser(userId) {
+        return UserModel.remove({_id: userId});
     }
 
-    function findUserById(userId) {
-        for(var u in mock) {
-            if( mock[u]._id === userId ) {
-                return mock[u];
-            }
-        }
-        return null;
-
+    function findAllUsers() {
+        console.log("find all users model");
+        return UserModel.find();
     }
 
     function createUser(user) {
-        user._id = "ID_" + (new Date()).getTime();
-        mock.push(user);
-        return user;
-        /*var deferred = q.defer();
-
-        UserModel.create(user, function(err, doc){
-            UserModel.find(function(err, users){
-                deferred.resolve(users);
-            });
-        });
-
-        return deferred.promise;*/
+        console.log("create user model");
+        return UserModel.create(user);
     }
 
-    function findUserByCredentials(credentials) {
-        for(var u in mock) {
-            if( mock[u].username === credentials.username &&
-                mock[u].password === credentials.password) {
-                return mock[u];
-            }
-        }
-        return null;
+    function updateUser(userId, user) {
+        console.log("update user model: "+userId);
+        return UserModel.update({username: userId}, {$set: user});
     }
+
+    function findUserByUsername(username) {
+        console.log("Inside find user by username");
+        return UserModel.findOne({username: username});
+    }
+
+    function getMongooseModel() {
+        console.log("user model get mongoose model");
+        return UserModel;
+    }
+
 }

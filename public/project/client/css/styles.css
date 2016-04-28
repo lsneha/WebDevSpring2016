@@ -1,3 +1,49 @@
+.top-buffer {
+    margin: 30px;
+}
+
+body {
+    margin: 20px;
+    padding:20px;
+}
+
+.all-side-padding {
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.websitename {
+    font-size: 32px;
+    text-align: left;
+    font-family: Cambria;
+    color: #151B8D;
+    text-decoration: underline;
+}
+
+.navbar-default {
+    color: #151B8D;
+    background-color: #151B8D;
+    background-image: none;
+}
+
+.labels {
+    font-weight: bold;
+    text-align: left !important;
+}
+
+.para {
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 5px;
+    font-size: medium;
+}
+
+.leftnavmenu {
+    font-size: 20px;
+}
+
 .topnavmenu {
     font-size:18px
 }
@@ -7,7 +53,7 @@
 }
 
 .myform-group {
-    background-color: #ffe4c4;
+    background-color: #A0CFEC;
     border-style: dotted;
     padding: 15px;
     -moz-border-radius: 25px 10px / 10px 25px;
@@ -19,7 +65,7 @@
 }
 
 .main-content {
-    background-color: #ffebcd;
+    background-color: #FEFCFF;
 }
 
 blockquote {
@@ -29,6 +75,7 @@ blockquote {
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
     color: #000000;
     content: open-quote;
@@ -37,6 +84,7 @@ blockquote:before {
     margin-right: 0.25em;
     vertical-align: -0.4em;
 }
+
 blockquote p {
     display: inline;
 }

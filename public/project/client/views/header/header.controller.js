@@ -1,45 +1,36 @@
 (function(){
     "use strict";
     angular
-        .module("MyProjectApp")
+        .module("ProjectApp")
         .controller("HeaderController", HeaderController);
 
-    function HeaderController($location, $scope, UserService, BookService, $routeParams) {
-        $scope.$location = $location;
-        $scope.logout = logout;
-        console.log("Inside header controller...");
+    function HeaderController($scope, $http, $routeParams, $location, $rootScope) {
 
-        function logout() {
-            UserService.setCurrentUser(null);
-            $location.url("/home");
+        function init(){
+            console.log("Header controller initalized");
         }
 
         var title = $routeParams.title;
+
         if(title) {
-            console.log("Inside of condition for title...");
             search(title);
         }
 
-        //event handler declaration
+        //event handler declarations
         $scope.search = search;
 
-        //event handler implementation
-        function search(title) {
+        function search(title){
             console.log(title);
-            $location.url("/search/"+title);
-            BookService
-                .findBooksByTitle(title)
-                .then(function(books){
-                    $scope.books = books;
-                });
-
-            console.log("after book search: "+$scope.books.count);
+            $http.get("http://www.omdbapi.com/?s="+title)
+             .success(render);
+            //MovieService.findMoviesByTitle(title, render);
         }
 
         function render(response) {
-            console.log(response);
-            $scope.data = response;
+            $rootScope.data = response;
+            $location.url("/searchResults");
         }
 
+        init();
     }
 })();

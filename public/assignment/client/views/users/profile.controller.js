@@ -6,19 +6,20 @@
 
     function ProfileController($scope, $rootScope, $location, UserService)
     {
-        $rootScope.isUserLoggedIn = true;
+        //$rootScope.isUserLoggedIn = true;
 
-        $rootScope.currentUser = model.getCurrentUser();
+        /*$rootScope.currentUser = model.getCurrentUser();
         if (!$rootScope.currentUser) {
             $location.url("/login");
-        }
+        }*/
 
-        $scope.updateUser = updateUser;
+        $scope.update = update;
 
         $scope.error = null;
         $scope.message = null;
+        console.log("inside profile controller...");
 
-        function updateUser(user) {
+        function update(user) {
 
             if(!user.firstName)
                 user.firstName = $rootScope.currentUser.firstName;
@@ -39,8 +40,15 @@
             }*/
 
             console.log("Inside update...");
+            console.log(user.username);
+            console.log(user.password);
+            console.log(user.firstName);
+            console.log(user.lastName);
+            console.log(user.email);
+            console.log(user.roles);
+            console.log(user._id);
             UserService
-                .updateUser(user._id, user)
+                .updateUser(user.username, user)
                 .then(
                     function(response) {
                         $scope.users = response.data;

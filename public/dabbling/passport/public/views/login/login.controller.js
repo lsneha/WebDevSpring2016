@@ -16,8 +16,10 @@
                 .then(
                     function(response)
                     {
+                        console.log("Login success: ", response.data);
                         $rootScope.currentUser = response.data;
-                        $location.url("/profile");
+                        console.log('Redirecting...');
+                        $location.path("/profile");
                     },
                     function(err) {
                         $scope.error = err;

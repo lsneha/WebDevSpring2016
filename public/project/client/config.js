@@ -1,7 +1,7 @@
 (function(){
     "use strict";
     angular
-        .module("MyProjectApp")
+        .module("ProjectApp")
         .config(function($routeProvider){
             $routeProvider
                 .when("/", {
@@ -9,27 +9,21 @@
                     controller: "HomeController"
                 })
                 .when("/home", {
-                    templateUrl: "views/home/home.view.html"
+                    templateUrl: "views/home/home.view.html",
+                    controller: "HomeController"
+                })
+                .when("/login", {
+                    templateUrl: "views/login/login.view.html",
+                    controller: "LoginController"
                 })
                 .when("/profile", {
-                    templateUrl: "views/users/profile.view.html",
+                    templateUrl: "views/profile/profile.view.html",
                     controller: "ProfileController"
                 })
-                .when("/mybooks", {
-                    templateUrl: "views/users/mybooks.view.html"
+                .when("/searchResults", {
+                    templateUrl: "views/search/searchresults.view.html"
                 })
-                /*.when("/details/:someID", {
-                    templateUrl: "views/details/details.view.html",
-                    controller: "DetailsController"
-                })*/
-                .when("/adminHm", {
-                    templateUrl: "views/users/admin.view.html"
-                })
-                .when("/search", {
-                    templateUrl: "views/details/details.view.html",
-                    controller: "DetailsController"
-                })
-                .when("/search/:title", {
+                .when("/details/:imdbID", {
                     templateUrl: "views/details/details.view.html",
                     controller: "DetailsController"
                 })
@@ -37,4 +31,6 @@
                     redirectTo: "/home"
                 });
         });
+
+
 })();

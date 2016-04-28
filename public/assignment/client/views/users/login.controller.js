@@ -17,7 +17,8 @@
                         function(response)
                         {
                             $rootScope.currentUser = response.data;
-                            $location.url("/profile");
+                            //check this url or path?
+                            $location.path("/profile");
                         },
                         function(err) {
                             $scope.error = err;

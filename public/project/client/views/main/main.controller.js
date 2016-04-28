@@ -1,10 +1,12 @@
 (function() {
+    "use strict";
     angular
-        .module("MyProjectApp")
+        .module("ProjectApp")
         .controller("MainController", MainController);
 
-    function MainController($location, $scope, $http, $routeParams) {
-        console.log("Inside main controller");
+    function MainController($scope, $location)
+    {
+        $scope.$location = $location;
     }
 
 })();

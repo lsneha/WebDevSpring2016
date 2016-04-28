@@ -1,7 +1,6 @@
-module.exports = function(app) {
-    var userModel    = require("./models/user.model.server.js")();
-    //var bookModel   = require("./models/book.model.server.js")();
+module.exports = function(app, db, mongoose)  {
+    var userModel    = require("./models/user.model.server.js")(db, mongoose);
 
-    require("./services/user.service.server.js") (app, userModel);
-    require("./services/book.service.server.js")(app);
+    var userService  = require("./services/user.service.server.js") (app, userModel);
+    var movieService = require("./services/movie.service.server.js")(app);
 }

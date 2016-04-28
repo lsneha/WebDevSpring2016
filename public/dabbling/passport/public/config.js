@@ -60,6 +60,7 @@
     var checkLoggedin = function($q, $timeout, $http, $location, $rootScope)
     {
         var deferred = $q.defer();
+        console.log("Inside checkloggedin in config js");
     
         $http.get('/api/loggedin').success(function(user)
         {
@@ -68,12 +69,16 @@
             if (user !== '0')
             {
                 $rootScope.currentUser = user;
+                console.log("current user:"+$rootScope.currentUser.username)
                 deferred.resolve();
             }
             // User is Not Authenticated
             else
             {
                 $rootScope.errorMessage = 'You need to log in.';
+                console.log("Error: "+user.username);
+                console.log("user obj: "+user);
+
                 deferred.reject();
                 $location.url('/login');
             }

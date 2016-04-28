@@ -21,7 +21,6 @@
                 .when("/profile", {
                     templateUrl: "views/users/profile.view.html",
                     controller: "ProfileController",
-                    controllerAs: "model",
                     resolve: {
                         loggedin: checkLoggedin
                     }
@@ -67,15 +66,15 @@
     {
         var deferred = $q.defer();
 
-        $http.get('/api/assignment/user/loggedin').success(function(user)
+        $http.get('/api/assignment/loggedin', $rootScope.currentUser).success(function(user)
         {
             $rootScope.errorMessage = null;
             // User is Authenticated
-            if (user !== '0' && user.roles.indexOf('admin') != -1)
-            {
+            //if (user !== '0' && user.roles.indexOf('admin') != -1)
+            //{
                 $rootScope.currentUser = user;
                 deferred.resolve();
-            }
+            //}
         });
 
         return deferred.promise;
@@ -85,23 +84,32 @@
     var checkLoggedin = function($q, $timeout, $http, $location, $rootScope)
     {
         var deferred = $q.defer();
+        console.log("Inside checkloggedin in config js");
 
-        $http.get('/api/assignment/user/loggedin').success(function(user)
+        $http.get('/api/assignment/loggedin', $rootScope.currentUser).success(function(user)
         {
             $rootScope.errorMessage = null;
             // User is Authenticated
             if (user !== '0')
             {
                 $rootScope.currentUser = user;
+                console.log("current user:"+$rootScope.currentUser.username)
                 deferred.resolve();
             }
             // User is Not Authenticated
             else
             {
                 $rootScope.errorMessage = 'You need to log in.';
+                console.log("Error: "+user.username);
+                console.log("user obj: "+user);
+
                 deferred.reject();
                 $location.url('/login');
             }
+
+            /*$rootScope.currentUser = user;
+            console.log("current user:"+$rootScope.currentUser.username)
+            deferred.resolve();*/
         });
 
         return deferred.promise;
@@ -111,7 +119,7 @@
     {
         var deferred = $q.defer();
 
-        $http.get('/api/assignment/user/loggedin').success(function(user)
+        $http.get('/api/assignment/loggedin', $rootScope.currentUser).success(function(user)
         {
             $rootScope.errorMessage = null;
             // User is Authenticated

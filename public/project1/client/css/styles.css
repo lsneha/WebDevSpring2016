@@ -1,0 +1,42 @@
+.topnavmenu {
+    font-size:18px
+}
+
+.top-buffer {
+    margin: 30px;
+}
+
+.myform-group {
+    background-color: #ffe4c4;
+    border-style: dotted;
+    padding: 15px;
+    -moz-border-radius: 25px 10px / 10px 25px;
+    border-radius: 25px 10px / 10px 25px;
+}
+
+.area-top {
+    position:fixed;
+}
+
+.main-content {
+    background-color: #ffebcd;
+}
+
+blockquote {
+    background: #fffaf0;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+    color: #000000;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}

@@ -1,18 +1,19 @@
-(function() {
+(function(){
     angular
-        .module("MyProjectApp")
-        .controller("DetailsController", detailsController);
+        .module("ProjectApp")
+        .controller("DetailsController", DetailsController);
 
-    function detailsController($routeParams, $http, $scope) {
-        var id = $routeParams.someID;
-        /*$http
-            .get("")
-            .success(renderBook);
+    function DetailsController($routeParams, $scope, MovieService){
 
-        function renderBook(response) {
-            $scope.book = response;
-        }*/
+        function init() {
+            var imdbID = $routeParams.imdbID;
+            MovieService.findMovieByImdbId(imdbID).success(renderMovie);
+        }
 
+        function renderMovie(response){
+            $scope.movie = response;
+        }
+
+        init();
     }
-
 })();

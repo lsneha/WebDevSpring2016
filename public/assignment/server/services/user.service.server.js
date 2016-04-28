@@ -1,127 +1,77 @@
 var passport         = require('passport');
 var LocalStrategy    = require('passport-local').Strategy;
-var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
-var FacebookStrategy = require('passport-facebook').Strategy;
 var mongoose         = require('mongoose');
-var bcrypt = require('bcrypt-nodejs');
 
-module.exports = function(app, userModel) {
+module.exports = function(app) {
 
     "use strict";
 
     var userModel = require("../models/user.model.server.js")();
     var auth = authorized;
 
-    app.post('/api/assignment/user', auth, createUser);
-    app.post("/api/assignment/register", register);
-    app.get("/api/assignment/user", auth, findAllUsers);
-    app.get("/api/assignment/user/:id", auth, findUserById);
-    app.get("/api/assignment/user/username/:username", auth, findUserByUsername);
-    app.get("/api/assignment/user/username/:username/password/:password", auth, findUserByCredentials);
-    app.put("/api/assignment/user/:id", auth, updateUser);
-    app.delete("/api/assignment/user/:id", auth, deleteUser);
-    app.post("/api/assignment/login", passport.authenticate('local'), login);
-    app.get("/api/assignment/loggedin", loggedin);
-    app.post("/api/assignment/logout", logout);
-    app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+    app.post('/api/project/user', auth, createUser);
+    app.get("/api/project/user", auth, findAllUsers);
+    //app.get("/api/project/user/:id", auth, findUserById);
+    //app.get("/api/project/user/username/:username", auth, findUserByUsername);
+    //app.get("/api/project/user/username/:username/password/:password", auth, findUserByCredentials);
+    app.put("/api/project/user/:id", auth, updateUser);
+    app.delete("/api/project/user/:id", auth, deleteUser);
 
-    app.get   ('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
-    app.get('/auth/facebook/callback',
-        passport.authenticate('facebook', {
-            successRedirect: '/#/profile',
-            failureRedirect: '/#/login'
-        }));
+    //security project
+    app.post("/api/project/login", passport.authenticate('local'), login);
+    app.get("/api/project/loggedin", loggedin);
+    app.post("/api/project/logout", logout);
+    app.post("/api/project/register", register);
 
-    app.get   ('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
-    app.get   ('/auth/google/callback',
-        passport.authenticate('google', {
-            successRedirect: '/#/profile',
-            failureRedirect: '/#/login'
-        }));
+    //admin tasks
+    app.post("/api/project/admin/user", ensureAdmin, createUserByAdmin);
+    app.get("/api/project/admin/user", ensureAdmin, getAllUsers);
+    app.get("/api/project/admin/user/:userId", ensureAdmin, findUserByIdForAdmin);
+    app.delete("/api/project/admin/user/:userId", ensureAdmin, deleteUserByAdmin);
+    app.put("/api/project/admin/user/:userId", ensureAdmin, updateUserByAdmin);
 
-    var googleConfig = {
-        clientID        : process.env.GOOGLE_CLIENT_ID,
-        clientSecret    : process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL     : process.env.GOOGLE_CALLBACK_URL
-    };
-
-    var facebookConfig = {
-        clientID        : process.env.FACEBOOK_CLIENT_ID,
-        clientSecret    : process.env.FACEBOOK_CLIENT_SECRET,
-        callbackURL     : process.env.FACEBOOK_CALLBACK_URL
-    };
-
-    passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
-    passport.use(new GoogleStrategy(googleConfig, googleStrategy));
     passport.use(new LocalStrategy(localStrategy));
     passport.serializeUser(serializeUser);
     passport.deserializeUser(deserializeUser);
 
-    function facebookStrategy(token, refreshToken, profile, done) {
-        userModel
-            .findUserByFacebookId(profile.id)
-            .then(
-                function(user) {
-                    if(user) {
-                        return done(null, user);
-                    } else {
-                        var names = profile.displayName.split(" ");
-                        var newFacebookUser = {
-                            lastName:  names[1],
-                            firstName: names[0],
-                            email:     profile.emails ? profile.emails[0].value:"",
-                            facebook: {
-                                id:    profile.id,
-                                token: token
-                            }
-                        };
-                        return userModel.createUser(newFacebookUser);
-                    }
-                },
-                function(err) {
-                    if (err) { return done(err); }
-                }
-            )
-            .then(
-                function(user){
-                    return done(null, user);
-                },
-                function(err){
-                    if (err) { return done(err); }
-                }
-            );
+    function findUserByIdForAdmin(req, res) {
+        findUserById(req, res);
     }
 
-    function googleStrategy(token, refreshToken, profile, done) {
-        userModel
-            .findUserByGoogleId(profile.id)
-            .then(
-                function(user) {
-                    if(user) {
-                        return done(null, user);
+    function deleteUserByAdmin(req, res) {
+        deleteUser(req, res);
+    }
+
+    function updateUserByAdmin(req, res) {
+        updateUser(req, res);
+    }
+
+    function ensureAdmin(req, res, next) {
+        if (req.isAuthenticated()) {
+            userModel
+                .findById(req.user._id)
+                .then(function(user){
+                    delete user.password;
+                    if(user.roles.indexOf("admin") > -1) {
+                        return next();
                     } else {
-                        var newGoogleUser = {
-                            lastName: profile.name.familyName,
-                            firstName: profile.name.givenName,
-                            email: profile.emails[0].value,
-                            google: {
-                                id:          profile.id,
-                                token:       token
-                            }
-                        };
-                        return userModel.createUser(newGoogleUser);
+                        res.redirect('/#/login');
                     }
-                },
-                function(err) {
-                    if (err) { return done(err); }
-                }
-            )
+                })
+        }
+    }
+
+    function getAllUsers(req, res){
+        userModel
+            .findAllUsers()
             .then(
-                function(user){
-                    return done(null, user);
+                function (users) {
+                    console.log("Success finding users in server service");
+                    res.json(users);
                 },
-                function(err){
-                    if (err) { return done(err); }
+                function () {
+                    console.log("Error finding users in server service");
+                    res.status(400).send(err);
                 }
             );
     }
@@ -163,7 +113,9 @@ module.exports = function(app, userModel) {
     }
 
     function loggedin(req, res) {
-        res.send(req.isAuthenticated() ? req.user : '0');
+        console.log(req.body, null, 2);
+        //res.send(req.isAuthenticated() ? req.user : '0');
+        res.send(req.user);
     }
 
     function logout(req, res) {
@@ -185,7 +137,6 @@ module.exports = function(app, userModel) {
                         res.json(null);
                     } else {
                         console.log("line 181");
-                        newUser.password = bcrypt.hashSync(newUser.password);
                         console.log("encrypted password: "+newUser.password);
                         return userModel.createUser(newUser);
                     }
@@ -241,7 +192,9 @@ module.exports = function(app, userModel) {
 
     function findUserById(req, res) {
         var id = req.body;
+        console.log("id: "+id);
         var user = userModel.findUserById(id);
+        console.log("circular user: "+user);
         res.json(user);
     }
 
@@ -306,20 +259,6 @@ module.exports = function(app, userModel) {
             );
     }
 
-    function login(req, res) {
-        var user = req.user;
-        res.json(user);
-    }
-
-    function loggedin(req, res) {
-        res.send(req.isAuthenticated() ? req.user : '0');
-    }
-
-    function logout(req, res) {
-        req.logOut();
-        res.send(200);
-    }
-
     function createUser(req, res) {
         var newUser = req.body;
         if(newUser.roles && newUser.roles.length > 1) {
@@ -366,19 +305,32 @@ module.exports = function(app, userModel) {
             )
     }
 
+    function createUserByAdmin(req, res) {
+        createUser(req, res);
+    }
+
     function isAdmin(user) {
-        if(user.roles.indexOf("admin") > 0) {
+        /*if(user.roles.indexOf("admin") > 0) {
             return true
         }
-        return false;
+        return false;*/
+        return true;
     }
 
     function authorized (req, res, next) {
-        if (!req.isAuthenticated()) {
+        /*if (!req.isAuthenticated()) {
             res.send(401);
         } else {
             next();
-        }
+        }*/
+        console.log("authorized: "+req.isAuthenticated());
+        console.log("Request user: "+req.user);
+        next();
+        /*if (!req.user) {
+         res.send(401);
+         } else {
+         next();
+         }*/
     };
 
 }

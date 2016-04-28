@@ -2,8 +2,7 @@ var passport         = require('passport');
 var LocalStrategy    = require('passport-local').Strategy;
 var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
-var mongoose         = require('mongoose');
-var bcrypt = require('bcrypt-nodejs');
+var mongoose         = require("mongoose");
 
 module.exports = function(app) {
 
@@ -138,14 +137,17 @@ module.exports = function(app) {
         done(null, user);
     }
 
+    //use callbacks
     function deserializeUser(user, done) {
         userModel
             .findUserById(user._id)
             .then(
                 function(user){
+                    console.log("des: "+user.username);
                     done(null, user);
                 },
                 function(err){
+                    console.log("err: "+err);
                     done(err, null);
                 }
             );
@@ -153,10 +155,14 @@ module.exports = function(app) {
 
     function login(req, res) {
         var user = req.user;
+        console.log('User login: ', user);
         res.json(user);
     }
 
     function loggedin(req, res) {
+
+        console.log('Req User: ', req.user, null, 2);
+        console.log("auth: "+ req.isAuthenticated());
         res.send(req.isAuthenticated() ? req.user : '0');
     }
 
@@ -166,7 +172,6 @@ module.exports = function(app) {
     }
 
     function register(req, res) {
-        console.log("inside server register...");
         var newUser = req.body;
         newUser.roles = ['student'];
 
@@ -175,36 +180,28 @@ module.exports = function(app) {
             .then(
                 function(user){
                     if(user) {
-                        console.log("line 178");
                         res.json(null);
                     } else {
-                        console.log("line 181");
-                        newUser.password = bcrypt.hashSync(newUser.password);
-                        console.log("encrypted password: "+newUser.password);
                         return userModel.createUser(newUser);
                     }
                 },
                 function(err){
-                    console.log("user server service error: "+err);
                     res.status(400).send(err);
                 }
             )
             .then(
                 function(user){
-                    if(user){console.log("line 194");
+                    if(user){
                         req.login(user, function(err) {
                             if(err) {
-                                console.log("line 197: "+err);
                                 res.status(400).send(err);
                             } else {
-                                console.log("line 200: "+user);
                                 res.json(user);
                             }
                         });
                     }
                 },
                 function(err){
-                    console.log("error 207: "+err);
                     res.status(400).send(err);
                 }
             );

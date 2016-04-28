@@ -6,20 +6,18 @@
     
     function ProfileCtrl($scope, UserService)
     {
+        console.log('User in profile: ', $rootScope.currentUser, null, 2);
         $scope.update = update;
 
         function update(user)
         {
-            console.log("Inside update...");
             UserService
                 .updateUser(user._id, user)
                 .then(
                     function(response) {
                         $scope.users = response.data;
-                        console.log("scope.users: "+$scope.users);
                     },
                     function(err) {
-                        console.log("scope.err: "+$scope.error);
                         $scope.error = err;
                     }
                 );

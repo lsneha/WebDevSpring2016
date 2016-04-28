@@ -4,7 +4,7 @@
         .module("FormBuilderApp")
         .factory("UserService", UserService);
 
-    function UserService($http, $q)
+    function UserService($http)
     {
         var userService = {
             findUserByCredentials: findUserByCredentials,
@@ -16,10 +16,35 @@
             updateUser: updateUser,
             createUser: createUser,
             findUserByUsername: findUserByUsername,
-            findUserById: findUserById
+            findUserById: findUserById,
+            createUserByAdmin: createUserByAdmin,
+            getAllUsers: getAllUsers,
+            findUserByIdForAdmin: findUserByIdForAdmin,
+            deleteUserByAdmin: deleteUserByAdmin,
+            updateUserByAdmin: updateUserByAdmin
         };
 
         return userService;
+
+        function createUserByAdmin(user) {
+            return $http.post('/api/assignment/admin/user', user);
+        }
+
+        function getAllUsers() {
+            return $http.get('/api/assignment/admin/user');
+        }
+
+        function findUserByIdForAdmin(userId) {
+            return $http.get("/api/assignment/admin/user/"+userId);
+        }
+
+        function deleteUserByAdmin(userId) {
+            return $http.delete('/api/assignment/admin/user/'+userId);
+        }
+
+        function updateUserByAdmin(userId, user) {
+            return $http.put('/api/assignment/admin/user/'+userId, user);
+        }
 
         function findUserByCredentials(username, password) {
             return $http.get("/api/assignment/user/username/"+username+"/password/"+password);

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">
+            <section ng-show="data">
+                <h3>Search Results</h3>
+                <table class="table tabled-striped">
+                    <thead>
+                    <tr>
+                        <th>Poster</th>
+                        <th>Title</th>
+                        <th>Year</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="movie in data.Search">
+                        <td><img ng-src="{{movie.Poster}}" height="75px"/></td>
+                        <td>
+                            <a href="#/details/{{movie.imdbID}}">{{movie.Title}}</a>
+                        </td>
+                        <td>{{movie.Year}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+</div>

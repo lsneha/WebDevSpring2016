@@ -13,7 +13,6 @@
             if(user.password != user.password2 || !user.password || !user.password2)
             {
                 $scope.error = "Your passwords don't match";
-                console.log("Reg ctrl error: "+$scope.error);
             }
             else
             {
@@ -22,16 +21,13 @@
                     .then(
                         function(response) {
                             var user = response.data;
-                            console.log("Reg ctrl user: "+user);
                             if(user != null) {
                                 $rootScope.currentUser = user;
-                                console.log("Reg ctrl user not null: "+$rootScope.currentUser);
                                 $location.url("/profile");
                             }
                         },
                         function(err) {
                             $scope.error = err;
-                            console.log("Reg ctrl user error: "+$scope.error);
                         }
                     );
             }

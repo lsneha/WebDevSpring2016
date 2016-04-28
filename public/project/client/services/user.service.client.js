@@ -1,71 +1,40 @@
 (function() {
-     "use strict"
-     angular
-     .module("MyProjectApp")
-     .factory("UserService", UserService);
+    "use strict";
+    angular
+        .module("ProjectApp")
+        .factory("UserService", UserService);
 
-     function UserService($rootScope) {
-         var model = {
-             users: [
-             {username: "alice", password: "alice", roles: ["user"], description: "I am Alice"},
-             {username: "bob", password: "bob", roles: ["user", "admin"], description: "I am Bob"},
-             {username: "charlie", password: "charlie", roles: ["user"], description: "I am Charlie"}
-             ],
-             createUser: createUser,
-             findUserByUsername: findUserByUsername,
-             findUserByCredentials: findUserByCredentials,
-             updateUser: updateUser,
-             setCurrentUser: setCurrentUser,
-             getCurrentUser: getCurrentUser
-         };
-        return model;
+    function UserService($http)
+    {
+        var userService = {
+            findAllUsers: findAllUsers,
+            deleteUser: deleteUser,
+            updateUser: updateUser,
+            createUser: createUser,
+            findUserByUsername: findUserByUsername
+        };
 
-         function setCurrentUser (user) {
-            $rootScope.currentUser = user;
-         }
+        return userService;
 
-         function getCurrentUser () {
-            return $rootScope.currentUser;
-         }
+        function findUserByUsername(username) {
+            return $http.get("/api/project/user/username"+username);
+        }
 
-         function createUser (user) {
-             var user = {
-                username: user.username,
-                password: user.password
-             };
-             model.users.push(user);
-             return user;
-         }
+        function createUser(user) {
+            console.log("client user service create user");
+            return $http.post('/api/project/user', user);
+        }
 
-         function findUserByUsername (username) {
-            for (var u in model.users) {
-                if (model.users[u].username === username) {
-                    return model.users[u];
-                }
-            }
-            return null;
-         }
+        function updateUser(userId, user) {
+            return $http.put('/api/project/user/'+userId, user);
+        }
 
-         function findUserByCredentials(credentials) {
-             for (var u in model.users) {
-                if (model.users[u].username === credentials.username &&
-                model.users[u].password === credentials.password) {
-                    return model.users[u];
-                }
-             }
-             return null;
-         }
+        function deleteUser(userId) {
+            return $http.delete('/api/project/user'+userId);
+        }
 
-         function updateUser (currentUser) {
-             var user = model.findUserByUsername (currentUser.username);
-             if (user != null) {
-                user.firstName = currentUser.firstName;
-                 user.lastName = currentUser.lastName;
-                 user.password = currentUser.password;
-                 return user;
-             } else {
-                return null;
-             }
-         }
-     }
- })();
+        function findAllUsers() {
+            return $http.get("/api/project/user");
+        }
+    }
+})();
