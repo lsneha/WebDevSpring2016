@@ -6,16 +6,16 @@ var passport      = require('passport');
 var cookieParser  = require('cookie-parser');
 var session       = require('express-session');
 var mongoose      = require('mongoose');
+var flash      = require('connect-flash');
 
 //app.use(express.static(__dirname + '/public/dabbling/mongo/pageEditor/client'));
 //app.use(express.static(__dirname + '/public/dabbling/passport/public'));
 //app.use(express.static(__dirname + '/public/project/client' ));
 //app.use(express.static(__dirname + '/public/dabbling/angularJS/sortable/ul' ));
-//app.use(express.static(__dirname + '/public/assignment/client' ));
-app.use(express.static(__dirname + '/public/project/client' ));
+app.use(express.static(__dirname + '/public/assignment/client' ));
+//app.use(express.static(__dirname + '/public/project/client' ));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-//why not just multer()
 app.use(multer());
 //app.use(session({secret:"process.env.PASSPORT_SECRET"}));
 app.use(cookieParser());
@@ -31,6 +31,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 var connectionString = 'mongodb://localhost/project-db';
 mongoose.connect(connectionString);
@@ -48,12 +49,8 @@ app.get('/hello', function(req, res) {
     res.send('hello world');
 });
 
-var fieldService = require("./public/assignment/server/services/field.service.server");
-var userService = require("./public/assignment/server/services/user.service.server");
-var formService = require("./public/assignment/server/services/form.server.service");
-
-//require("./public/assignment/server/app.js")(app);
-require("./public/project/server/app.js")(app);
+require("./public/assignment/server/app.js")(app, db, mongoose);
+//require("./public/project/server/app.js")(app, db, mongoose);
 //require("./public/dabbling/mongo/pageEditor/server/app.js")(app, db, mongoose);
 //require("./public/dabbling/passport/app/app.js")(app);
 

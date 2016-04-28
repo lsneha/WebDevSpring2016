@@ -38,8 +38,12 @@ module.exports = function() {
     }
 
     function findAllUsers() {
+        var deferred = q.defer();
         console.log("find all users model");
-        return UserModel.find();
+        return UserModel.find(function(err, users){
+            deferred.resolve(users);
+        });
+        return deferred.promise;
     }
 
     function createUser(user) {
@@ -50,12 +54,12 @@ module.exports = function() {
 
     function updateUser(userId, user) {
         console.log("update user model");
-        return UserModel.update({_id: userId}, {$set: user});
+        return UserModel.update({username: userId}, {$set: user});
     }
 
     function findUserByUsername(username) {
         console.log("find user by username model line 59");
-        console.log(UserModel.findOne({username: username}));
+        //console.log(UserModel.findOne({username: username}));
         return UserModel.findOne({username: username});
     }
 

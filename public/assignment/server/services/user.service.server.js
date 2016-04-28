@@ -9,30 +9,40 @@ module.exports = function(app) {
     var userModel = require("../models/user.model.server.js")();
     var auth = authorized;
 
-    app.post('/api/project/user', auth, createUser);
-    app.get("/api/project/user", auth, findAllUsers);
+    app.post('/api/assignment/user', isLoggedIn, createUser);
+    app.get("/api/assignment/user", findAllUsers);
     //app.get("/api/project/user/:id", auth, findUserById);
     //app.get("/api/project/user/username/:username", auth, findUserByUsername);
     //app.get("/api/project/user/username/:username/password/:password", auth, findUserByCredentials);
-    app.put("/api/project/user/:id", auth, updateUser);
-    app.delete("/api/project/user/:id", auth, deleteUser);
+    app.put("/api/assignment/user/:id", updateUser);
+    app.delete("/api/assignment/user/:id", isLoggedIn, deleteUser);
 
     //security project
-    app.post("/api/project/login", passport.authenticate('local'), login);
-    app.get("/api/project/loggedin", loggedin);
-    app.post("/api/project/logout", logout);
-    app.post("/api/project/register", register);
+    app.post("/api/assignment/login", passport.authenticate('local'), login);
+    app.get("/api/assignment/loggedin", loggedin);
+    app.post("/api/assignment/logout", logout);
+    app.post("/api/assignment/register", register);
 
     //admin tasks
-    app.post("/api/project/admin/user", ensureAdmin, createUserByAdmin);
-    app.get("/api/project/admin/user", ensureAdmin, getAllUsers);
-    app.get("/api/project/admin/user/:userId", ensureAdmin, findUserByIdForAdmin);
-    app.delete("/api/project/admin/user/:userId", ensureAdmin, deleteUserByAdmin);
-    app.put("/api/project/admin/user/:userId", ensureAdmin, updateUserByAdmin);
+    app.post("/api/assignment/admin/user", ensureAdmin, createUserByAdmin);
+    app.get("/api/assignment/admin/user", ensureAdmin, getAllUsers);
+    app.get("/api/assignment/admin/user/:userId", ensureAdmin, findUserByIdForAdmin);
+    app.delete("/api/assignment/admin/user/:userId", ensureAdmin, deleteUserByAdmin);
+    app.put("/api/assignment/admin/user/:userId", ensureAdmin, updateUserByAdmin);
 
     passport.use(new LocalStrategy(localStrategy));
     passport.serializeUser(serializeUser);
     passport.deserializeUser(deserializeUser);
+
+    function isLoggedIn(req, res, next) {
+
+        // if user is authenticated in the session, carry on
+        if (req.isAuthenticated())
+            return next();
+
+        // if they aren't redirect them to the home page
+        res.redirect('/');
+    }
 
     function findUserByIdForAdmin(req, res) {
         findUserById(req, res);
@@ -179,9 +189,12 @@ module.exports = function(app) {
                 .findAllUsers()
                 .then(
                     function (users) {
+                        console.log("User success");
+                        console.log(users, null, 2);
                         res.json(users);
                     },
                     function () {
+                        console.log("User failure");
                         res.status(400).send(err);
                     }
                 );
@@ -231,24 +244,11 @@ module.exports = function(app) {
     }
 
     function updateUser(req, res) {
-        var newUser = req.body;
-        if(!isAdmin(req.user)) {
-            delete newUser.roles;
-        }
-        if(typeof newUser.roles == "string") {
-            newUser.roles = newUser.roles.split(",");
-        }
-
+        console.log("Inside server service");
+        console.log("id"+req.params.id);
+        console.log(req.body);
         userModel
-            .updateUser(req.params.id, newUser)
-            .then(
-                function(user){
-                    return userModel.findAllUsers();
-                },
-                function(err){
-                    res.status(400).send(err);
-                }
-            )
+            .updateUser(req.params.id, req.body)
             .then(
                 function(users){
                     res.json(users);

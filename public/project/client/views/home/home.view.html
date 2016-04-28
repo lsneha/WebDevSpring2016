@@ -1,4 +1,8 @@
 <div class="container-fluid">
     <h2 class="sub-header">Welcome {{currentUser.firstName}} {{currentUser.lastName}}</h2>
-
+    <ul>
+        <li ng-repeat="movie in userMovies">
+            {{movie}}
+        </li>
+    </ul>
 </div>

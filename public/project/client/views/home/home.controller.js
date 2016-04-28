@@ -14,7 +14,9 @@
         $scope.getMoviesForUser = getMoviesForUser;
 
         function getMoviesForUser(username) {
-            $scope.userMovies = UserService.getMoviesForUser(username);
+            console.log("inside get movies for user"+$rootScope.currentUser.username);
+            $scope.userMovies = UserService.getMoviesForUser($rootScope.currentUser.username).userMovies;
+            console.log($scope.userMovies);
         }
 
         init();

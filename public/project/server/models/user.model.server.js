@@ -11,11 +11,13 @@ module.exports = function() {
     var UserModel = mongoose.model('UserModel', UserSchema);
 
     var userApi = {
+        findUserByCredentials: findUserByCredentials,
         findAllUsers : findAllUsers,
         createUser : createUser,
         deleteUser: deleteUser,
         updateUser: updateUser,
         findUserByUsername: findUserByUsername,
+        findUserById: findUserById,
         getMongooseModel: getMongooseModel
     };
 
@@ -25,24 +27,39 @@ module.exports = function() {
         return UserModel.remove({_id: userId});
     }
 
+    function findUserByCredentials(credentials) {
+        console.log("find user by creds model");
+        return UserModel.findOne(
+            {
+                username: credentials.username,
+                password: credentials.password
+            }
+        );
+    }
+
     function findAllUsers() {
         console.log("find all users model");
         return UserModel.find();
     }
 
     function createUser(user) {
-        console.log("create user model");
         return UserModel.create(user);
     }
 
     function updateUser(userId, user) {
-        console.log("update user model: "+userId);
+        console.log("update user model");
         return UserModel.update({username: userId}, {$set: user});
     }
 
     function findUserByUsername(username) {
-        console.log("Inside find user by username");
+        console.log("find user by username model line 59");
+        console.log(UserModel.findOne({username: username}));
         return UserModel.findOne({username: username});
+    }
+
+    function findUserById(userId) {
+        //console.log(" "+UserModel.findOne({_id: userId}));
+        return UserModel.findOne({username: userId});
     }
 
     function getMongooseModel() {

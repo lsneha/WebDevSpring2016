@@ -9,6 +9,7 @@
                         <th>Poster</th>
                         <th>Title</th>
                         <th>Year</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -18,6 +19,7 @@
                             <a href="#/details/{{movie.imdbID}}">{{movie.Title}}</a>
                         </td>
                         <td>{{movie.Year}}</td>
+                        <td><button ng-click="addMovie(movie.title)">Add</button></td>
                     </tr>
                     </tbody>
                 </table>

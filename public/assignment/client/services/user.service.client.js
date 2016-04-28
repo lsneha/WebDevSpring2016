@@ -4,7 +4,7 @@
         .module("FormBuilderApp")
         .factory("UserService", UserService);
 
-    function UserService($http)
+    function UserService($http, $q)
     {
         var userService = {
             findUserByCredentials: findUserByCredentials,
@@ -76,7 +76,13 @@
         }
 
         function findAllUsers() {
-            return $http.get("/api/assignment/user");
+            var deferred = $q.defer();
+            $http.get("/api/assignment/user")
+                .success(function(users){
+                deferred.resolve(users);
+            });
+
+            return deferred.promise;
         }
 
         function register(user) {

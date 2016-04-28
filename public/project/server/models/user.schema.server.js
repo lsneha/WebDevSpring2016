@@ -18,8 +18,9 @@ module.exports = function() {
             },
             firstName: String,
             lastName: String,
-            email: [String],
-            roles: [String]
+            email: String,
+            roles: [String],
+            movies: [String]
         }, {collection: COLLECTION});
 
     return UserSchema;

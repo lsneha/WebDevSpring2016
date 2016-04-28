@@ -1,4 +1,4 @@
-<div class="container" align="center">
+<div class="container">
     <h2>Admin</h2>
     <h3 class="sub-header">Users</h3>
     <table width="100%" border="1" id="demo_datatables" class="table table-responsive">
@@ -12,17 +12,17 @@
             <th>Actions</th>
         </tr>
         <tr>
-            <th><input ng-model="newUser.username" class="form-control" placeholder="Title"/></th>
-            <th><input ng-model="newUser.password" class="form-control" placeholder="password" type="password"/></th>
-            <th><input ng-model="newUser.firstname" class="form-control" placeholder="first name"/></th>
-            <th><input ng-model="newUser.lastname" class="form-control" placeholder="last name"/></th>
-            <th><input ng-model="newUser.roles" class="form-control" placeholder="roles"/></th>
+            <th><input ng-model="currentUser.username" class="form-control" placeholder="Title"/></th>
+            <th><input ng-model="currentUser.password" class="form-control" placeholder="password" type="password"/></th>
+            <th><input ng-model="currentUser.firstname" class="form-control" placeholder="first name"/></th>
+            <th><input ng-model="currentUser.lastname" class="form-control" placeholder="last name"/></th>
+            <th><input ng-model="currentUser.roles" class="form-control" placeholder="roles"/></th>
             <th>
-                <button ng-click="addUser(newUser)" class="btn btn-primary">
+                <button ng-click="addUser(currentUser)" class="btn btn-primary">
                     Add
                 </button>
                 <button
-                        ng-click="updateUser(newUser)"
+                        ng-click="updateUser(currentUser)"
                         class="btn btn-success">
                     Update
                 </button>
@@ -30,7 +30,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="user in users" ng-class="{'success' : $index == selectedCourseIndex}">
+        <tr ng-repeat="user in users">
             <td>{{user.username}}</td>
             <td>{{user.password}}</td>
             <td>{{user.firstName}}</td>
@@ -38,12 +38,12 @@
             <td>{{user.roles}}</td>
             <td>
                 <a
-                    ng-click="removeUser(user)"
-                    class="btn btn-danger">
+                        ng-click="removeUser(user.username)"
+                        class="btn btn-danger">
                     Delete
                 </a>
                 <a
-                    ng-click="editUser($index)" class="btn btn-warning">
+                        ng-click="editUser(user)" class="btn btn-warning">
                     Edit
                 </a>
             </td>
@@ -56,7 +56,6 @@
         </tr>
         </tfoot>-->
     </table>
-
 </div>
 
 <script>

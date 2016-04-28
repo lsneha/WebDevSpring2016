@@ -11,10 +11,20 @@
             deleteUser: deleteUser,
             updateUser: updateUser,
             createUser: createUser,
-            findUserByUsername: findUserByUsername
+            findUserByUsername: findUserByUsername,
+            getMoviesForUser: getMoviesForUser,
+            addMovie: addMovie
         };
 
         return userService;
+
+        function addMovie(userId, title) {
+            return $http.put("api/project/movie/"+userId, title);
+        }
+
+        function getMoviesForUser(username) {
+            return $http.get("/api/project/userMovies", username);
+        }
 
         function findUserByUsername(username) {
             return $http.get("/api/project/user/username"+username);
@@ -26,6 +36,11 @@
         }
 
         function updateUser(userId, user) {
+            console.log("update user client: "+user.username);
+            console.log("update user client user obj: "+user.password);
+            console.log("update user client user obj: "+user.firstName);
+            console.log("update user client user obj: "+user.lastName);
+            console.log("update user client user obj: "+user.email);
             return $http.put('/api/project/user/'+userId, user);
         }
 
