@@ -8,4 +8,7 @@
             <a class="btn btn-default" role="button" ng-click="search(title)">Go!</a>
         </form>
     </div>
+    <div ng-show="isUserLoggedIn">
+        <a class="btn btn-default" href="#" ng-click="logout()">Logout</a>
+    </div>
 </nav>

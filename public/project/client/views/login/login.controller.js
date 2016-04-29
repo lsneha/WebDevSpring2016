@@ -8,9 +8,28 @@
 
         function init() {
             console.log("Login controller initialized...");
+            $rootScope.currentUser = null;
+            $scope.register = register;
+            $scope.login = login;
         }
 
-        $scope.register = register;
+        function login(user)
+        {
+            if(user)
+                UserService
+                    .login(user)
+                    .then(
+                        function(response)
+                        {
+                            $rootScope.currentUser = response.data;
+                            //check this url or path?
+                            $location.path("/profile");
+                        },
+                        function(err) {
+                            $scope.error = err;
+                        }
+                    );
+        }
 
         function register(user) {
             if (user === null) {
@@ -31,7 +50,7 @@
             }
             else {
                 UserService
-                    .createUser(user)
+                    .register(user)
                     .then(
                         function(response) {
                             var user = response.data;

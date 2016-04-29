@@ -13,11 +13,10 @@
         $scope.addMovie = addMovie;
 
         function addMovie(title) {
-            UserService.addMovie($rootScope.currentUser, title);
+            UserService.addMovie($rootScope.currentUser.username, title);
         }
 
         init();
-
     }
 
 })();

@@ -1,8 +1,18 @@
 <div class="container-fluid">
     <h2 class="sub-header">Welcome {{currentUser.firstName}} {{currentUser.lastName}}</h2>
-    <ul>
-        <li ng-repeat="movie in userMovies">
-            {{movie}}
-        </li>
-    </ul>
+    <div class="row top-buffer">
+        <h3>Your movie list...</h3>
+        <ul>
+            <li ng-repeat="movie in movies">
+                {{movie.title}}
+            </li>
+        </ul>
+    </div>
+    <div class="row top-buffer">
+        <h6>You can search for other movies and add them to your list.</h6>
+        <p>Here is the latest movie trailer...</p>
+    </div>
+    <div class="row top-buffer">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/yViIi3gie2c" frameborder="0" allowfullscreen></iframe>
+    </div>
 </div>

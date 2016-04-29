@@ -6,14 +6,9 @@ var passport      = require('passport');
 var cookieParser  = require('cookie-parser');
 var session       = require('express-session');
 var mongoose      = require('mongoose');
-var flash      = require('connect-flash');
+var flash         = require('connect-flash');
 
-//app.use(express.static(__dirname + '/public/dabbling/mongo/pageEditor/client'));
-//app.use(express.static(__dirname + '/public/dabbling/passport/public'));
-//app.use(express.static(__dirname + '/public/project/client' ));
-//app.use(express.static(__dirname + '/public/dabbling/angularJS/sortable/ul' ));
-app.use(express.static(__dirname + '/public/assignment/client' ));
-//app.use(express.static(__dirname + '/public/project/client' ));
+app.use(express.static(__dirname + '/public/project/client' ));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(multer());
@@ -49,8 +44,8 @@ app.get('/hello', function(req, res) {
     res.send('hello world');
 });
 
-require("./public/assignment/server/app.js")(app, db, mongoose);
-//require("./public/project/server/app.js")(app, db, mongoose);
+//require("./public/assignment/server/app.js")(app, db, mongoose);
+require("./public/project/server/app.js")(app, db, mongoose);
 //require("./public/dabbling/mongo/pageEditor/server/app.js")(app, db, mongoose);
 //require("./public/dabbling/passport/app/app.js")(app);
 

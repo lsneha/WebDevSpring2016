@@ -5,8 +5,8 @@
         .config(function($routeProvider){
             $routeProvider
                 .when("/", {
-                    templateUrl: "views/home/home.view.html",
-                    controller: "HomeController"
+                    templateUrl: "views/login/login.view.html",
+                    controller: "LoginController"
                 })
                 .when("/home", {
                     templateUrl: "views/home/home.view.html",
@@ -33,7 +33,7 @@
                     controller: "DetailsController"
                 })
                 .otherwise({
-                    redirectTo: "/home"
+                    redirectTo: "/login"
                 });
         });
 

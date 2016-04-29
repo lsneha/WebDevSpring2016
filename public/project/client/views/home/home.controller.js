@@ -8,15 +8,14 @@
     {
        function init() {
            console.log("Home controller initialized...");
+           $scope.getMoviesForUser = getMoviesForUser;
+           $scope.movies = getMoviesForUser();
+           console.log($scope.movies);
        }
 
-        $scope.userMovies = null;
-        $scope.getMoviesForUser = getMoviesForUser;
-
-        function getMoviesForUser(username) {
+        function getMoviesForUser() {
             console.log("inside get movies for user"+$rootScope.currentUser.username);
-            $scope.userMovies = UserService.getMoviesForUser($rootScope.currentUser.username).userMovies;
-            console.log($scope.userMovies);
+            return UserService.getMoviesForUser($rootScope.currentUser.username);
         }
 
         init();

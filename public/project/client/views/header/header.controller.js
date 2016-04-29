@@ -8,6 +8,10 @@
 
         function init(){
             console.log("Header controller initalized");
+            function logout() {
+                $rootScope.currentUser = null;
+                $location.url("/home");
+            }
         }
 
         var title = $routeParams.title;
@@ -27,7 +31,10 @@
         }
 
         function render(response) {
-            $rootScope.data = response;
+            if(response) {
+                $rootScope.data = response;
+            }
+
             $location.url("/searchResults");
         }
 

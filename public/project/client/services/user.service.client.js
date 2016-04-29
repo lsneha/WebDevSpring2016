@@ -13,17 +13,34 @@
             createUser: createUser,
             findUserByUsername: findUserByUsername,
             getMoviesForUser: getMoviesForUser,
-            addMovie: addMovie
+            addMovie: addMovie,
+            logout: logout,
+            register: register,
+            login: login
         };
 
         return userService;
+
+        function logout() {
+            return $http.post("/api/project/logout");
+        }
+
+        function register(user) {
+            console.log("inside client service register");
+            return $http.post("/api/project/register", user);
+        }
+
+        function login(user) {
+            return $http.post("/api/project/login", user);
+        }
 
         function addMovie(userId, title) {
             return $http.put("api/project/movie/"+userId, title);
         }
 
         function getMoviesForUser(username) {
-            return $http.get("/api/project/userMovies", username);
+            console.log("client service get movies: "+username);
+            return $http.get("/api/project/userMovies/"+ username);
         }
 
         function findUserByUsername(username) {

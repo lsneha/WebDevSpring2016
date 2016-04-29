@@ -1,5 +1,6 @@
 var q             = require("q");
 var mongoose      = require("mongoose");
+var util = require('util');
 
 module.exports = function() {
 
@@ -18,10 +19,22 @@ module.exports = function() {
         updateUser: updateUser,
         findUserByUsername: findUserByUsername,
         findUserById: findUserById,
-        getMongooseModel: getMongooseModel
+        getMongooseModel: getMongooseModel,
+        getMoviesForUser: getMoviesForUser,
+        addMovie: addMovie
     };
 
     return userApi;
+
+    function addMovie(username, movieTitle) {
+        return UserModel.update({username: username}, {$set: {"movies" : movieTitle}});
+    }
+
+    function getMoviesForUser(username) {
+        console.log("Some magic...");
+        console.log(util.inspect(username, {showHidden: false, depth: null}));
+        return UserModel.findOne({username: username});
+    }
 
     function deleteUser(userId) {
         return UserModel.remove({_id: userId});
