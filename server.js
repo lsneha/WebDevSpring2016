@@ -8,7 +8,8 @@ var session       = require('express-session');
 var mongoose      = require('mongoose');
 var flash         = require('connect-flash');
 
-app.use(express.static(__dirname + '/public/project/client' ));
+//app.use(express.static(__dirname + '/public/project/client' ));
+app.use(express.static(__dirname + '/public' ));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(multer());
