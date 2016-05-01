@@ -8,6 +8,16 @@
     {
         function init() {
             console.log("Admin controller initialized...");
+            findAllUsers();
+        }
+
+        function findAllUsers() {
+            UserService
+                .findAllUsers()
+                .then(function(users){
+                    $scope.users1 = users;
+                    console.log("Admin ctrl no of users: "+users.length);
+                });
         }
 
         init();
@@ -27,6 +37,21 @@
         $scope.removeUser = removeUser;
         $scope.editUser = editUser;
         $scope.updateUser = updateUser;
+        $scope.followUser = followUser;
+
+        function followUser(userId) {
+            console.log("Current user is : "+$rootScope.currentUser.username);
+            console.log("User to be followed is : "+userId);
+            UserService
+                .followUser($rootScope.currentUser.username, userId)
+                .then(function(user){
+                    $scope.followingDup = user.following;
+                    var unique = user.following.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
+                    console.log("Admin ctrl no of users in following: "+unique.length);
+                    console.log("Admin ctrl whats in following: "+unique);
+                    $scope.following = unique;
+                });;
+        }
 
         function updateUser(user)
         {
@@ -46,7 +71,9 @@
 
         function removeUser(userId)
         {
+            console.log("Inside controller remove user");
             UserService.deleteUser(userId);
+            findAllUsers();
         }
 
         function addUser(user)

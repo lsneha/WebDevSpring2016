@@ -14,7 +14,8 @@ module.exports = function(app, db, mongoose) {
     app.delete("/api/project/user/:id", deleteUser);
     app.get("/api/project/user/username/:username", findUserByUsername);
     app.get("/api/project/userMovies/:username", getMoviesForUser);
-    app.put("api/project/movie/:userId", addMovie);
+    app.put("/api/project/movie/:userId", addMovie);
+    app.put("/api/project/follow/:userId", followUser);
 
     app.post("/api/project/login", passport.authenticate('local'), login);
     app.get("/api/project/loggedin", loggedin);
@@ -127,12 +128,33 @@ module.exports = function(app, db, mongoose) {
             );
     }
 
-    function addMovie(req, res) {
+    function followUser(req, res) {
+        console.log("Add user server service body: "+req.body);
+        console.log("Title?: "+req.body.username);
+        console.log("userId: "+req.params.userId);
         userModel
-            .addMovie(req.params.username, req.body)
+            .followUser(req.params.userId, req.body.username)
             .then(
                 function (user) {
-                    console.log("ss success");
+                    console.log("ss success added user: "+user.following);
+                    res.json(user);
+                },
+                function () {
+                    console.log("ss failed");
+                    res.status(400).send(err);
+                }
+            );
+    }
+
+    function addMovie(req, res) {
+        console.log("Add movie server service body: "+req.body);
+        console.log("Title?: "+req.body.title);
+        console.log("userId: "+req.params.userId);
+        userModel
+            .addMovie(req.params.userId, req.body.title)
+            .then(
+                function (user) {
+                    console.log("ss success added movie:");
                     res.json(user);
                 },
                 function () {
@@ -148,7 +170,7 @@ module.exports = function(app, db, mongoose) {
             .getMoviesForUser(req.params.username)
             .then(
                 function (user) {
-                    console.log("ss success");
+                    console.log("ss success: "+user.movies);
                     res.json(user);
                 },
                 function () {
@@ -159,20 +181,16 @@ module.exports = function(app, db, mongoose) {
     }
 
     function findAllUsers(req, res) {
-        if(isAdmin(req.user)) {
-            userModel
-                .findAllUsers()
-                .then(
-                    function (users) {
-                        res.json(users);
-                    },
-                    function () {
-                        res.status(400).send(err);
-                    }
-                );
-        } else {
-            res.status(403);
-        }
+        userModel
+            .findAllUsers()
+            .then(
+                function (users) {
+                    res.json(users);
+                },
+                function () {
+                    res.status(400).send(err);
+                }
+            );
     }
 
     function findUserByUsername(req, res) {
@@ -182,29 +200,19 @@ module.exports = function(app, db, mongoose) {
     }
 
     function deleteUser(req, res) {
-        if(isAdmin(req.user)) {
-
-            userModel
-                .removeUser(req.params.id)
-                .then(
-                    function(user){
-                        return userModel.findAllUsers();
-                    },
-                    function(err){
-                        res.status(400).send(err);
-                    }
-                )
-                .then(
-                    function(users){
-                        res.json(users);
-                    },
-                    function(err){
-                        res.status(400).send(err);
-                    }
-                );
-        } else {
-            res.status(403);
-        }
+        console.log("DELETE USER IN server service")
+        userModel
+            .deleteUser(req.params.id)
+            .then(
+                function(users){
+                    console.log("success in delete user ss");
+                    res.json(users);
+                },
+                function(err){
+                    console.log("failure in delete user ss");
+                    res.status(400).send(err);
+                }
+            );
     }
 
     function updateUser(req, res) {

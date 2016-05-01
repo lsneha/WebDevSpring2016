@@ -8,8 +8,10 @@ var session       = require('express-session');
 var mongoose      = require('mongoose');
 var flash         = require('connect-flash');
 
-//app.use(express.static(__dirname + '/public/project/client' ));
-app.use(express.static(__dirname + '/public' ));
+app.use(express.static(__dirname + '/public/project/client' ));
+//app.use(express.static(__dirname + '/public/dabbling/mongodb/ss/client' ));
+//app.use(express.static(__dirname + '/public/assignment/client' ));
+//app.use(express.static(__dirname + '/public' ));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(multer());
@@ -48,6 +50,7 @@ app.get('/hello', function(req, res) {
 //require("./public/assignment/server/app.js")(app, db, mongoose);
 require("./public/project/server/app.js")(app, db, mongoose);
 //require("./public/dabbling/mongo/pageEditor/server/app.js")(app, db, mongoose);
+//require("./public/dabbling/mongodb/ss/server/app.js")(app, db, mongoose);
 //require("./public/dabbling/passport/app/app.js")(app);
 
 app.get('/someurl', function(req, res){
